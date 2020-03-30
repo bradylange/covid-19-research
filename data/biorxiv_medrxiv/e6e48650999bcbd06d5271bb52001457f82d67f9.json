@@ -1,0 +1,490 @@
+{
+    "paper_id": "e6e48650999bcbd06d5271bb52001457f82d67f9",
+    "metadata": {
+        "title": "Title: Basic and effective reproduction numbers of COVID-19 cases in South Korea excluding Sincheonji cases",
+        "authors": [
+            {
+                "first": "Jeongeun",
+                "middle": [],
+                "last": "Hwang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Asan Medical Center",
+                    "location": {
+                        "settlement": "Seoul",
+                        "country": "Republic of Korea"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Hyunjung",
+                "middle": [],
+                "last": "Park",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Asan Medical Center",
+                    "location": {
+                        "settlement": "Seoul",
+                        "country": "Republic of Korea"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Jiwon",
+                "middle": [],
+                "last": "Jung",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Ulsan College of Medicine",
+                    "location": {
+                        "settlement": "Seoul",
+                        "country": "Republic of Korea"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Sung-Han",
+                "middle": [],
+                "last": "Kim",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Ulsan College of Medicine",
+                    "location": {
+                        "settlement": "Seoul",
+                        "country": "Republic of Korea"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Namkug",
+                "middle": [],
+                "last": "Kim",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Asan Medical Center",
+                    "location": {
+                        "addrLine": "Asan Medical Center, 88, Olympic-ro 43-gil, Sonpa-gu",
+                        "postCode": "05505, 05505",
+                        "settlement": "Seoul, Seoul",
+                        "country": "Republic of Korea, Republic of Korea"
+                    }
+                },
+                "email": "namkugkim@gmail.com"
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "In February and March 2020, COVID-19 epidemic in South Korea met a large black swan effect by a Sincheonji cult mass infection in Daegu-Gyeongbuk area. The black swan made it difficult to evaluate that the current policies for infection prevention including social distancing, closing schools, hand washing, and wearing masks good enough or not. Therefore, in this study, we evaluated basic reproduction number (R 0 ) and time-dependent reproduction number (R t ) of confirmed cases based on various kinds of populations, including total, Daegu-Geyoengbuk, except-Daegu-Gyeongbuk, Sincheonji, and except-Sincheonji. In total, it seems the infection is going to be under control, but this is never true because in the except-Sincheonji and except-Daegu-Geyongbuk cases, R 0 is still above 1.0, and R t is drifting around 1.0. This study could be used to determine government policies in the near future.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "South Korea currently has 8,413 cumulated confirmed COVID-19 cases as of March 18 th , 2020. There was a large \"black swan\" event called the Sincheonji cult mass infection incidence that lead to an exponential increase of confirmed cases. Since then, a great effort has been made to defend the public from virus, and to some extent, these efforts have suppressed the spread.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "The basic and time-dependent effective reproduction number R 0 and R t are two of the most representative characteristics for the dynamics of the infectious virus. To observe the basic features of the COVID-19 outbreak in South Korea without the black swan effect, we collected the daily counts of confirmed cases. The Korean Centers for Disease Control and Prevention (KCDC) has investigated, summarized, and released daily updates on the cumulated counts of confirmed cases, which are available online 1 . The cumulated counts have been provided in total, according to the administrative",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "In February and March 2020, COVID-19 epidemic in South Korea met a large black swan effect by a Sincheonji cult mass infection in Daegu-Gyeongbuk area. The black swan made it difficult to evaluate that the current policies for infection prevention including social distancing, closing schools, hand washing, and wearing masks good enough or not. Therefore, in this study, we evaluated basic reproduction number (R 0 ) and time-dependent reproduction number (R t ) of confirmed cases based on various kinds of populations, including total, Daegu-Geyoengbuk, except-Daegu-Gyeongbuk, Sincheonji, and except-Sincheonji. In total, it seems the infection is going to be under control, but this is never true because in the except-Sincheonji and except-Daegu-Geyongbuk cases, R 0 is still above 1.0, and R t is drifting around 1.0. This study could be used to determine government policies in the near future.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "South Korea currently has 8,413 cumulated confirmed COVID-19 cases as of March 18 th , 2020. There was a large \"black swan\" event called the Sincheonji cult mass infection incidence that lead to an exponential increase of confirmed cases. Since then, a great effort has been made to defend the public from virus, and to some extent, these efforts have suppressed the spread.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Text"
+        },
+        {
+            "text": "The basic and time-dependent effective reproduction number R 0 and R t are two of the most representative characteristics for the dynamics of the infectious virus. To observe the basic features of the COVID-19 outbreak in South Korea without the black swan effect, we collected the daily counts of confirmed cases. The Korean Centers for Disease Control and Prevention (KCDC) has investigated, summarized, and released daily updates on the cumulated counts of confirmed cases, which are available online 1 . The cumulated counts have been provided in total, according to the administrative provinces (Gwangyeok-Si and Do in the South Korean administrative system), and several mass infection cases have occurred. We collected counts of daily confirmed cases from the Sincheonji cult, . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Text"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.19.20039347 doi: medRxiv preprint which was named after a church with a COVID-19 outbreak, and subtracted them from the total counts to comprise the \"except Sincheonji\" cases. Additionally, we collected the case counts from Daegu-si and Gyeongsangbuk-do province, which surrounds Daegu-si, because the initial outbreak in the Sincheonji cult took place in those areas. We summed up the counts from the two provinces and subtracted them from the total counts to total the \"except Daegu-Gyeonbuk\" cases. The Sincheonji cult cases and Daegu-Gyeongbuk cases are not mutually inclusive nor exclusive. Because it took days to identify a confirmed case belonging to the Sincheonji cult, the time frames of the Sincheonji cases could have been confounded.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Text"
+        },
+        {
+            "text": "The cumulated counts from January 21 st , 2020 (the first confirmed case of COVID-19 in South Korea)",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Text"
+        },
+        {
+            "text": "to March 17 th , 2020 are shown in Figure 1 . The first Sincheonji cult case appeared on February 18 th , 2020, and it was the first case in the Daegu-Gyeongbuk area. Qualitatively, the cumulated counts curves for Daegu-Gyeongbuk and Sincheonji looks like they are reaching for a plateau, but the curves for the except-Sincheonji and except-Daegu-Gyeongbuk cases do not. R statistics software version 3.6.3 (R Foundation for Statistical Computing, Vienna, Austria) and the R0 package 2 was used. For the estimation of the subgroups' R 0 values, we fitted an exponential growth model 3 . Sensitivity analysis of the exponential growth period was performed. The generation time distribution should be obtained from the time lag between all infector-infectee pairs 4 , which is called a serial interval, but it is currently unavailable. Instead, we assumed that the serial interval had a gamma distribution with mean \u00b1 standard deviation of 2.0 \u00b1 1.0, 3.0 \u00b1 1.5, 4.0 \u00b1 2.0, 5.0 \u00b1 2.5, and 6.0 \u00b1 3.0 days. The serial interval could be approximated by referring to the estimated incubation time of COVID-19. Recent research by Guan et al. 5 suggested that the virus has an incubation period of four days with an interquartile range two to seven days. Some studies have estimated a wider range for the incubation period; data for human infection with other coronaviruses (e.g. MERS-CoV, SARS-CoV) suggested that the incubation period may range from two to 14 days 6 . Sensitivity tests for the generation time assumptions were performed ( Figure S1 ). Figure 2 shows the estimated R0 for each study subgroup and their 95% confidence intervals (by simulation) with an assumption of 4.0 \u00b1 2.0 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 583,
+                    "end": 584,
+                    "text": "3",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 1134,
+                    "end": 1135,
+                    "text": "5",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 1458,
+                    "end": 1459,
+                    "text": "6",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 35,
+                    "end": 43,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1533,
+                    "end": 1542,
+                    "text": "Figure S1",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1546,
+                    "end": 1554,
+                    "text": "Figure 2",
+                    "ref_id": "FIGREF3"
+                }
+            ],
+            "section": "Text"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.19.20039347 doi: medRxiv preprint (mean \u00b1 standard deviation). In the sensitivity test, the R 0 values were sensitive to the generation time assumptions; therefore, the numbers themselves are not reliable in the current study. On the contrary, the relative scales among the R 0 values were robust to the generation time assumptions.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Text"
+        },
+        {
+            "text": "The Daegu-Gyeongbuk cases showed significantly higher R 0 than the except-Daegu-Gyeongbuk cases, and the Sincheonji cases showed significantly higher R 0 than the except-Sincheonji cases. In all subgroups, R 0 was larger than 1.0. R 0 is an initial-stage characteristic before the health authorities take action or social awareness rises. Since the Sincheonji cult mass infection incidence was noticed, health authority actions including COVID-19 tests, isolation, active surveillance, and school closures, were executed immediately. In addition, social awareness of COVID-19 soared, and South Korean residents began to more actively follow hygiene recommendations, including wearing masks, washing hands frequently, and practicing social distancing in everyday life, throughout the nation.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Text"
+        },
+        {
+            "text": "Adding to such efforts to fight the disease, we measured the time dependent reproduction rate R t 7 for each subgroup. We again assumed the generation time to gamma distribution with a 4.0 \u00b1 2.0 mean \u00b1 standard deviation.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Text"
+        },
+        {
+            "text": "In Figure 3 , R t with 95% confidence intervals in the subgroups, including the total, Sincheonji, except-Sincheonji, Daegu-Gyeongbuk, and except-Daegu-Gyeongbuk subgroups, are shown. In all subgroups, R t gradually decreased until the end of February. R t for the Sincheonji and Daegu-Gyeongbuk cases are staying under R t = 1.0 horizon, but in the except-Sincheonji and except-Daegu-Gyeongbuk cases, R t is drifting around the R t = 1.0 horizon currently (as of March 18 th , 2020).",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 3,
+                    "end": 11,
+                    "text": "Figure 3",
+                    "ref_id": "FIGREF4"
+                }
+            ],
+            "section": "Text"
+        },
+        {
+            "text": "Although the analysis in Figure 3 is preliminary, and thus, we should be very cautious about its interpretations, we see a great uncertainty that South Korea is still in danger of COVID-19. Another instance of the mass infection case could happen if we lose the current momentum in social distancing and preventive action, even if no black swan comes. Assessing only the total counts may blind our sense of danger. Therefore, analyzing the except-Sincheonji and except-Daegu-Gyeongbuk cases separately from the total cases would be recommended.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 25,
+                    "end": 33,
+                    "text": "Figure 3",
+                    "ref_id": "FIGREF4"
+                }
+            ],
+            "section": "Text"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Text"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.19.20039347 doi: medRxiv preprint",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Text"
+        },
+        {
+            "text": "Our current analysis has substantial limitations. Because we collected the daily press releases from the KCDC, there could be re-classified cases not reflected in our analysis. There could also be misclassification, because a Sincheonji cult may deny his or her beliefs in the KCDC investigations.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Text"
+        },
+        {
+            "text": "Imported cases were not accounted for in the current analysis, though the cumulated imported cases until March 17 th , 2020 was 54, according to KCDC press release. Another source of confounding is that we are not aware of the true number of cases. In a recent study in China, Li et al. 8 estimated that only 14% of infected cases have been confirmed by the authorities. Nevertheless, qualitative interpretations may stay robust to under-reporting if they are constant. Delays in confirmation and in classification are another source of error. The uncertainty in the generation time is also an issue, but it could be overcome by performing sensitivity analysis. If more detailed data on infector-infectee interactions becomes available, more reliable analysis could be achieved.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Text"
+        },
+        {
+            "text": "To conclude, in total, it seems that the virus is going to be under control, but this is never true because if we analyze the except-Sincheonji and except-Daegu-Geyongbuk cases, the basic reproduction rate is still above 1.0, and the effective reproduction rate Rt is still higher than 1.0. The current efforts to suppress the COVID-19 outbreak should at least be maintained.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Text"
+        },
+        {
+            "text": "All authors have no potential conflicts of interest to disclose. . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Disclosure"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Author Contributions"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.19.20039347 doi: medRxiv preprint",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Author Contributions"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "The R0 package: a toolbox to estimate reproduction numbers for epidemic outbreaks",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Obadia",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Haneef",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Boelle",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Bmc Medical Informatics and Decision Making",
+            "volume": "12",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "How generation intervals shape the relationship between growth rates and reproductive numbers",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wallinga",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Proceedings of the Royal Society B-Biological Sciences",
+            "volume": "274",
+            "issn": "",
+            "pages": "599--604",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "A note on generation times in epidemic models",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Svensson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Mathematical Biosciences",
+            "volume": "208",
+            "issn": "1",
+            "pages": "300--311",
+            "other_ids": {}
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Clinical Characteristics of Coronavirus Disease 2019 in China",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Guan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Ni",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Liang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "Q"
+                    ],
+                    "last": "Ou",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "X"
+                    ],
+                    "last": "He",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "N Engl J Med",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Interim Clinical Guidance for Management of Patients with Confirmed Coronavirus Disease (COVID-19)",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "Different epidemic curves for severe acute respiratory syndrome reveal similar impacts of control measures",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wallinga",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Teunis",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "American Journal of Epidemiology",
+            "volume": "160",
+            "issn": "6",
+            "pages": "509--525",
+            "other_ids": {}
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "author/funder, who has granted medRxiv a license to display the preprint in perpetuity. is the (which was not peer-reviewed) The copyright holder for this preprint",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/2020.03.19.20039347"
+                ]
+            }
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Conceptualization: Hwang J, Kim S, Jung J, Kim N. Methodology: Hwang J, Kim N. Formal analysis: Hwang J, Kim N. Data curation: Par H, Software: Hwang J, Kim N. Investigation: Jung J, Kim S, Kim N. Writing -original draft preparation: Hwang J, Park H. Writing -review and editing: Jung J, Kim S, Kim N. Approval of final manuscript: all authors.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure legends",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Cumulated counts of confirmed cases of the subgroups, including the total, Daegu-Geyoengbuk, except-Daegu-Gyeongbuk, Sincheonji, and except-Sincheonji cases.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "R 0 with 95% confidence intervals in the subgroups, including the total, Daegu-Gyeongbuk, except Deagu-Gyeongbuk, Sincheonji, and except Sincheonji groups.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Changes of R t with 95% confidence intervals of subgroups, including the total, Sincheonji, except-Sincheonji, Daegu-Gyeongbuk, and except-Daegu-Gyeongbuk groups. A week after the first Sinceonji cult mass infection case (February 24 th , 2020), R t for all subgroups decreased for a couple of days. In the following weeks (around March 2 nd , 2020 and after) Sincheonji and Daegu-Gyeongbuk cases fell under the R t = 1.0 horizon, but R t for the except-Sincheonji and except-Daegu-Gyeongbuk cases were drifting around the 1.0 horizon.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": ". https://doi.org/10.1101/2020.03.19.Li R, Pei S, Chen B, Song Y, Zhang T, Yang W, et al. Substantial undocumented infection facilitates the rapid dissemination of novel coronavirus (SARS-CoV2). Science 2020.. CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.19.20039347 doi: medRxiv preprint",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": []
+}

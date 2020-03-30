@@ -1,0 +1,2787 @@
+{
+    "paper_id": "65ed294672533d6734d1c0d66b1c987101a42fcf",
+    "metadata": {
+        "title": "Estimating unobserved SARS-CoV-2 infections in the United States",
+        "authors": [
+            {
+                "first": "T",
+                "middle": [
+                    "Alex"
+                ],
+                "last": "Perkins",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Notre Dame",
+                    "location": {}
+                },
+                "email": ""
+            },
+            {
+                "first": "Sean",
+                "middle": [
+                    "M"
+                ],
+                "last": "Cavany",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Notre Dame",
+                    "location": {}
+                },
+                "email": ""
+            },
+            {
+                "first": "Sean",
+                "middle": [
+                    "M"
+                ],
+                "last": "Moore",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Notre Dame",
+                    "location": {}
+                },
+                "email": ""
+            },
+            {
+                "first": "Rachel",
+                "middle": [
+                    "J"
+                ],
+                "last": "Oidtman",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Notre Dame",
+                    "location": {}
+                },
+                "email": ""
+            },
+            {
+                "first": "Anita",
+                "middle": [],
+                "last": "Lerch",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Notre Dame",
+                    "location": {}
+                },
+                "email": ""
+            },
+            {
+                "first": "Marya",
+                "middle": [],
+                "last": "Poterek",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Notre Dame",
+                    "location": {}
+                },
+                "email": ""
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "Countries across the world observed dramatic rises in COVID-19 cases and deaths in March 2020. In the United States, delays in the availability of diagnostic testing have prompted questions about the extent of unobserved community transmission. Using a simulation model informed by reported cases and deaths, we estimated that tens of thousands of people (median: 22,876, 95% posterior predictive interval: 7,451 -53,044) were infected by the time a national emergency was declared. Our results also indicate that fewer than 10% of locally acquired, symptomatic infections in the US were detected throughout much of late February. These results point to the need for immediate, large-scale efforts to mitigate the impacts of SARS-CoV-2 on the US.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "SARS-CoV-2 is a newly emerged coronavirus that is causing a global pandemic ( 1 ) . The unprecedented spread of SARS-CoV-2 owes to its high transmissibility ( 2 ) , pre-symptomatic transmission ( 3 ) , and transmission by asymptomatic infections ( 4 ) . An appreciable fraction of infections are asymptomatic ( 5 ) , and many others result in mild symptoms that could be mistaken for other respiratory illnesses ( 6 ) . These factors point to a potentially large reservoir of unobserved infections ( 7 ) , especially in settings where capacity to test for SARS-CoV-2 has been limited ( 8 ) . The United States is one such country in which limited testing has been a major concern, particularly as imported cases, and now local cases, have increased over time ( 9 ) . Until February 27, testing criteria in the US were limited to close contacts of confirmed cases and those with recent travel to China ( 9 ) . This means that any local infections resulting from an unobserved imported infection would have gone unnoticed. Community transmission occurred without notice while testing was still being rolled out ( 10 , 11 ) , albeit to an unknown extent.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "Our goal was to estimate the extent of community transmission of SARS-CoV-2 in the US that occurred prior to its widespread recognition. Unlike other countries where testing and containment measures were pursued aggressively ( 12 , 13 ) , rollout of testing in the US was slow ( 9 ) and widespread social-distancing measures did not go into effect until several weeks after the first reported case ( 14 , 15 ) . Understanding the extent of community transmission has major implications for the effectiveness of different options for control ( 16 ) and for anticipating the trajectory and impact of the pandemic ( 17 ) .",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 398,
+                    "end": 409,
+                    "text": "( 14 , 15 )",
+                    "ref_id": null
+                }
+            ],
+            "section": "Abstract"
+        },
+        {
+            "text": "This work has not yet been peer-reviewed.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "To estimate the extent of community transmission of SARS-CoV-2 in the US, we used a stochastic simulation model that combined importation and local transmission processes. We informed model parameters with estimates from other countries, where available (Table S1) , and estimated values of two unknown parameters by fitting the model to data on local reported deaths in the US ( 18 ) . To model importation, we simulated observed and unobserved imported infections based on the number and timing of imported cases reported in the US ( 19 ) and assumptions about the proportion of different infection outcomes ( 5 , 20 ) . To model local transmission, we used a branching process model informed by estimates of the serial interval and reproduction number of SARS-CoV-2 from Singapore ( 3 ) . Due to aggressive containment efforts there ( 12 ) , we considered our model to be a conservative representation of community transmission in the US. To relate our model's predictions to US data on reported cases and deaths, we also simulated the timing of symptom onset ( 3 ) , case reporting ( 18 ) , and death ( 21 ) , for simulated infections for which those outcomes occurred.",
+            "cite_spans": [
+                {
+                    "start": 378,
+                    "end": 384,
+                    "text": "( 18 )",
+                    "ref_id": null
+                },
+                {
+                    "start": 534,
+                    "end": 540,
+                    "text": "( 19 )",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 610,
+                    "end": 620,
+                    "text": "( 5 , 20 )",
+                    "ref_id": null
+                },
+                {
+                    "start": 836,
+                    "end": 842,
+                    "text": "( 12 )",
+                    "ref_id": null
+                },
+                {
+                    "start": 1086,
+                    "end": 1092,
+                    "text": "( 18 )",
+                    "ref_id": null
+                },
+                {
+                    "start": 1105,
+                    "end": 1111,
+                    "text": "( 21 )",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 254,
+                    "end": 264,
+                    "text": "(Table S1)",
+                    "ref_id": "TABREF0"
+                }
+            ],
+            "section": ""
+        },
+        {
+            "text": "By March 12, there were a total of 1,514 reported cases and 39 reported deaths that resulted from local transmission of SARS-CoV-2 in the US. We used this information to estimate the probability of detecting imported symptomatic infections, , by seeding our model with \u03c1 travel imported infections, simulating local transmission, and comparing simulated and reported local deaths. Under our baseline scenario, this resulted in a median estimate of (95% .39 \u03c1 travel = 0 posterior predictive interval: 0.15 -0.90). Simulating from January 1, we obtained 22,876 (95% PPI: 7,451 -53,044) local infections cumulatively in the US by March 12 (Fig. 1A) . Due to the exponential growth posited by our model, 2,958 (95% PPI: 956 -7,249) local infections were predicted to have occurred on March 12 alone (Fig. 1B) . Had we performed a simple extrapolation of reported cases and deaths based on , our estimate of cumulative local \u03c1 travel",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 637,
+                    "end": 646,
+                    "text": "(Fig. 1A)",
+                    "ref_id": null
+                },
+                {
+                    "start": 796,
+                    "end": 805,
+                    "text": "(Fig. 1B)",
+                    "ref_id": null
+                }
+            ],
+            "section": ""
+        },
+        {
+            "text": "We estimated the probability of detecting local symptomatic infections, , by comparing our \u03c1 local model's predictions of symptomatic infections to local case reports on a daily basis. Over the course of February, daily estimates of decreased from our uniform prior down to a low of \u03c1 local 6.4x10 -3 (95% PPI: 2.4x10 -4 -4.8x10 -2 ) on March 1, as increases in simulated local infections outpaced newly reported local cases (Fig. 2B, black) . As testing increased in March (Fig. 2B , red), so too did reported cases ( Fig. 2A , red) and daily estimates of ( Fig. 2B, black) . By \u03c1 local March 12, we estimated to be 0.80 (95% PPI: 0.34 -1.00). Between February 23 (low \u03c1 local estimate of ) and March 8 (last day of verified testing numbers), our daily estimates of \u03c1 local were well correlated with daily numbers of tests administered (Pearson's correlation, \u03c1 local median: 0.57, 95% PPI: 0.48 -0.65). Although these results are consistent with the possibility that testing might have improved case detection in March, they also indicate that case detection was likely very low at times in February when containment might have been feasible. Successful fitting of our model was demonstrated by its predictions of local deaths by March 12 (median: 33, 95% PPI: 9 -74), which were consistent with the 39 reported (Fig. 3 ). Although we did not fit our model to deaths on a daily basis, 85.5% of the deaths predicted by our model occurred within the same range of days over which local deaths were reported (February 29 -March 12). This indicates that, collectively, our model's assumptions about the timing of importation, local transmission, and delay between exposure and death are plausible. Deaths caused by COVID-19 often occur several weeks after exposure ( 22 ) . Thus, our baseline model predicts that there will be a median of 395 (95% PPI: 125 -948) additional deaths as a result of infections that occurred by March 12. Relative to deaths reported by then, this represents an increase by a factor of 12.2 (95% PPI: 7.03 -21.3). There are several limitations of our analysis that should be acknowledged. First, our results were, in some cases, sensitive to deviations from baseline assumptions (Supplementary Text). Although most parameter scenarios we explored resulted in similar cumulative infections, higher values of R 0 and earlier importation resulted in estimates in excess of 100,000 (Fig. S4) . Second, our branching process model assumes exponential growth, which could be affected by social distancing ( 23 ) or the buildup of immunity ( 24 ) . Neither of those factors were likely to have had much influence on local transmission in the US before March 13, however. Third, our parameter assumptions were based on analyses of data collected outside the US. Similar information has proven useful for other pathogens, such as Zika and Ebola ( 25 , 26 ) , in past public health emergencies. Fourth, we did not make use of airline data to model importation ( 27 ) , but future applications of our method could incorporate such data.",
+            "cite_spans": [
+                {
+                    "start": 1763,
+                    "end": 1769,
+                    "text": "( 22 )",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 2525,
+                    "end": 2531,
+                    "text": "( 23 )",
+                    "ref_id": null
+                },
+                {
+                    "start": 2559,
+                    "end": 2565,
+                    "text": "( 24 )",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 2862,
+                    "end": 2873,
+                    "text": "( 25 , 26 )",
+                    "ref_id": null
+                },
+                {
+                    "start": 2976,
+                    "end": 2982,
+                    "text": "( 27 )",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 425,
+                    "end": 441,
+                    "text": "(Fig. 2B, black)",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 474,
+                    "end": 482,
+                    "text": "(Fig. 2B",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 519,
+                    "end": 526,
+                    "text": "Fig. 2A",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 559,
+                    "end": 574,
+                    "text": "Fig. 2B, black)",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1314,
+                    "end": 1321,
+                    "text": "(Fig. 3",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 2404,
+                    "end": 2413,
+                    "text": "(Fig. S4)",
+                    "ref_id": null
+                }
+            ],
+            "section": "Figure 1. Local infections of SARS-CoV-2 in the US by March 12. These results derive from our baseline scenario and show A) cumulative and B) daily incidence of all local infections, including observed and unobserved. In B, black shows the median and gray shading shows the 95% PPI."
+        },
+        {
+            "text": "These limitations mean that results from our baseline scenario should be interpreted cautiously. Nonetheless, based on our sensitivity analysis, we conclude that unobserved SARS-CoV-2 infections in the US by March 12 likely numbered in the tens of thousands, and quite possibly in excess of 100,000. This result, considered together with extensive pre-symptomatic and asymptomatic transmission of SARS-CoV-2 ( 3 , 4 ) , suggests that the US was well past the possibility of containment by March 12. Other modeling work ( 16 ) suggests that the feasibility of containing SARS-CoV-2 is highly sensitive to the number of infections that occur prior to scale-up of containment efforts. Our estimate that fewer than 10% of local symptomatic infections were detected by surveillance for much of February suggests that a crucial opportunity to limit the impact of SARS-CoV-2 on the US may have been missed. Although the number of tests administered increased in March ( 9 ) , so too did the number of infections and, consequently, the demand for testing.",
+            "cite_spans": [
+                {
+                    "start": 408,
+                    "end": 417,
+                    "text": "( 3 , 4 )",
+                    "ref_id": null
+                },
+                {
+                    "start": 519,
+                    "end": 525,
+                    "text": "( 16 )",
+                    "ref_id": null
+                },
+                {
+                    "start": 961,
+                    "end": 966,
+                    "text": "( 9 )",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Figure 1. Local infections of SARS-CoV-2 in the US by March 12. These results derive from our baseline scenario and show A) cumulative and B) daily incidence of all local infections, including observed and unobserved. In B, black shows the median and gray shading shows the 95% PPI."
+        },
+        {
+            "text": "Coincident with the March 13 declaration of a national emergency ( 14 ) , social distancing measures went into effect across the US ( 15 ) . Our estimate of several thousand active SARS-CoV-2 infections at that time suggests that large-scale mitigation efforts, rather than reactionary measures ( 28 ) , are necessary. Even if these efforts begin to reverse increases in SARS-CoV-2 transmission in the US, our results show that a downturn in COVID-19 deaths may not appear until several weeks later. Analyses of the impact of large-scale mitigation efforts in China ( 29 ) provide reason for optimism that they can be effective.",
+            "cite_spans": [
+                {
+                    "start": 65,
+                    "end": 71,
+                    "text": "( 14 )",
+                    "ref_id": null
+                },
+                {
+                    "start": 132,
+                    "end": 138,
+                    "text": "( 15 )",
+                    "ref_id": null
+                },
+                {
+                    "start": 295,
+                    "end": 301,
+                    "text": "( 28 )",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Figure 1. Local infections of SARS-CoV-2 in the US by March 12. These results derive from our baseline scenario and show A) cumulative and B) daily incidence of all local infections, including observed and unobserved. In B, black shows the median and gray shading shows the 95% PPI."
+        },
+        {
+            "text": "We calibrated a stochastic model, including separate importation and local transmission steps, to two publicly available datasets on cases of COVID-19 internationally and in the United States. All code and data used are available at http://github.com/TAlexPerkins/sarscov2_unobserved.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Materials and Methods"
+        },
+        {
+            "text": "We obtained data on the number of imported cases and deaths from line list data compiled by the Models of Infectious Disease Agent Spread (MIDAS) Network ( 1 ) . These data informed the number and timing of imported infections predicted by our importation model. We obtained data on the total number of US cases and deaths and total number of cases and deaths globally from time series compiled by the Johns Hopkins University Center for Systems Science and Engineering ( 2 ) . These data informed our estimates of the proportion of local infections detected. We also used these data in an alternative importation scenario in which the timing of imported infections was sampled proportional to daily global incidence.",
+            "cite_spans": [
+                {
+                    "start": 154,
+                    "end": 159,
+                    "text": "( 1 )",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 470,
+                    "end": 475,
+                    "text": "( 2 )",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Data"
+        },
+        {
+            "text": "We considered cases associated with international travel in the MIDAS dataset to be imported. We removed SARS-CoV-2-positive individuals who were repatriated from the Diamond Princess cruise ship from our analysis, due to the fact that they were quarantined ( 3 ) , leaving 153 imported cases (including one death). We first estimated the number of imported infections based on the probability that an infection would be symptomatic, the probability of an imported symptomatic infection being detected, and the probability of death among symptomatic infections (case fatality risk, CFR). The CFR and the probability that an infection is symptomatic were drawn from beta distributions with parameters given in Table S1 , with means of 2.29% and 17.9%, respectively. We jointly estimated the probability of detection of imported symptomatic infections,",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 709,
+                    "end": 717,
+                    "text": "Table S1",
+                    "ref_id": "TABREF0"
+                }
+            ],
+            "section": "Importation model"
+        },
+        {
+            "text": ", and the relative offspring number of asymptomatic infections, , by running \u03c1 travel \u03b1 the importation and branching process models across a range of values of those parameters and calculating the probability of observing the number of reported deaths through March 12; this approach is described in more detail in the parameter calibration section below. The probability of the number of unobserved imported infections being between 0 and 20,000, along with the 152 observed cases and 1 observed death, was calculated using a multinomial distribution; the number of imported infections was then sampled from that distribution. We then smoothed the date of known imported infections with a Gaussian kernel and sampled dates of all imported infections from that distribution . As an alternative scenario, we distributed the timing of imported infections based on the timing of international incidence, with cases in China excluded after February 3, due to a ban on entrance by non-resident foreign nationals who had been to China within the past 14 days enacted on February 2. For each scenario and parameter combination, we generated 1,000 sets of imported infections.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Importation model"
+        },
+        {
+            "text": "We simulated local transmission in the United States from January 1 to March 12 using a branching process model, seeded by the aforementioned importation model. Each replicate This work has not yet been peer-reviewed. 9",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": ". CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": "draw of the number and timing of imported infections seeded one simulation of the branching process model, to maximally represent uncertainty in both importation and transmission processes. The number of secondary infections generated by each infection in the branching process model was drawn from a negative binomial offspring distribution with mean R and dispersion parameter k . Under our baseline scenario, we used a dispersion parameter of k = 1,000, approximating a Poisson distribution, due to a lack of estimates of k for SARS-CoV-2. Under alternative scenarios for k , we considered values of 0.15 and 0.30 to account for superspreading observed in outbreaks of SARS and MERS ( 4 , 5 ) . The number of secondary infections generated by asymptomatic individuals was also drawn from a negative binomial distribution, but with mean , where . Whether an individual was symptomatic was R \u03b1 0 0, ] \u03b1 \u2208 [ 1 determined by a Bernoulli trial with probability equal to the proportion of infections that were asymptomatic in that replicate. Each secondary infection's exposure time was drawn from a log-normal generation interval distribution with mean 4.56 days. In doing so, we assumed that the generation interval followed the same distribution as the serial interval.",
+            "cite_spans": [
+                {
+                    "start": 686,
+                    "end": 695,
+                    "text": "( 4 , 5 )",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": "In addition to exposure, we simulated three additional outcomes, and the timing thereof, in a subset of infections.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": "\u2022 Symptom onset: The number of new symptomatic infections on day t was drawn from a binomial distribution with the number of trials equal to the number of infections with time of potential symptom onset on day t , and the probability of success equal to the proportion of infections that are symptomatic. For infections that were simulated to result in symptoms, the time of symptom onset was drawn from a Weibull incubation period distribution with mean 7.07 ( 6 ) and added to each individual's exposure time. \u2022 Case reporting: The number of cases reported on day t was drawn from a binomial distribution with the number of trials equal to the number of infections with time of potential case reporting on day t , and the probability of success equal to the proportion of infections that are symptomatic. This accounts for the delay in reporting, but not underreporting, which is addressed below when we calculate the probability that a symptomatic infection is detected, . The time of potential case reporting was drawn \u03c1 local from a gamma distribution of the period between symptom onset and case reporting with mean 6 days, and added to each infection's time of symptom onset.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": "\u2022 Death: The number of deaths on day t was drawn from a binomial distribution with the number of trials equal to the number of infections that could have experienced death on day t , and the probability of success equal to the case fatality risk. The time of death was drawn from a log-normal distribution of time from symptom onset to death with mean 14 days ( 7 ) , and added to each individual's time of symptom onset.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": "All parameter values, and their associated distributions, are described in Table S1 . Where parameter distributions were described in the literature using medians and interval measures of spread, we used the optim function in R to estimate parameters of those distributions that matched distribution moments reported by those studies. In that sense, all parameters in our analysis were treated as random variables, with associated uncertainty accounted for throughout our analysis. For the delay between symptom onset and case notification, we fitted This work has not yet been peer-reviewed. 10",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 75,
+                    "end": 83,
+                    "text": "Table S1",
+                    "ref_id": "TABREF0"
+                }
+            ],
+            "section": "Transmission model"
+        },
+        {
+            "text": ". CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": "a gamma distribution to data on the delay between symptoms and reporting for 26 US cases in the MIDAS line list data; the gamma distribution fitted the data better than negative binomial or log-normal distributions according to AIC (133.5, 134.6, and 134.0, respectively) (Fig. S1 ). Our mean estimate of 6.0 for this delay is in line with previous estimates from China of 5.8 by Li et al. ( 8 ) and 5.5 by Bi et al. ( 9 ) . Three key parameters -R , the serial interval, and the incubation period -were taken from a single reference ( 6 ) to ensure that those estimates were consistent with each other. That is important because R and the serial interval jointly control the epidemic growth rate ( 10 ) , so taking estimates of R and the serial interval from different studies could have led to unrealistic projections of epidemic growth rate. Figure S1 . Distribution of the delay between symptom onset and reporting for 26 US cases. The curve shows the maximum-likelihood fit of a gamma distribution (shape = 3.43, rate = 0.572) to those data.",
+            "cite_spans": [
+                {
+                    "start": 390,
+                    "end": 395,
+                    "text": "( 8 )",
+                    "ref_id": null
+                },
+                {
+                    "start": 417,
+                    "end": 422,
+                    "text": "( 9 )",
+                    "ref_id": null
+                },
+                {
+                    "start": 534,
+                    "end": 539,
+                    "text": "( 6 )",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 272,
+                    "end": 280,
+                    "text": "(Fig. S1",
+                    "ref_id": null
+                },
+                {
+                    "start": 845,
+                    "end": 854,
+                    "text": "Figure S1",
+                    "ref_id": null
+                }
+            ],
+            "section": "Transmission model"
+        },
+        {
+            "text": "We estimated how the probability of detecting locally acquired, symptomatic infections, , \u03c1 local changed over time. These estimates were based on the number of symptomatic cases reported each day, C ( t ), and our model's predictions for the number of symptomatic infections that could have been reported each day, S ( t ), after accounting for a delay between symptom onset and reporting. We assumed a uniform prior for , and on each day estimated a posterior equal to \u03c1 local",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": "To understand how many deaths may occur after the time period of our analysis based on infections occurring through then, we set from March 13 onwards and simulated our R 0 = 0 This work has not yet been peer-reviewed. 11",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": ". CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . model forward to May 31. This allowed any infections occurring by March 12 enough time to result in death, for the proportion expected to result in that outcome.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission model"
+        },
+        {
+            "text": "Due to a lack of prior estimates for two parameters, we jointly estimated the proportion of imported symptomatic infections that were detected, , and the relative infectiousness of \u03c1 travel asymptomatic infections, . We fitted these parameters to the total number of deaths resulting in increments of 0.05 for each parameter, we smoothed this marginal likelihood surface using the bicubic.grid function in the akima package in R to create a gridded marginal likelihood surface with a 0.001 x 0.001 mesh. Finally, we drew samples from the posterior probability distribution of these parameters by resampling from this smoothed marginal likelihood surface, which implicitly assumed a uniform prior on the two parameters. We repeated this calibration procedure for each scenario that we explored, obtaining different estimates for and for \u03c1 travel \u03b1 each of our sensitivity analyses.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Parameter calibration"
+        },
+        {
+            "text": "In addition to the alternative importation models, we also undertook a one-at-a-time sensitivity analysis for each parameter shown in Table S1 , with the exception of the calibrated parameters (the last two rows). These last two parameters were re-calibrated as described in the previous section for each new parameter set and importation timing combination. Including the baseline scenario, there were a total of 18 scenarios (i.e., the baseline plus two explored values for each of seven parameters plus one additional scenario with different importation timing). For some parameter values explored in sensitivity analyses, we did not directly use literature estimates, but instead chose values which were plausible minima or maxima for that parameter; these are indicated by \"lower\" or \"higher\" in Table S1 . For the dispersion parameter, we wanted to explore a value that allowed for superspreading but that generated less overdispersion than was observed for SARS; this formed our intermediate value in the sensitivity analysis. All baseline values were taken directly from literature estimates, with the exception of reporting delay, which was calibrated as described in the branching process model section. For that parameter, we obtained the low and high scenarios by multiplying the shape parameter by 0.5 and 1.5, This work has not yet been peer-reviewed. 12 . CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 134,
+                    "end": 142,
+                    "text": "Table S1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 801,
+                    "end": 809,
+                    "text": "Table S1",
+                    "ref_id": "TABREF0"
+                }
+            ],
+            "section": "Sensitivity analysis"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.15.20036582 doi: medRxiv preprint respectively, while keeping the rate parameter the same. In this way, the reporting delay is the sum of one, two, or three identically distributed gamma random variables in the low, baseline, and high scenarios, respectively. Posterior predictive check against reported local cases Using our estimate of , we simulated the number of reported cases through time and (t) \u03c1 local compared this with the actual number of reported cases. By March 12, our model predicted that there should have been 1,530 (95% PPI: 475 -3,496) reported cases, commensurate with the actual number of 1,514 reported cases (Fig. S2) . As expected, this confirms that our estimates of were consistent with the model and the data. (t) \u03c1 local Figure S2 . The number of cases reported in the US compared to the number our model predicts were reported.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 742,
+                    "end": 751,
+                    "text": "(Fig. S2)",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 860,
+                    "end": 869,
+                    "text": "Figure S2",
+                    "ref_id": "FIGREF0"
+                }
+            ],
+            "section": "Sensitivity analysis"
+        },
+        {
+            "text": "Estimates of the proportion of imported symptomatic infections that were detected, , and \u03c1 travel the infectiousness of asymptomatic infections relative to symptomatic infections, , varied \u03b1 This work has not yet been peer-reviewed. 15",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": ". CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": "based on the values of the other parameters. In general, higher values for parameters expected to increase transmission (e.g., R ) were associated with higher estimates of ( with R = 1.5. For a shorter serial interval with a mean of 4.7 days, the estimate was = 0.52 \u03c1 travel (95% PPI: 0.19 -0.96), and with a longer mean serial interval of 7.5 days, the estimate was 0.06 (95% PPI: 0.03 -0.14). The estimated value of was also lower if the CFR was low ( = \u03c1 travel \u03c1 travel 0.20, 95% PPI: 0.08 -0.53), compared to the scenario with a higher CFR ( = 0.54, 95% PPI: \u03c1 travel 0.21 -0.96). Higher estimates correspond to fewer undetected imported infections; \u03c1 travel therefore, fewer undetected importations are required to account for the observed number of local deaths through March 12 if the CFR is high, R is high, or the serial interval is short. In addition, when we based the timing of importations on international incidence (excluding China after travel restrictions were implemented on February 3) the estimate of was 1.00 (95% \u03c1 travel PPI: 0.98 -1.00) due to the increased probability of early importations -and more time for local infections to increase -under this scenario. There was greater uncertainty in our estimates under most sensitivity scenarios, and in most scenarios the estimates of and were \u03c1 travel positively correlated (Fig. S3 ).",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 1348,
+                    "end": 1356,
+                    "text": "(Fig. S3",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": "This work has not yet been peer-reviewed. 16",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": ". CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . This work has not yet been peer-reviewed. 17",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": ". CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . Sensitivity analysis of cumulative infections Because and were estimated for each parameter-sensitivity scenario, cumulative \u03c1 travel infections were relatively similar under the low, baseline, and high scenarios for many parameters. Cumulative infections were most sensitive to assumptions about R , the serial interval, and the timing of imported infections (Fig. S4 , Table S3 ). The former two affect how quickly local infections increase, and the latter affects how much time they have to increase. Cumulative infections were also somewhat sensitive to assumptions about case fatality risk and the delay between exposure and death, because assumptions about those parameters influenced estimates of and , which were based on reported deaths. \u03c1 travel \u03b1 This work has not yet been peer-reviewed. 19",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 438,
+                    "end": 446,
+                    "text": "(Fig. S4",
+                    "ref_id": null
+                },
+                {
+                    "start": 449,
+                    "end": 457,
+                    "text": "Table S3",
+                    "ref_id": "TABREF3"
+                }
+            ],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": ". CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . Figure S4 . Posterior predictive distributions of cumulative infections by March 12 under different parameter sensitivity scenarios. Unlike other parameters, importation timing was not described in terms of simple numerical values; in that case, \"mid\" refers to our baseline assumption that the timing of unobserved imported infections followed the timing of observed imported cases, and \"high\" refers to the alternative scenario that their timing followed international incidence patterns. This work has not yet been peer-reviewed. 22",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 78,
+                    "end": 87,
+                    "text": "Figure S4",
+                    "ref_id": null
+                }
+            ],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": ". CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . Sensitivity analysis of the ratio of deaths after and before March 12 The ratio of deaths expected March 13 and after, relative to before then, was higher with changes in parameters that resulted in faster growth in local infections and later arrival of imported infections (Fig. S6, Table S4 ). The proportion of deaths expected to occur after March 12 also increased with increases in the delay between symptom onset and death (Table S4) . Overdispersion (lower k ) did not drastically alter our estimates of or (Table S2) or the \u03c1 travel number of cumulative infections (Table S3 ), but it did extend the lower and upper bounds on the range of the ratio of deaths after and before March 12 (Table S4) .",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 352,
+                    "end": 370,
+                    "text": "(Fig. S6, Table S4",
+                    "ref_id": null
+                },
+                {
+                    "start": 507,
+                    "end": 517,
+                    "text": "(Table S4)",
+                    "ref_id": "TABREF4"
+                },
+                {
+                    "start": 592,
+                    "end": 602,
+                    "text": "(Table S2)",
+                    "ref_id": "TABREF1"
+                },
+                {
+                    "start": 651,
+                    "end": 660,
+                    "text": "(Table S3",
+                    "ref_id": "TABREF3"
+                },
+                {
+                    "start": 771,
+                    "end": 781,
+                    "text": "(Table S4)",
+                    "ref_id": "TABREF4"
+                }
+            ],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": "This work has not yet been peer-reviewed. 23",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": ". CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . Figure S6 . Posterior predictive distributions of the ratio of deaths after and before March 12 under different parameter sensitivity scenarios. Unlike other parameters, importation timing was not described in terms of simple numerical values; in that case, \"mid\" refers to our baseline assumption that the timing of unobserved imported infections followed the timing of observed imported cases, and \"high\" refers to the alternative scenario that their timing followed international incidence patterns.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 78,
+                    "end": 87,
+                    "text": "Figure S6",
+                    "ref_id": null
+                }
+            ],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": "This work has not yet been peer-reviewed. 24",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": ". CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 15.20036582 doi: medRxiv preprint . CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 144,
+                    "text": "15.20036582 doi: medRxiv preprint",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 15.20036582 doi: medRxiv preprint ",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 144,
+                    "text": "15.20036582 doi: medRxiv preprint",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Sensitivity analysis of unknown parameters"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "World Health Organization",
+            "authors": [],
+            "year": 2020,
+            "venue": "Coronavirus disease 2019 (COVID-19) Situation Report",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "Aerosol and surface stability of HCoV-19 (SARS-CoV-2) compared to SARS-CoV-1. medRxiv",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Van Doremalen",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Bushmaker",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Morris",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Holbrook",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Gamble",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Williamson",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Tamin",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Harcourt",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Thornburg",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Gerber",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lloyd-Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Wit",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Munster",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "Others, Transmission interval estimates suggest pre-symptomatic spread of",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Tindale",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Coombe",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Stockdale",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Garlock",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "Y V"
+                    ],
+                    "last": "Lau",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Saraswat",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.-H",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wallinga",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "https:/www.medrxiv.org/content/10.1101/2020.03.03.20029983v1.abstract"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Presumed Asymptomatic Carrier Transmission of COVID-19",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Bai",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Yao",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Tian",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.-Y",
+                    "middle": [],
+                    "last": "Jin",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "JAMA",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1001/jama.2020.2565"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Estimating the Asymptomatic Proportion of 2019 Novel Coronavirus onboard the Princess Cruises Ship, 2020. Infectious Diseases (except HIV/AIDS) (2020)",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Mizumoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Kagaya",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Zarebski",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Chowell",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/2020.02.20.20025866"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "Preparedness and vulnerability of African countries against importations of COVID-19: a modelling study",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Gilbert",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Pullano",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Pinotti",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Valdano",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Poletto",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.-Y",
+                    "middle": [],
+                    "last": "Bo\u00eblle",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Ortenzio",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yazdanpanah",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Eholie",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Altmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Gutierrez",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "U G"
+                    ],
+                    "last": "Kraemer",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Colizza",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Lancet",
+            "volume": "",
+            "issn": "",
+            "pages": "30411--30417",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(20)30411-6"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "COVID-19)",
+            "authors": [
+                {
+                    "first": "Coronavirus",
+                    "middle": [],
+                    "last": "Cdc",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Disease",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Centers for Disease Control and Prevention",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "Active Monitoring of Persons Exposed to Patients with Confirmed COVID-19 -United States",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Burke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "MMWR Morb. Mortal. Wkly. Rep",
+            "volume": "69",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.15585/mmwr.mm6909e1"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "How much is coronavirus spreading under the radar?",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Maxmen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Nature",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/d41586-020-00760-8"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "Evaluation of the Effectiveness of Surveillance and Containment Measures for the First 100 Patients with COVID-19 in Singapore",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Ng",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "MMWR Morb. Mortal. Wkly. Rep",
+            "volume": "69",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.15585/mmwr.mm6911e1"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "ref_id": "b10",
+            "title": "Division of Risk assessment and International cooperation, 76 additional cases have been confirmed. The Updates of COVID-19 in Republic of Korea",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "COVID-19) Outbreak | The White House. The White House",
+            "authors": [],
+            "year": null,
+            "venue": "Proclamation on Declaring a National Emergency Concerning the Novel Coronavirus Disease",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF12": {
+            "ref_id": "b12",
+            "title": "Americans Brace for New Life of No School and Growing Dread",
+            "authors": [],
+            "year": 2020,
+            "venue": "The New York Times",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF13": {
+            "ref_id": "b13",
+            "title": "Feasibility of controlling COVID-19 outbreaks by isolation of cases and contacts",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Hellewell",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Abbott",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Gimma",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [
+                        "I"
+                    ],
+                    "last": "Bosse",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "I"
+                    ],
+                    "last": "Jarvis",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Russell",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Munday",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Kucharski",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Edmunds",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "The Lancet Global Health",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S2214-109X(20)30074-7"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "How will country-based mitigation measures influence the course of the COVID-19 epidemic?",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Heesterbeek",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Klinkenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Hollingsworth",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Lancet",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(20)30567-5"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "ref_id": "b15",
+            "title": "An interactive web-based dashboard to track COVID-19 in real time",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Gardner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Lancet Infect. Dis",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S1473-3099(20)30120-1"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "Updated understanding of the outbreak of 2019 novel coronavirus (2019-nCoV) in Wuhan",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "China. J. Med. Virol",
+            "volume": "92",
+            "issn": "",
+            "pages": "441--447",
+            "other_ids": {}
+        },
+        "BIBREF17": {
+            "ref_id": "b17",
+            "title": "Clinical course and risk factors for mortality of adult inpatients with COVID-19 in Wuhan, China: a retrospective cohort study",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Fan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Xiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Song",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Gu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Guan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Tu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Cao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Lancet",
+            "volume": "0",
+            "issn": "",
+            "pages": "30566--30569",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(20)30566-3"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "Early dynamics of transmission and control of COVID-19: a mathematical modelling study",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Jarvis",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Clifford",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [
+                        "I"
+                    ],
+                    "last": "Quilty",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Bosse",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Abbott",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Klepac",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Flasche",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Lancet Infect. Dis",
+            "volume": "0",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S1473-3099(20)30144-4"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "ref_id": "b20",
+            "title": "Network frailty and the geometry of herd immunity",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Ferrari",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Bansal",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Meyers",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [
+                        "N"
+                    ],
+                    "last": "Bj\u00f8rnstad",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Proc. Biol. Sci",
+            "volume": "273",
+            "issn": "",
+            "pages": "2743--2748",
+            "other_ids": {}
+        },
+        "BIBREF21": {
+            "ref_id": "b21",
+            "title": "A review of epidemiological parameters from Ebola outbreaks to inform early public health decision-making",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Van Kerkhove",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "I"
+                    ],
+                    "last": "Bento",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Mills",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Ferguson",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Donnelly",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Sci Data",
+            "volume": "2",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF22": {
+            "ref_id": "b22",
+            "title": "Model-based projections of Zika virus infections in childbearing women in the Americas",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Perkins",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Siraj",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Ruktanonchai",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "U G"
+                    ],
+                    "last": "Kraemer",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Tatem",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Nat Microbiol",
+            "volume": "1",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF23": {
+            "ref_id": "b23",
+            "title": "The effect of travel restrictions on the spread of the 2019 novel coronavirus",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Chinazzi",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Davis",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ajelli",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Gioannini",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Litvinova",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Merler",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Pastore Y Piontti",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Mu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Rossi",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Viboud",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xiong",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Halloran",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Longini",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vespignani",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.aba9757"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "ref_id": "b24",
+            "title": "Factors that make an infectious disease outbreak controllable",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Riley",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Ferguson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc. Natl. Acad. Sci. U. S. A",
+            "volume": "101",
+            "issn": "",
+            "pages": "6146--6151",
+            "other_ids": {}
+        },
+        "BIBREF25": {
+            "ref_id": "b25",
+            "title": "Update: Public Health Response to the Coronavirus Disease 2019 Outbreak -United States",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Jernigan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "CDC COVID-19 Response Team",
+            "volume": "69",
+            "issn": "",
+            "pages": "216--219",
+            "other_ids": {}
+        },
+        "BIBREF26": {
+            "ref_id": "b26",
+            "title": "The role of superspreading in Middle East respiratory syndrome coronavirus (MERS-CoV) transmission",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Kucharski",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Althaus",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Eurosurveillance",
+            "volume": "20",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.2807/1560-7917.es2015.20.25.21167"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "ref_id": "b27",
+            "title": "Superspreading and the effect of individual variation on disease emergence",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [
+                        "O"
+                    ],
+                    "last": "Lloyd-Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Schreiber",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Kopp",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Getz",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "438",
+            "issn": "",
+            "pages": "355--359",
+            "other_ids": {}
+        },
+        "BIBREF28": {
+            "ref_id": "b28",
+            "title": "Transmission interval estimates suggest pre-symptomatic spread of COVID-19. medRxiv",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Tindale",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Coombe",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Stockdale",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Garlock",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "Y V"
+                    ],
+                    "last": "Lau",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Saraswat",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.-H",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wallinga",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Colijn",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF30": {
+            "ref_id": "b30",
+            "title": "Clinical Characteristics of Coronavirus Disease 2019 in China",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.-J",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.-Q",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Qiu",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.-J",
+                    "middle": [],
+                    "last": "Luo",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.-Y",
+                    "middle": [],
+                    "last": "Ye",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.-S",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Zhong",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "N. Engl. J. Med",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMoa2002032"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "ref_id": "b32",
+            "title": "Epidemiology and Transmission of COVID-19 in Shenzhen China: Analysis of 391 cases and 1,286 of their close contacts",
+            "authors": [
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Bi",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Mei",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Ye",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zou",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Truelove",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Cheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lessler",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Feng",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF33": {
+            "ref_id": "b33",
+            "title": "How generation intervals shape the relationship between growth rates and reproductive numbers",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wallinga",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Proc. Biol. Sci",
+            "volume": "274",
+            "issn": "",
+            "pages": "599--604",
+            "other_ids": {}
+        },
+        "BIBREF34": {
+            "ref_id": "b34",
+            "title": "Downgrading disease transmission risk estimates using terminal importations",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Fox",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Bellan",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Perkins",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Johansson",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Meyers",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "PLoS Negl. Trop. Dis",
+            "volume": "13",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF35": {
+            "ref_id": "b35",
+            "title": "Nowcasting and forecasting the potential domestic and international spread of the 2019-nCoV outbreak originating in Wuhan, China: a modelling study",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Leung",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Leung",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "The Lancet",
+            "volume": "395",
+            "issn": "",
+            "pages": "689--697",
+            "other_ids": {}
+        },
+        "BIBREF36": {
+            "ref_id": "b36",
+            "title": "Estimating the Asymptomatic Proportion of 2019 Novel Coronavirus onboard the Princess Cruises Ship, 2020. Infectious Diseases (except HIV/AIDS)",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Mizumoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Kagaya",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Zarebski",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Chowell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF37": {
+            "ref_id": "b37",
+            "title": "COVID-19 reports | Faculty of Medicine | Imperial College London",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF38": {
+            "ref_id": "b38",
+            "title": "WHO Director-General's opening remarks at the media briefing on COVID",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF39": {
+            "ref_id": "b39",
+            "title": "Serial interval of novel coronavirus (2019-nCoV) infections. Infectious Diseases (except HIV/AIDS",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Nishiura",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Linton",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Akhmetzhanov",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF40": {
+            "ref_id": "b40",
+            "title": "The Incubation Period of Coronavirus Disease 2019 (COVID-19) From Publicly Reported Confirmed Cases: Estimation and Application",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Lauer",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Grantz",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Bi",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [
+                        "K"
+                    ],
+                    "last": "Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Meredith",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Azman",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "Reich",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lessler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Ann. Intern. Med",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.7326/M20-0504"
+                ]
+            }
+        },
+        "BIBREF41": {
+            "ref_id": "b41",
+            "title": "Updated understanding of the outbreak of 2019 novel coronavirus (2019-nCoV) in Wuhan",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "China. J. Med. Virol",
+            "volume": "92",
+            "issn": "",
+            "pages": "441--447",
+            "other_ids": {}
+        },
+        "BIBREF42": {
+            "ref_id": "b42",
+            "title": "Estimating the risk of 2019 Novel Coronavirus death during the course of the outbreak in China",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Mizumoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Chowell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF44": {
+            "ref_id": "b44",
+            "title": "An interactive web-based dashboard to track COVID-19 in real time",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Gardner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Lancet Infect. Dis",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S1473-3099(20)30120-1"
+                ]
+            }
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Comparison of symptomatic infections and reported cases. A) Local symptomatic infections predicted under the baseline scenario increased exponentially, whereas reported cases increased more sharply in March. B) Based on this, we estimated how the probability of detecting local symptomatic infections changed daily in the US. Black lines show the median and grayshading shows the 95% PPI.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Deaths over time. Our baseline model's predictions were A) consistent with reported deaths through March 12 (dashed line) and B) indicate that many more deaths should be expected after then based solely on infections that occurred by March 12. Results to the right of the dashed line do not reflect additional deaths that would result from new infections occurringMarch 13 or after. The black line shows the median and gray shading shows the 95% PPI.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "\u03b1 from locally acquired SARS-CoV-2 infections in the US by March 12. To approximate a likelihood for given values of and , we simulated 200 replicate time series of imported infections, \u03c1 travel \u03b1 each based on the same value of , and then simulated local transmission using the same \u03c1 travel value of for each of the 200 replicates. For each of these 200 replicate simulations, we \u03b1 calculated the cumulative number of infections, I D , that, based on their timing, could have resulted in death by March 12. We then calculated the likelihood of the reported number of deaths, D , according to a binomial distribution in which D is the number of successes among I D trials that each have probability of success IFR, where IFR is equal to the CFR times one minus the probability of being asymptomatic. Each of the 200 replicates used independent draws from the uncertainty distributions of other model parameters, so we took the average of the 200 likelihoods to obtain a single marginal likelihood for a given value of and . After \u03c1 travel \u03b1 calculating this marginal likelihood across a grid of values between 0 (or 0.01 for ) and 1 \u03c1 travel",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "predictions and estimates of imported case detection probability, \u03c1 travel By March 12, there were a total of 152 reported cases and one reported death in the US that were classified as imported on the basis of international travel to areas with known SARS-CoV-2 transmission ( 21 ) . By jointly estimating and the relative infectiousness of asymptomatic \u03c1 travel infections, , we obtained a median estimate of 0.39 (95% PPI: 0.15  -0.90) for under our \u03b1 \u03c1 travel baseline scenario. This resulted in a median of 452 (95% PPI: 206 -1068) imported infections. Under the alternative importation timing scenario, where importation timing was based on international case reports, we estimated = 1.00 (95% PPI: 0.98 -1.00) and 187 (95% PPI: \u03c1 travel 174 -202) imported infections. An estimate of = 1.00 implies that all symptomatic \u03c1 travel imported infections were detected, but it still means that asymptomatic infections would have been undetected.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Samples (10 4 ) from the joint posterior distribution of the proportion of imported symptomatic infections detected and the relative infectiousness of asymptomatic \u03c1 ) ( travel infections (\u03b1) under different parameter-sensitivity scenarios.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "continued). Samples(10 4  ) from the joint posterior distribution of the proportion of imported symptomatic infections detected and the relative infectiousness of \u03c1 ) ( travel asymptomatic infections (\u03b1) under different parameter-sensitivity scenarios.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Median and 95% posterior predictive interval of the probability of detecting a local symptomatic infection after accounting for delays in reporting. Each panel represents a different parameter-sensitivity scenario.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF7": {
+            "text": "continued). Median and 95% posterior predictive interval of the probability of detecting a local symptomatic infection after accounting for delays in reporting. Each panel represents a different parameter-sensitivity scenario.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": "Model parameters. All time periods are given in days.",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Median estimates and 95% posterior predictive intervals of the marginal distributions of proportion of imported symptomatic infections detected infectiousness of asymptomatic infections (\u03b1) under different parameter-sensitivity scenarios.",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF3": {
+            "text": "Median estimates and 95% posterior predictive intervals of cumulative infections under different parameter sensitivity scenarios.This work has not yet been peer-reviewed. 20. CC-BY 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.15.20036582  doi:  medRxiv preprint",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF4": {
+            "text": "Median estimates and 95% posterior predictive intervals of the ratio of deaths after and before March 12 under different parameter sensitivity scenarios.This work has not yet been peer-reviewed.25",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": [
+        {
+            "text": "Thanks to Jason Rohr and Moritz Kraemer for feedback on the manuscript.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgements"
+        },
+        {
+            "text": "The proportion of symptomatic infections detected over time followed a similar pattern under all parameter sensitivity scenarios, with low values of throughout late February followed \u03c1 local by increases in March (Fig. S5) . Long delays in case detection (9 days) were associated with the lowest proportion of symptomatic infections detected; in that scenario, mostly did not \u03c1 local",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 213,
+                    "end": 222,
+                    "text": "(Fig. S5)",
+                    "ref_id": null
+                }
+            ],
+            "section": "Sensitivity analysis of imported case detection probability, \u03c1 local"
+        }
+    ]
+}

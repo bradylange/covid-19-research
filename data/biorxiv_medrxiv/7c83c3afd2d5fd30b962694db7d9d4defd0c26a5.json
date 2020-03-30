@@ -1,0 +1,884 @@
+{
+    "paper_id": "7c83c3afd2d5fd30b962694db7d9d4defd0c26a5",
+    "metadata": {
+        "title": "PREDICTING THE EVOLUTION OF COVID-19 IN PORTUGAL USING AN ADAPTED SIR MODEL PREVIOUSLY USED IN SOUTH KOREA FOR THE MERS OUTBREAK",
+        "authors": [
+            {
+                "first": "Pedro",
+                "middle": [],
+                "last": "Teles",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Porto",
+                    "location": {
+                        "country": "Portugal"
+                    }
+                },
+                "email": ""
+            }
+        ]
+    },
+    "abstract": [],
+    "body_text": [
+        {
+            "text": "There is already abundant information on the new coronavirus and its spread worldwide [1] [2] [3] , as well as the risks it poses to the population. The person infected with the severe acute respiratory syndrome coronavirus 2 (SARS-cov-2) [4] may develop the disease called COVID-19, which manifests with mild to severe symptoms of fever, cough, shortness of breath and other signs [5] . In the most severe cases, the infection can lead to the development of acute respiratory distress syndrome (ARDS) causing respiratory failure, septic shock, or multiorgan failure, and even death [6] .",
+            "cite_spans": [
+                {
+                    "start": 86,
+                    "end": 89,
+                    "text": "[1]",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 90,
+                    "end": 93,
+                    "text": "[2]",
+                    "ref_id": null
+                },
+                {
+                    "start": 94,
+                    "end": 97,
+                    "text": "[3]",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 239,
+                    "end": 242,
+                    "text": "[4]",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 382,
+                    "end": 385,
+                    "text": "[5]",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 583,
+                    "end": 586,
+                    "text": "[6]",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "ref_spans": [],
+            "section": "INTRODUCTION."
+        },
+        {
+            "text": "There is yet a lot about this new coronavirus that is still unknown. Studies suggest that the case fatality rate of the virus is of about 3.5% in mainland China, but the authors suggest considering the range 0.2-3.0% [7] . However, this value seems to be much higher in Italy [8] , suggesting its strong dependence on demographics. In fact, the Chinese Center for Disease Control, released an analysis that showed that the case fatality rate ranged from 0% in children aged 0-9 years old to 14.8% in those over 80 [9] , which implies that countries with a high number of elderly citizens, as is the case of Italy and Portugal, are more prone to having higher death rates. The quick spread of the virus in Europe has led the WHO to declare Europe as the new epicentre of the disease on the 13th of March of 2020 [10] . The rapid growth of the number of active cases presenting severe symptoms has saturated the health services in most countries in the continent, especially in Italy [11] . It is yet unknown when the epidemic will reach an end, but governments throughout Europe have implemented harsh measures to prevent and mitigate the spread of the virus. Yet, as of today there are as many as 77,394 confirmed cases on the European continent, in 46 territories, resulting in 3,457 deaths, and rising [2] [3] . In Portugal, the two first confirmed cases in the Portuguese territory were announced on the 2nd of March, which puts the country slightly behind the curve in the outbreak in the European continent. As of today, there are 642 confirmed cases, 2 deaths, and 3 recovered [12] . Also, the country is on lockdown since the 13th of March 2020, and the Portuguese Parliament declared a State of Emergency today (18th of March 2020). One of the questions many policy makers, and governments are asking themselves is how the spread is going to evolve in time. A timely idea of the amount of cases that will exist in a near future can allow governments and policy makers to act accordingly. In this study, I adapted a model of the SIR type used in South-Korea to model the evolution of the active cases of the MERS outbreak in the country back in 2015 [13] . Although there are other models being used [14] [15] , this model seemed most appropriate given that the MERS and the SARS-cov-2 are related illnesses, both provoked by a coronavirus strand, and with similar symptoms, although MERS was much deadlier. In order to fit the parameters and given that there is still very little data in the case of Portugal, I used the data of Italy instead. This allowed me to fit the curve of current active cases in Portugal with a model, which I then use, by implementing the control measure parameters predicted in the model to predict the future number of cases, in three different scenarios (the outof-control scenario, a scenario in which the government is successful in applying control measures and citizens mildly adhere to self-protection measures, and a scenario in which the government fails to completely apply control measures, yet citizens still adhere to some measure of self-protection).",
+            "cite_spans": [
+                {
+                    "start": 217,
+                    "end": 220,
+                    "text": "[7]",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 276,
+                    "end": 279,
+                    "text": "[8]",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 514,
+                    "end": 517,
+                    "text": "[9]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 811,
+                    "end": 815,
+                    "text": "[10]",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 982,
+                    "end": 986,
+                    "text": "[11]",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 1304,
+                    "end": 1307,
+                    "text": "[2]",
+                    "ref_id": null
+                },
+                {
+                    "start": 1308,
+                    "end": 1311,
+                    "text": "[3]",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 1583,
+                    "end": 1587,
+                    "text": "[12]",
+                    "ref_id": null
+                },
+                {
+                    "start": 2157,
+                    "end": 2161,
+                    "text": "[13]",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 2207,
+                    "end": 2211,
+                    "text": "[14]",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 2212,
+                    "end": 2216,
+                    "text": "[15]",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "ref_spans": [],
+            "section": "INTRODUCTION."
+        },
+        {
+            "text": "The model used is the model described in Xia et al [13] , which can be understood by the flow diagram shown in figure 1 (which was taken from the paper, page 4). In this model, S corresponds to the number of susceptible individuals; E, the number of exposed individuals; A, the number of asymptomatic infected cases; I, the total number of mild-to-severe infected patients. H, the number of hospitalized cases; R, the number of removed cases, and finally N, the total population of Portugal.",
+            "cite_spans": [
+                {
+                    "start": 51,
+                    "end": 55,
+                    "text": "[13]",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 111,
+                    "end": 119,
+                    "text": "figure 1",
+                    "ref_id": null
+                }
+            ],
+            "section": "METHODOLOGY."
+        },
+        {
+            "text": "\u03b21 is the transmission coefficient of the asymptomatic infected cases, \u03b22 is the transmission coefficient of the symptomatic infected cases (mild infected person and severe patients) to the susceptible, \u03b23 is the transmission coefficient of the hospitalized cases to the susceptible, 1/\uf073 is the mean incubation period, 1/\uf06c is the mean time between symptom onset to hospitalization, 1/k1 is the mean infectious period of asymptomatic infected person for survivors, 1/k2 is the mean duration for hospitalized cases for survivors, 1/\uf064 is the mean time from hospitalization to death, \u03b3 is the clinical outbreak rate in all the infected cases. The time unit is 1 day. Figure 1 . Flow chart of the SIR-type model used in this work, taken from [13] The set of differential equations can then be written as: (1)",
+            "cite_spans": [
+                {
+                    "start": 737,
+                    "end": 741,
+                    "text": "[13]",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 663,
+                    "end": 671,
+                    "text": "Figure 1",
+                    "ref_id": null
+                }
+            ],
+            "section": "METHODOLOGY."
+        },
+        {
+            "text": "Given that the available data for covid-19 is still very preliminary, the model was further adapted. the only parameters that were considered \"known\" were the mean incubation time, which was taken as 1/\uf073 =5.1 days from the literature (here using the median as equal to the mean) [16] , and the mean infectious period of asymptomatic people, where a conservative estimate of 1/k1=14 days was used. All other parameters were taken to be \"unknown\". Furthermore, and because the fitting of the model was difficult to achieve, I took \u03b21= \u03b22 = \u03b23 as a first approximation, meaning that the mean transmission coefficient is the same independently of type and setting of the transmission. Finally, unlike Xia et al [13] , I consider that the epidemic starts with only one person infected (I0=1), being the rest of the values 0, except for S0 which is simply N-1. See table 1 for a breakdown of the different parameters of this model.",
+            "cite_spans": [
+                {
+                    "start": 279,
+                    "end": 283,
+                    "text": "[16]",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 707,
+                    "end": 711,
+                    "text": "[13]",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "ref_spans": [],
+            "section": "METHODOLOGY."
+        },
+        {
+            "text": "The solving of the system of differential equations was performed using the Mathematica code [17] , which also allows for the use of fittable parameters, using the function \"NonLinearModelFit\" [18] . Given that there is still very little data for Portugal, the data for Italy was used as proxy. This seems like the most reasonable approach (instead of using data from China or another Asian country), given the cultural and health system proximity between the two countries. In order to determine the parameters \uf06c\uf02c \uf064\uf02c I used the number of deaths, as reported by the Italian ministry of Health and available online [19] . For the estimation of the value of k2, the number of recovered was used. After determining the values for these parameters, they were used to fit the curve of infected cases for Portugal, where the values of \uf062=\uf062\uf031=\uf062\uf032=\uf062\uf033 and \uf067 were fitted to obtain a model. This model was then used to estimate the future evolution of future cases in Portugal, according to three different scenarios:",
+            "cite_spans": [
+                {
+                    "start": 93,
+                    "end": 97,
+                    "text": "[17]",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 193,
+                    "end": 197,
+                    "text": "[18]",
+                    "ref_id": null
+                },
+                {
+                    "start": 614,
+                    "end": 618,
+                    "text": "[19]",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "ref_spans": [],
+            "section": "METHODOLOGY."
+        },
+        {
+            "text": "\u2022 Out-of-control scenario (nothing done, the virus is free to spread);",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "METHODOLOGY."
+        },
+        {
+            "text": "\u2022 Scenario in which the government takes severe mitigating measures and the population mildly adheres to self-protecting measures; \u2022 Scenario in which the government fails to implement mitigating measures, yet still implements some, and the population mildly adheres to selfprotecting measures.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "METHODOLOGY."
+        },
+        {
+            "text": "3.1. Fitting of parameters \uf06c and \uf064 (Italy).",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "RESULTS."
+        },
+        {
+            "text": "The number of deaths in Italy was taken from [18], and the set of differential equations described in eq. 1 fitted to obtain the best possible fit for parameters \uf06c and \uf064\uf02e An R2 value of 0.99255 was obtain with the fit. The rest of the parameters are presented in table 3 . Results are shown in figure 1. is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 269,
+                    "end": 270,
+                    "text": "3",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "ref_spans": [],
+            "section": "RESULTS."
+        },
+        {
+            "text": "The copyright holder for this preprint . https://doi.org/10.1101/2020.03.18.20038612 doi: medRxiv preprint",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "As can be seen, in the case of recovered cases, the fit has not the same quality as the fit in 3.1. This is further evidenced by figure 2, where a graphical representation of the fit is shown. After the two previous procedures, we now have all the parameters we need to fit Eq. 1 to the number of Portuguese active cases, in order to determine the value of \uf062 and \uf067\uf02e The number of Portuguese active cases was taken from [20], which is updated daily.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "The values previously obtained of parameters \uf06c\uf02c \uf064\uf02c and k2 were used. As explained previously, because the fitting was difficult to obtain, as a first approximation, we considered \u03b21= \u03b22 = \u03b23. The obtained values for \uf062 and \uf067 are given in table 4. is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "The copyright holder for this preprint . A graphical depiction of the fitted model is given in figure 3 . In this scenario, the out-of-control scenario, in which the corona virus would be \"free\" to spread within the country would lead to a pic of ~40,000 infected around the 6th of April 2020. A scenario that will very likely be avoided given the strong containment measures implemented by the government. . CC-BY-ND 4.0 International license It is made available under a is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 95,
+                    "end": 103,
+                    "text": "figure 3",
+                    "ref_id": "FIGREF3"
+                }
+            ],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "The copyright holder for this preprint . https://doi.org/10.1101/2020.03.18.20038612 doi: medRxiv preprint",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "The fitting of these parameters was difficult to obtain. There is enough systematic error and lack of statistics to make the present results very unreliable. In order to obtain the parameters for \uf06c\uf02c\uf064\uf02c and k2, an ersatz value for \uf067 had to be given. In this model, \uf067 is originally defined as \"the clinical outbreak rate in all the infected cases\", which is in itself difficult to understand what it means. In the cases of the fits of \uf06c\uf02c\uf064\uf02c and k2, the ersatz value used for \uf067 had a very strong impact in the results of the other parameters. In fact, as it comes multiplied with \uf073 in the transfer from compartment E(t) to compartments A(t) and S(t), I think the high variation in this value could very well be due to the huge uncertainty there is at the moment for the appropriate incubation time of this virus, which some authors claim can be of up to 27 days [21] , although this number is probably an outlier. Finally, a case of an incubation period of 18 days seems to have been confirmed by a recent study [22] . The other parameters are somewhat less elusive. The obtained value for \uf067=0.0168 is 50% the value obtained by Xia et al [13] of 0.0348, which shows the difference in case fatality rates between the SARS-covid-2 (7.2% currently for Italy), and MERS (estimated at 34%), but then again the value should be 20% of this value and not 50%, further implying that the case fatality rate of the SARScovid-2 is still difficult to determine, and could be higher than previously thought.",
+            "cite_spans": [
+                {
+                    "start": 857,
+                    "end": 861,
+                    "text": "[21]",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 1007,
+                    "end": 1011,
+                    "text": "[22]",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 1133,
+                    "end": 1137,
+                    "text": "[13]",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Discussion of the obtained values for \uf06c\uf02c\uf064\uf02c k2, \uf062\uf02c and \uf067\uf02e"
+        },
+        {
+            "text": "Finally, from the obtained values it is also possible to determine a value for the basic reproduction number R0, which here I take as being simply the value R0=\uf062\uf02f\uf073=5.916 which demonstrates how strong the capacity for spreading of this particular virus is. In table 4, the final values of the obtained parameters are given. ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Discussion of the obtained values for \uf06c\uf02c\uf064\uf02c k2, \uf062\uf02c and \uf067\uf02e"
+        },
+        {
+            "text": "The paper by Xia et al [13] further presents an extra 7 parameters to take into account control measures in time evolution of the epidemic. These parameters are meant to take into account two things: -Isolation and monitoring measures taken by the government (parameters d1, d2, d3, and d4); -Self-protection measures taken by the population (parameters l1, l2, and l3).",
+            "cite_spans": [
+                {
+                    "start": 23,
+                    "end": 27,
+                    "text": "[13]",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "ref_spans": [],
+            "section": "DIFFERENT SCENARIOS FOR THE EVOLUTION OF SARS-COVID-2 IN PORTUGAL."
+        },
+        {
+            "text": ". CC-BY-ND 4.0 International license It is made available under a is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity. (2)",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "DIFFERENT SCENARIOS FOR THE EVOLUTION OF SARS-COVID-2 IN PORTUGAL."
+        },
+        {
+            "text": "The l1, l2, and l3 parameters are basically multiplication factors for the transmission parameter \uf062, so in our model we only consider one value for it as we did for \uf062. The d1, d2, d3, and d4 parameters are summed to the parameters of spread between the infected, asymptomatic and hospitalized cases, further stressing their connection to implemented government measures. The values provided by Xia et al [13] , when applied to the Portuguese case, seem to provide a very unrealistic scenario, in which the values would immediately start to diminish. Perhaps this made sense in the case of the MERS epidemic, given that it was much more localised that the one provoked by this virus. As such, and for the lack of a better model, I devised two different scenarios in addition to the \"outof-control\" scenario described in the previous section:",
+            "cite_spans": [
+                {
+                    "start": 404,
+                    "end": 408,
+                    "text": "[13]",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "ref_spans": [],
+            "section": "DIFFERENT SCENARIOS FOR THE EVOLUTION OF SARS-COVID-2 IN PORTUGAL."
+        },
+        {
+            "text": "\u2022 Scenario in which the government takes severe mitigating measures and the population mildly adheres to self-protecting measures (scenario 1); \u2022 Scenario in which the government fails to implement mitigating measures, yet still implements some, and the population mildly adheres to selfprotecting measures (scenario 2).",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "DIFFERENT SCENARIOS FOR THE EVOLUTION OF SARS-COVID-2 IN PORTUGAL."
+        },
+        {
+            "text": "The values for these scenarios are given in table 5. [13] . In the second scenario I keep the 50% reduction in the transmission rate but diminish the efforts of the government by half. Results are shown in figure 4 . Results show that measures can be effective in \"flattening the curve\", as it has come to be called this effect in recent times. In the first scenario the effectiveness of the control measures seems to be at a maximum, and a maximum of just about 700 cases would be reached. This seems unlikely as of today, there are 641 active cases in the country. In scenario 2, the maximum is shifted to the 20th of April, reaching a maximum number of ~7,000 active cases in the country. In this scenario, the transmission rate has been cut to a half, but the government has not been effective in implementing control measures. As said previously, in the out-of-control scenario, the peak would be reached at about ~40,000 people.",
+            "cite_spans": [
+                {
+                    "start": 53,
+                    "end": 57,
+                    "text": "[13]",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 206,
+                    "end": 214,
+                    "text": "figure 4",
+                    "ref_id": "FIGREF6"
+                }
+            ],
+            "section": "DIFFERENT SCENARIOS FOR THE EVOLUTION OF SARS-COVID-2 IN PORTUGAL."
+        },
+        {
+            "text": "Given the huge uncertainties concerning these numbers, and the current lack of knowledge of the ongoing epidemic, it is very hard to make sense of its evolution, even using well-established SIR methods. The current work makes a series of assumptions which may or may not be proven correct in the future, including the incubation period of the virus, which is still not well-known. This proved to be a major source of uncertainty to fit the results, because it had a great influence in the other parameters, especially parameter \uf067, which seems to describe a probability of the person being exposed to the virus being symptomatic or not. Instead this parameter seems to behave in this study as an indicator of the huge uncertainty of the value for the incubation period. Finally, epidemiologists and pathologists will tell you that these parameters, unlike what is considered in this study, are not only not constant, but dependent on time, location, culture, and other factors. It is therefore particularly hard to model the current epidemic of covid-19. Also, this study takes into account the particular situation for one country (Portugal), and we know that in globalised times, the likelihood that new foci of infections arise from outside visitors is also very high. Although currently most government have implemented serious travel restrictions, it is now well-known exactly how this parameter could affect this model, which does not take that into account. In fact, one of the major issues with the SARS-covid-2 virus is that, unlike the other SARS, it seems to be much less contained locally, as is evident by the amount of countries afflicted. The amount of actual active cases is another clear source of uncertainty. This model takes the values of active cases and compares them with official confirmed numbers, which not only may be smaller than the actual cases, as are released at an administratively defined time, which probably does not correspond to something realistic.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "LIMITATIONS OF THIS STUDY AND SCOPE OF APPLICATION"
+        },
+        {
+            "text": "The author believes that the values obtained in this study should be taken qualitatively rather than quantitatively. One can think of the scenarios as defining two limits of a likelihood interval, and as such, the actual figure of maximum number of active cases in Portugal will likely be in the interval ~700-7,000 between the 9th-20th of April. This can perhaps serve to advise the competent authorities in taking the appropriate measures. It also serves to show the importance of control and self-protecting measures. It is possible to bring down the number of affected people by following the recommendations of the WHO and health authorities. Without them, this model predicts that the figures of active cases would reach a staggering ~40,000 people. It also shows that with the appropriate measures this can be indeed brought down. Hopefully that will be the case not just in Portugal, but in the rest of the World.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "LIMITATIONS OF THIS STUDY AND SCOPE OF APPLICATION"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "Novel Coronavirus (2019-nCoV) situation reports -World Health Organization",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "Coronavirus Disease (COVID-19) -Research and Statistics",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "18",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "The species Severe acute respiratory syndrome-related coronavirus: classifying 2019-nCoV and naming it SARS-CoV-2",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Gobalenya",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Baker",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Baric",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Nature Microbiology",
+            "volume": "",
+            "issn": "",
+            "pages": "1--9",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/s41564-020-0695-z.PMID32123347"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Epidemiological and clinical characteristics of 99 cases of 2019 novel coronavirus pneumonia in Wuhan, China: a descriptive study",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Qu",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Gong",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "395",
+            "issn": "",
+            "pages": "507--520",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(20)30211-7"
+                ],
+                "PMID": [
+                    "32007143"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "COVID-19: what is next for public health",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Heymann",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Shindo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "WHO Scientific and Technical Advisory Group for Infectious Hazards",
+            "volume": "395",
+            "issn": "",
+            "pages": "30374--30377",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/s0140-6736(20"
+                ],
+                "PMID": [
+                    "32061313"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Case-fatality estimates for COVID-19 calculated by using a lag time for fatality",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Wilson",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kvalsvig",
+                    "suffix": ""
+                },
+                {
+                    "first": "Telfar",
+                    "middle": [],
+                    "last": "Barnard",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Baker",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "Emerg Infect Dis",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "Why Deaths from Coronavirus Are So High in Italy, Rachael Rettner, LiveScience on March",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "10",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF10": {
+            "ref_id": "b10",
+            "title": "Novel Coronavirus Pneumonia Emergency Response Epidemiology Teamexternal icon. [The Epidemiological Characteristics of an Outbreak of",
+            "authors": [],
+            "year": 2019,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "Novel Coronavirus Diseases (COVID-19) in China",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF13": {
+            "ref_id": "b13",
+            "title": "WHO Director-General's opening remarks at the media briefing on COVID-19 -13",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "The Atlantic",
+            "authors": [],
+            "year": 2020,
+            "venue": "The Extraordinary Decisions Facing Italian Doctors, Yascha Mounk",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF15": {
+            "ref_id": "b15",
+            "title": "Modeling the Transmission of Middle East Respirator Syndrome Corona Virus in the Republic of Korea Xia",
+            "authors": [
+                {
+                    "first": "Z-Q",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Xue",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y-K",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "G-Q",
+                    "middle": [],
+                    "last": "",
+                    "suffix": ""
+                },
+                {
+                    "first": "Jin",
+                    "middle": [
+                        "Z"
+                    ],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "PLoS ONE",
+            "volume": "10",
+            "issn": "12",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "A Time-dependent SIR model for COVID-19",
+            "authors": [
+                {
+                    "first": "Yi-Cheng",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Ping-En",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "arXiv": [
+                    "arXiv:2003.00122v1"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "ref_id": "b17",
+            "title": "Risk Assessment of Novel Coronavirus COVID-19 Outbreaks Outside China",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "The incubation period of coronavirus disease 2019 (COVID-19) from publicly reported confirmed cases: Estimation and application",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Lauer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Ann Intern Med",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.7326/M20-0504"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "ref_id": "b20",
+            "title": "Mathematica, Version 12",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF21": {
+            "ref_id": "b21",
+            "title": "Dipartimento della Protezione Civile COVID-19 Italia -Monitoraggio della situazione",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF22": {
+            "ref_id": "b22",
+            "title": "Coronavirus incubation could be as long as 27 days, Chinese provincial government says -Reuters",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF23": {
+            "ref_id": "b23",
+            "title": "Presumed Asymptomatic Carrier Transmission of COVID-19",
+            "authors": [
+                {
+                    "first": "Jama",
+                    "middle": [],
+                    "last": "Bai",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yao",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "JAMA",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1001/jama.2020.2565"
+                ]
+            }
+        }
+    },
+    "ref_entries": {
+        "FIGREF1": {
+            "text": "Graphical representation of the fitted model to the Italian government official recoveries. 3.3. Fitting of parameters \uf062 and \uf067 (Portugal).",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Graphical representation of the fitted model to the Portuguese government official active cases.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Graphical representation of the different scenarios considered in this study.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": "The different parameters of the model described by Eq. 1",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table of fitted parameters \uf06c and \uf064 as obtained using \"FindFit\" in Mathematica Figure 1. Graphical representation of the fitted model to the Italian government official death toll. 3.2. Fitting of parameter k2 (Italy). Now, using the values for \uf06c and \uf064 found in 3.1, parameter k2 was obtained again with a fit of Eq. 1, but now to the number of recovered cases in Italy, which again was taken from [18]. The best possible fit for k2 gave an R2 value of 0.86178 was obtain with the fit. The rest of the parameters are presented in table 3.",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Table of fitted parameter k2 as obtained using \"FindFit\" in Mathematica",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF3": {
+            "text": "Table of fitted parameters \uf062 and \uf067 as obtained using \"NonLinearModelFit\" in Mathematica",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF4": {
+            "text": "The obtained parameters of the model described by Eq. 1",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF5": {
+            "text": "Control parameters of the model described by Eq. 2",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": []
+}

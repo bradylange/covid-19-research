@@ -1,0 +1,1092 @@
+{
+    "paper_id": "c6d525a29a5c98edfac25678a34e2d91aab461c7",
+    "metadata": {
+        "title": "COVID-19 outbreak in Algeria: A mathematical model to predict the incidence",
+        "authors": [
+            {
+                "first": "Mohamed",
+                "middle": [],
+                "last": "Hamidouche",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "Introduction: Since December 29, 2019 a pandemic of new novel coronavirus-infected pneumonia named COVID-19 has started from Wuhan (China) has led to 254 996 confirmed cases until midday March 20, 2020. Sporadic cases have been imported worldwide, in Algeria, the first case reported on February 25, 2020 was imported from Italy, and then the epidemic has spread to other parts of the country very quickly with 90 confirmed cases until March 19, 2020.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "It is crucial to estimate the cases number growth in the early stages of the outbreak, to this end, we have implemented the Alg-COVID-19 Model which allows to predict the incidence and the reproduction number R0 in the coming months in order to help decision makers.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "The Alg-COVIS-19 Model initial equation (1) estimates the incidence (cases number) at (t) prediction time using two parameters: the reproduction number (R0) and the serial interval (SI) Results: We found R0=2.56 (95% CI 2.16-2.98) based on actual incidence at the first 23 days, using the serial interval SI= 4,4 and the prediction time t=23. The herd immunity HI estimated is HI=61%. Also, The Covid-19 incidence predicted with the Alg-COVID-19 Model fits closely the actual incidence during the first 23 days of the epidemic in Algeria (Fig. ",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 538,
+                    "end": 543,
+                    "text": "(Fig.",
+                    "ref_id": null
+                }
+            ],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "On December 29, 2019, Wuhan, the capital city of Hubei Province in Central China, has reported four cases of pneumonia with unknown etiology (unknown cause), the next day, the WHO China Country Office was informed (WHO 2020) about this pneumonia cases that were found to have a link with Huanan seafood and animal market in Wuhan, the Centers for Disease Control and Prevention (CDC) and Chinese health authorities determined and announced later that a novel coronavirus denoted as Wuhan (CoV) had caused the pneumonia outbreak (CDC 2020) . Since then, the outbreak has rapidly spread over a short span of time and has received considerable global attention.",
+            "cite_spans": [
+                {
+                    "start": 214,
+                    "end": 224,
+                    "text": "(WHO 2020)",
+                    "ref_id": null
+                },
+                {
+                    "start": 355,
+                    "end": 383,
+                    "text": "Control and Prevention (CDC)",
+                    "ref_id": null
+                },
+                {
+                    "start": 528,
+                    "end": 538,
+                    "text": "(CDC 2020)",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "On January 7, 2020 the etiological agent of the outbreak was identified as a novel coronavirus (2019-nCoV) and its gene sequence was quickly submitted (GenBank 2019), the coronavirus was renamed COVID-19 by WHO on February 12, 2020. It has since been identified as a zoonotic coronavirus, similar to SARS and MERS coronaviruses. (Ying, et al. 2020) On January 30, WHO announced the listing of this novel coronavirus-infected pneumonia (NCP) as a \"public health emergency of international concern\", A total of 254 996 confirmed cases of infection with COVID-19, including 10444 deaths have been reported worldwide as on midday March 20 th , 2020 (WHO 2020).",
+            "cite_spans": [
+                {
+                    "start": 329,
+                    "end": 348,
+                    "text": "(Ying, et al. 2020)",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Sporadic cases have been imported to Europe, Africa and North and South America via returning travellers from China. In Algeria, the first case of COVID-19 was reported on February 25, 2020, when an Italian national tested positive in Ouargla region in the south of the country, a few days later, on March 1, 2020, two cases were reported in Blida region in the North of Algeria, following their contacts with two Algerian nationals who came from France for holidays, they were detected positive after their return to France, since then, a COVID-19 outbreak has started in this region (Blida) that form a cluster of more than 5,4 million inhabitants with the surrounding cities (Algiers, Boumerdes, Tipaza) (Algerian Ministry of Health 2020, ONSA 2020), now, the epidemic is spreading to other parts of the country, until March 20, 2020, the Algerian authorities have declared 93 confirmed cases with a fatality rate of 9.6% (9 deaths) (Table 1) (Algerian Ministry of Health 2020).",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Meanwhile, there is considerable uncertainty as to the extent of the epidemic and its parameters, the COVOD-19 reproduction number (R0) has been estimated in various studies, they found, 2,35 (95% CI 1.15-4.77) (Kucharski, et al. 2020) , two studies used stochastic methods to estimate R0 have reported a range of 2.2 to 2.68 with an average of 2.44. (Joseph, et al. 2020 , Riou et Althaus 2020 , Six studies that used mathematical methods to estimate R0 produced a range from 1.5 to 6.49 with an average of 4.2. (Shen, et al. 2020 , Read, et al. 2020 , Chong, et al. 2020 , Natsuko, et al. 2020 , Tang, et al. 2020 The three studies using statistical methods such as exponential growth estimated an R0 ranging from 2.2 to 3.58, with an average of 2.67. , Zhao, et al. 2020 . Also, the COVID-19 fatality rate vary by region from 0.39% in Norway to 8,3% in Italy, in China the fatality rate is 4%, (Wilson, et al. 2020 , Johns Hopkins 2020 , however, the highest mortality rate remain in Algeria at 9,6% until March 20, 2020 (Algerian Ministry of Health 2020)",
+            "cite_spans": [
+                {
+                    "start": 211,
+                    "end": 235,
+                    "text": "(Kucharski, et al. 2020)",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 351,
+                    "end": 371,
+                    "text": "(Joseph, et al. 2020",
+                    "ref_id": null
+                },
+                {
+                    "start": 372,
+                    "end": 394,
+                    "text": ", Riou et Althaus 2020",
+                    "ref_id": null
+                },
+                {
+                    "start": 513,
+                    "end": 531,
+                    "text": "(Shen, et al. 2020",
+                    "ref_id": null
+                },
+                {
+                    "start": 532,
+                    "end": 551,
+                    "text": ", Read, et al. 2020",
+                    "ref_id": null
+                },
+                {
+                    "start": 552,
+                    "end": 572,
+                    "text": ", Chong, et al. 2020",
+                    "ref_id": null
+                },
+                {
+                    "start": 573,
+                    "end": 595,
+                    "text": ", Natsuko, et al. 2020",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 596,
+                    "end": 615,
+                    "text": ", Tang, et al. 2020",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 754,
+                    "end": 773,
+                    "text": ", Zhao, et al. 2020",
+                    "ref_id": null
+                },
+                {
+                    "start": 897,
+                    "end": 917,
+                    "text": "(Wilson, et al. 2020",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 918,
+                    "end": 938,
+                    "text": ", Johns Hopkins 2020",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "In the early stages of a new infectious disease outbreak, as COVID-19 in Algeria, it is crucial to estimate the transmission dynamics and inform predictions about potential future epidemic growth (Viboud, et al. 2018) , it can provide insights into the epidemiological situation which help decision makers to adapt the health system capacities, thus, a prediction Model can help to do that and identify whether outbreak control measures are having a measurable effect or not (Funk, et al. 2017 , Riley, et al. 2003 and guide the design of alternative interventions (Kucharski, et al. 2015) , in addition, a prediction Model can be updated to help estimate risk to other countries (Cooper, et al. 2006) .",
+            "cite_spans": [
+                {
+                    "start": 196,
+                    "end": 217,
+                    "text": "(Viboud, et al. 2018)",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 475,
+                    "end": 493,
+                    "text": "(Funk, et al. 2017",
+                    "ref_id": null
+                },
+                {
+                    "start": 494,
+                    "end": 514,
+                    "text": ", Riley, et al. 2003",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 565,
+                    "end": 589,
+                    "text": "(Kucharski, et al. 2015)",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 680,
+                    "end": 701,
+                    "text": "(Cooper, et al. 2006)",
+                    "ref_id": "BIBREF3"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "To this end, we have implemented the Alg-COVID-19 Model which allows to predict the number of new cases (incidence) in the coming weeks, and to calculate the actual reproduction number (R0), consequently, this Model can show hospitals what to expect in terms of Covid-19 patients, the percentage who need to be in an intensive care unit (ICU) or on a ventilator and the future number of deaths based on a given data. . CC-BY 4.0 International license It is made available under a is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "The copyright holder for this preprint . https://doi.org/10. 1101 ",
+            "cite_spans": [
+                {
+                    "start": 61,
+                    "end": 65,
+                    "text": "1101",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "We retrieved information on cases number with confirmed COVID-19 infection based on official reports from governmental institutes in Algeria (Algerian Ministry of Health 2020).",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Epidemiological data"
+        },
+        {
+            "text": "In order to predict the cumulative incidence (cases number) of COVID-19 Algerian epidemic in the coming weeks we used the mathematical model (Alg-COVID-19) defined as: The approach implemented to estimate the basic reproduction numbers (R0) in this model is to calculate the average R0 using the real chronological incidence (case number) during the first 23 days of the COVID-19 Algeria epidemic between February 25 and March 19, 2020, so that, we used the equation (3) derived from the equation (1). The R0 will be used also to calculate the herd immunity (HI) needed to stop the epidemic spontaneously based on the equation 4.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "The mathematical Model"
+        },
+        {
+            "text": ". CC-BY 4.0 International license It is made available under a is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "The mathematical Model"
+        },
+        {
+            "text": "The copyright holder for this preprint . ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "The serial interval (SI) is the time between symptom onset of a primary and secondary case, a previous studies reported that (SI = 4.4\u00b13.17) days (Chong, et al. 2020 ), so we used this value in our model to predict the incidence.",
+            "cite_spans": [
+                {
+                    "start": 146,
+                    "end": 165,
+                    "text": "(Chong, et al. 2020",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Estimation of the serial interval (SI)"
+        },
+        {
+            "text": "This study was conducted using Excel 2013 and STATA/IC 15 software",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Statistical analysis and software"
+        },
+        {
+            "text": "Without considering the prevention measures and other factors, this paper focused on the predicted COVID-19 incidence at any time of the epidemic using Alg-COVID-19 Model (equation 1), based on three parameters, namely, the average reproduction number based on the actual incidence at the first 23 days R0=2.5685 (95% CI 2.16-2.98) (equation 3), the serial interval (SI=4.4) and the prediction time (t) we are looking for. The herd immunity (HI) estimated using the (equation 4) is HI=61%.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "The initial parameters used in Alg-COVID-19 Model"
+        },
+        {
+            "text": "The Covid-19 incidence (cases number) predicted with the Alg-COVID-19 Model fits closely the actual incidence during the first 23 days of the epidemic in Algeria (Fig. 1.A) , this allows us to use this Model to predict the Covid-19 incidence in the next months of the epidemic (Fig.   2 .B).",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 162,
+                    "end": 172,
+                    "text": "(Fig. 1.A)",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 277,
+                    "end": 286,
+                    "text": "(Fig.   2",
+                    "ref_id": null
+                }
+            ],
+            "section": "Model fitting"
+        },
+        {
+            "text": "The estimations presented by this Model are based on the first 23 days data and cover the next months of COVID-19 epidemic in Algeria, according to that, the number of cases will exceed 5000 on the 40 th day (April 5 th ) and it will double to 10000 on 43th day of the epidemic (April 8 th ), thus, exponential phase will begin (Table 2; Fig.1 .B) and increases continuously until reaching \u00e0 herd immunity of 61% or a serious preventive measures are considered.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 338,
+                    "end": 343,
+                    "text": "Fig.1",
+                    "ref_id": "FIGREF2"
+                }
+            ],
+            "section": "Alg-COVIS-19 Model results"
+        },
+        {
+            "text": ". CC-BY 4.0 International license It is made available under a is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Alg-COVIS-19 Model results"
+        },
+        {
+            "text": "The copyright holder for this preprint . https: //doi.org/10.1101 //doi.org/10. /2020 Case numbers",
+            "cite_spans": [
+                {
+                    "start": 48,
+                    "end": 65,
+                    "text": "//doi.org/10.1101",
+                    "ref_id": null
+                },
+                {
+                    "start": 66,
+                    "end": 85,
+                    "text": "//doi.org/10. /2020",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "Alg-COVID-19 Model . CC-BY 4.0 International license It is made available under a is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Time (days)"
+        },
+        {
+            "text": "The copyright holder for this preprint . https://doi.org/10. 1101 (Kucharski, et al. 2020) , also, it is in the range of reproduction numbers of other studies mentioned below (Shen, et al. 2020 , Read, et al. 2020 , Chong, et al. 2020 , Natsuko, et al. 2020 , Tang, et al. 2020 ), on the other hand, the parameter that we cannot update and can affect the predictions is the serial interval (SI), we found two studies each one has different value that range from 4.4\u00b13,17 (Chong, et al. 2020) to 7.5 days (95% CI, 5.3 to 19) (Li, et al. 2020 ) , we used (SI=4.4) because of its standard deviation is not very large.",
+            "cite_spans": [
+                {
+                    "start": 61,
+                    "end": 65,
+                    "text": "1101",
+                    "ref_id": null
+                },
+                {
+                    "start": 66,
+                    "end": 90,
+                    "text": "(Kucharski, et al. 2020)",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 175,
+                    "end": 193,
+                    "text": "(Shen, et al. 2020",
+                    "ref_id": null
+                },
+                {
+                    "start": 194,
+                    "end": 213,
+                    "text": ", Read, et al. 2020",
+                    "ref_id": null
+                },
+                {
+                    "start": 214,
+                    "end": 234,
+                    "text": ", Chong, et al. 2020",
+                    "ref_id": null
+                },
+                {
+                    "start": 235,
+                    "end": 257,
+                    "text": ", Natsuko, et al. 2020",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 258,
+                    "end": 277,
+                    "text": ", Tang, et al. 2020",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 471,
+                    "end": 491,
+                    "text": "(Chong, et al. 2020)",
+                    "ref_id": null
+                },
+                {
+                    "start": 524,
+                    "end": 542,
+                    "text": "(Li, et al. 2020 )",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "This model is valid only when the majority of the population is vulnerable to COVID-19",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "infection, since it does not take into account the herd immunity acquired ongoing epidemic.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "In case of R0 decreases over the next weeks of the epidemic, Alg-COVID-19 Model can be revalidated by recalculating a new useful R0 (equation 3). However, this will happen only if the herd immunity rises spontaneously during the epidemic or the state act on one of the components of R0 by preventive measures (equation 2).",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "In the case of the Algerian COVID-19 epidemic, the model can be valid for the first few months if the herd immunity remain low and susceptible population size is not changed, thus, it is applicable whenever a new regional outbreak begins with a naive population. On the other hand, if the state implement a good preventive policy and set up measures to reduce the effective . CC-BY 4.0 International license It is made available under a is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "The copyright holder for this preprint . https://doi.org/10. 1101 contact rate, this will obviously reduce the R0 and the reproduction number after preventive measures (R1) can be calculated to estimate the implemented preventive actions effectiveness, and Alg-COVID-19 Model can be updated to fit the new R1 values.",
+            "cite_spans": [
+                {
+                    "start": 61,
+                    "end": 65,
+                    "text": "1101",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "After the 43 th day of the epidemic (April 8, 2020), the exponential phase 3 will probably announced, consequently, the response to the epidemic will change from trying to curb the spread of viruses on the territory to a strategy that lead to mitigate the effects of the epidemic wave, so that, after R0 and SI update, the model can be used to predict the hospitalization and ICU or on a under ventilator patients number, and also, predict the number of deaths that remain the highest in the wold (Algeria: 9.6%) since the start of the pandemic, without any concrete explanation. Case numbers",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "Alg-COVID-19 Model . CC-BY 4.0 International license It is made available under a is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Time (days)"
+        },
+        {
+            "text": "(which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10. 1101 ",
+            "cite_spans": [
+                {
+                    "start": 91,
+                    "end": 95,
+                    "text": "1101",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Time (days)"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "Algerian Ministry of Health",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "Estimation of the Time-Varying Reproduction Number of COVID-19 Outbreak in China",
+            "authors": [
+                {
+                    "first": "You",
+                    "middle": [],
+                    "last": "Chong",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Delaying the international spread of pandemic influenza",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Cooper",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Rj",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Pitman",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Edmunds",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Gay",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "PLoS Med",
+            "volume": "",
+            "issn": "3",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "The impact of control strategies and behavioural changes on the elimination of Ebola from Lofa County, Liberia",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Funk",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Ciglenecki",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Tiffany",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Philos Trans R Soc Lond B Biol Sci",
+            "volume": "2017",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "Nowcasting and forecasting the potential domestic and international spread of the 2019-nCoV outbreak originating in Wuhan, China: a modelling study",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Joseph",
+                    "suffix": ""
+                },
+                {
+                    "first": "Leung",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "Leung"
+                    ],
+                    "last": "Kathy",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Gabriel",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Et",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "THE LANCET",
+            "volume": "2020",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "Early dynamics of transmission and control of COVID-19: a mathematical modelling study",
+            "authors": [
+                {
+                    "first": "Adam",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Kucharski",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Lancet Infect Dis",
+            "volume": "11",
+            "issn": "20",
+            "pages": "30144--30148",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S1473-3099"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "Evaluation of the benefits and risks of introducing Ebola community care centers, Sierra Leone",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Kucharski",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Camacho",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Checchi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Emerg Infect Dis",
+            "volume": "21",
+            "issn": "",
+            "pages": "393--99",
+            "other_ids": {}
+        },
+        "BIBREF10": {
+            "ref_id": "b10",
+            "title": "Early Transmission Dynamics in Wuhan, China, of Novel Coronavirus-Infected Pneumonia",
+            "authors": [
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "NEJM",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "Transmission dynamics of 2019 novel coronavirus (2019-nCoV)",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "bioRxiv",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF12": {
+            "ref_id": "b12",
+            "title": "Report 3: Transmissibility of 2019-nCoV. COVID-19 Response Team",
+            "authors": [
+                {
+                    "first": "Imai",
+                    "middle": [],
+                    "last": "Natsuko",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF13": {
+            "ref_id": "b13",
+            "title": "ONSA. Office national des statistiques d'Alg\u00e9rie . 2020",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "Novel coronavirus 2019-nCoV: early estimation of epidemiological parameters and epidemic predictions",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Read",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Jre",
+                    "suffix": ""
+                },
+                {
+                    "first": "Dat",
+                    "middle": [],
+                    "last": "Bridgen",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Cummings",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Ho",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Jewell",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF15": {
+            "ref_id": "b15",
+            "title": "Transmission dynamics of the etiological agent of SARS in Hong Kong: impact of public health interventions",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Riley",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Donnelly",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Science",
+            "volume": "300",
+            "issn": "",
+            "pages": "1961--66",
+            "other_ids": {}
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "Pattern of early human-to-human transmission of Wuhan 2019-nCoV",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Riou",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Althaus",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF17": {
+            "ref_id": "b17",
+            "title": "Infectious Diseases of Humans: Dynamics and Control",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Roy",
+                    "suffix": ""
+                },
+                {
+                    "first": "May",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Robert",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF18": {
+            "ref_id": "b18",
+            "title": "Modelling the epidemic trend of the 2019 novel coronavirus outbreak in China",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Shen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Peng",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "Estimation of the Transmission Risk of 2019-nCov and Its Implication for Public Health Interventions",
+            "authors": [
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Biao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF20": {
+            "ref_id": "b20",
+            "title": "The RAPIDD Ebola forecasting challenge: synthesis and lessons learnt",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Viboud",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Gaffey",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Epidemics",
+            "volume": "22",
+            "issn": "",
+            "pages": "13--21",
+            "other_ids": {}
+        },
+        "BIBREF21": {
+            "ref_id": "b21",
+            "title": "Case-Fatality Risk Estimates for COVID-19 Calculated by Using a Lag Time for Fatality",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Wilson",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kvalsvig",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Telfar",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "Baker",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Emerg Infect Dis",
+            "volume": "26",
+            "issn": "10",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF22": {
+            "ref_id": "b22",
+            "title": "The reproductive number of COVID-19 is higher compared to",
+            "authors": [
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Ying",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "Gayle"
+                    ],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Wilder-Smith",
+                    "middle": [],
+                    "last": "Albert",
+                    "suffix": ""
+                },
+                {
+                    "first": "Rockl\u00f6v",
+                    "middle": [],
+                    "last": "Annelies",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Joacim",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Journal of Travel Medicine",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF23": {
+            "ref_id": "b23",
+            "title": "Preliminary estimation of the basic reproduction number of novel coronavirus (2019-nCoV) in China, from 2019 to 2020: A datadriven analysis in the early phase of the outbreak",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "The incidence (cases number) at t time R0: The reproduction number SI: The serial interval t: The prediction time Estimation of Basic Reproduction Number (R0) and the herd immunity The reproduction number is defined as the (average) number of new infections generated by one infected individual during the entire infectious period in a fully susceptible population. It can be also understood as the average number of infections caused by a typical individual during the early stage of an outbreak when nearly all individuals in the population are susceptible to infection. The basic reproduction number reflects the ability of an infection spreading under no control, it has three components (Roy, et al. 1992): R0= CB*N*D\u2026\u2026\u2026\u2026.(2) CB: effective contact rate (C: contact frequency, B: contact efficacy) N: susceptible population size D: infectious phase duration",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "A: Alg-COVID-19 Model match to actual data (Cases number) of the first 23 days of epidemic. B: Alg-COVID-19 Model of more than 2 months of epidemic.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "A: Alg-COVID-19 Model match to actual data (Cases number) of the first 23 days of epidemic. B: Alg-COVID-19 Model of more than 2 months of epidemic.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": "COVID-19 epidemic situation in Algeria until March 20, 2020. (Algerian Ministry of Health 2020)",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "A sum up of Alg-COVID-19 Model results (entire results on supplementary data)",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": [
+        {
+            "text": "The authors have no conflicts of interest to declare",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Conflict of Interest Statement"
+        }
+    ]
+}

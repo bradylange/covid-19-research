@@ -1,0 +1,852 @@
+{
+    "paper_id": "9063827ea238079db54e7ebddb628daad3d2b523",
+    "metadata": {
+        "title": "Forecasting Ultra-early Intensive Care Strain from COVID-19 in England",
+        "authors": [
+            {
+                "first": "Jacob",
+                "middle": [],
+                "last": "Deasy",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Emma",
+                "middle": [],
+                "last": "Rocheteau",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Katharina",
+                "middle": [],
+                "last": "Kohler",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Addenbrooke's Hospital",
+                    "location": {
+                        "postCode": "CB2 0QQ",
+                        "settlement": "Cambridge",
+                        "country": "UK"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Daniel",
+                "middle": [
+                    "J"
+                ],
+                "last": "Stubbs",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Addenbrooke's Hospital",
+                    "location": {
+                        "postCode": "CB2 0QQ",
+                        "settlement": "Cambridge",
+                        "country": "UK"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Pietro",
+                "middle": [],
+                "last": "Barbiero",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Mark",
+                "middle": [],
+                "last": "Cresham",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Pietro",
+                "middle": [],
+                "last": "Li\u00f2",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Ari",
+                "middle": [],
+                "last": "Ercole",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Addenbrooke's Hospital",
+                    "location": {
+                        "postCode": "CB2 0QQ",
+                        "settlement": "Cambridge",
+                        "country": "UK"
+                    }
+                },
+                "email": ""
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "The COVID-19 pandemic has led to unprecedented strain on intensive care unit (ICU) admission in parts of the world. Strategies to create surge ICU capacity requires complex local and national service reconfiguration and reduction or cancellation of elective activity. Theses measures require time to implement and have an inevitable lag before additional capacity comes on-line.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "An accurate short-range forecast would be helpful in guiding such di cult, costly and ethically challenging decisions.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "At the time this work began, cases in England were starting to increase. Here we present an attempt at an agile short-range forecast based on published real-time COVID-19 case data from the seven National Health Service commissioning regions in England (East of England, London, Midlands, North East and Yorkshire, North West, South East and South West). We use a Monte Carlo approach to model the likely impact of current diagnoses on regional ICU capacity over a 14 day horizon. Our model is designed to be parsimonious and based on plausible epidemiological data from the literature available.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "On the basis of the modelling assumptions made, ICU occupancy is likely to increase dramatically in the the days following the time of modelling. If the current exponential growth continues, 5 out of 7 commissioning regions will have more critically ill COVID-19 patients than there are ICU beds within two weeks. Despite variable growth in absolute patients, all commissioning regions are forecast to be heavily burdened under the assumptions used.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "Whilst, like any forecast model, there remain uncertainties both in terms of model specification and robust epidemiological data in this early prospective phase, it would seem that surge capacity will be required in the very near future. We hope that our model will help policy decision makers with their preparations. The uncertainties in the data highlight the urgent need for ongoing realtime surveillance to allow forecasts to be constantly updated using high quality local patient-facing data as it emerges.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "The emergence of a novel COVID-19 coronavirus pandemic has rapidly caused an enormous worldwide medical and socioeconomic impact since the first case emerged on November 16th 2019 [1] .",
+            "cite_spans": [
+                {
+                    "start": 180,
+                    "end": 183,
+                    "text": "[1]",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "There is a potential for cases of respiratory complications from such infectious outbreaks to overwhelm intensive care unit (ICU) capacity and this was seen previously with the influenza-A [H1N1] pandemic of 2009. The relatively large numbers of COVID-19 patients with hypoxaemic respiratory failure requiring ICU admission [1] for mechanical ventilation and high mortality (compared to seasonal influenza) is of particular concern in the current circumstances. In Northern Italy, an exponential increase in COVID-19 admissions rapidly overwhelmed normal ICU capacity [2] and surge capacity had to be created quickly.",
+            "cite_spans": [
+                {
+                    "start": 324,
+                    "end": 327,
+                    "text": "[1]",
+                    "ref_id": null
+                },
+                {
+                    "start": 568,
+                    "end": 571,
+                    "text": "[2]",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "It is currently unclear exactly why the ICUs in Italy were so badly a\u21b5ected and whether this will generalise to other countries: Both demographic factors and healthcare system structure are likely to be important. However, it is noteworthy that the UK compares poorly with other high-income countries-including Italy-in terms of available ICU bed capacity per capita [3] and so it is far from inconceivable that a similar pattern may emerge.",
+            "cite_spans": [
+                {
+                    "start": 367,
+                    "end": 370,
+                    "text": "[3]",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Whilst normal wards may be relatively straightforwardly re-purposed from a basic care perspective, this is more di cult for ICUs which are naturally constrained by the need for complex equipment and for the delivery of highly is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "The copyright holder for this preprint . 2: Regional demographics and expected critical care demand per case of COVID-19 stratified by region, each compared to ICU bed capacity per 100,000 people. Population is divided into age categories, and percentage of cases requiring ICU is divided into expected percentage of survivors and non-survivors. The numerical data can be seen in Table 1. obtain information on daily cases. We began extracting this data feed on 13/03/20 to give daily case data. Since this data was only publicly available in machine readable form recently, backward extrapolation was necessary for the small number of cases in the week before 13/03/20. This was achieved by scaling the previous countrywide new case estimates-which are available as a time series from the publicly available dashboard CC-BY 4.0 International license It is made available under a is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 380,
+                    "end": 388,
+                    "text": "Table 1.",
+                    "ref_id": null
+                }
+            ],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "The copyright holder for this preprint al. [6] . We model the ICU admission date according to this delay distribution which is considered to be normally distributed.",
+            "cite_spans": [
+                {
+                    "start": 43,
+                    "end": 46,
+                    "text": "[6]",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "Bed occupancy also requires estimates of the length of stay for patients currently in the ICU.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "The most up-to-date information indicates a median length of stay of approximately 8 days, with a wide interquartile range and positive skew [14, 15] . We model this with a gamma distribution (\u21b5 = 8, = 1).",
+            "cite_spans": [
+                {
+                    "start": 141,
+                    "end": 145,
+                    "text": "[14,",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 146,
+                    "end": 149,
+                    "text": "15]",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "We use a Monte Carlo simulation with 100 samples to link the expected daily incidence distribution to the expected excess ICU bed occupancy due to COVID-19. This involves sampling from the delay and length of stay distributions as well as the daily incidence distribution. We represent bed occupancy as a fraction of the total number of ICU beds in the commissioning region based on data from a snapshot in December 2019 [7] . Figure 3 shows the expected number of new COVID-19 patients per day assuming the extrapolated current exponential trend in England.",
+            "cite_spans": [
+                {
+                    "start": 421,
+                    "end": 424,
+                    "text": "[7]",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 427,
+                    "end": 435,
+                    "text": "Figure 3",
+                    "ref_id": "FIGREF3"
+                }
+            ],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "We note that all R 2 values are, on average, above 0.9 implying that, for now, new case growth in England is well modelled by exponential growth.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Results"
+        },
+        {
+            "text": "In London, the R 2 value for the fit is particularly high and the 95% confidence interval is tight demonstrating this region is likely to already be in a period of exponential growth of new cases.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Results"
+        },
+        {
+            "text": "However, the fit is less reliable in the North East and Yorkshire, a region wheres we have separately confirmed the trend of observed new cases to have the weakest correlation with the other is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Results"
+        },
+        {
+            "text": "The copyright holder for this preprint . Figure 4 : Projected regional COVID-19 ICU occupancy as a percentage of regional capacity the seven National Health Service commissioning regions in England. crucial. Using agile project management methodologies, we were able to develop a working model, documentation and web-implementation in less than one week.",
+            "cite_spans": [
+                {
+                    "start": 190,
+                    "end": 198,
+                    "text": "England.",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 41,
+                    "end": 49,
+                    "text": "Figure 4",
+                    "ref_id": "FIGREF4"
+                }
+            ],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "It is crucial to appreciate that both model and Whilst we believe this approach has merit in that our findings suggest that waiting for better data may mean forecasting is too late, there are some specific limitations which need to be discussed.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Discussion"
+        },
+        {
+            "text": "Crucially, we have used Public Health England published data for case ascertainment as this is publicly available and seems reasonable as the earliest available starting point. We recognise that this data is potentially flawed and does not 6 . CC-BY 4.0 International license It is made available under a is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Discussion"
+        },
+        {
+            "text": "The copyright holder for this preprint . https://doi.org/10.1101/2020.03.19.20039057 doi: medRxiv preprint recognise all cases within the wider population.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "However, for our needs we are specifically focused on the severe end of cases where, arguably, ascertainment bias is likely minimal due to the roll-out of routine testing for all critical care patients by PHE as part of the 'COVID Hospitalisation in England Surveillance System -CHESS' [18] . A persistent issue however is that case ascertainment and timing after symptom onset is unlikely to be uniform between healthcare settings or even over time in a single setting as the surveyed population varies. Thus the compatibility between our data and the literature is uncertain. Nevertheless, this will always be a limitation of any early modelling including that used in reference [10] .",
+            "cite_spans": [
+                {
+                    "start": 286,
+                    "end": 290,
+                    "text": "[18]",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 681,
+                    "end": 685,
+                    "text": "[10]",
+                    "ref_id": "BIBREF9"
+                }
+            ],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "The ICU bed estimates are assumed to be fixed at the December 2019 baseline. Whilst this may vary and modify our results in detail, we do not believe that this is likely to change so greatly as to alter our conclusions. Furthermore, we assume that each region behaves as a perfect 'pool' of beds in a way that they may be optimally allocated. Of course this is not necessarily the case, since inter-hospital ICU-to-ICU transfers are not always feasible for both operational and clinical reasons, so the patient load is not necessarily uniformly distributed. We do not have more granular data available to model this, but it is worth considering that it is very possible for an individual hospital to reach a locally critical capacity even before the region as a whole does. In this sense our predictions represent a 'best case' scenario.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "We have forecast the percentage COVID-19 bed requirements in isolation. In reality, the ICU must continue to provide 'business as usual' care for other types of patients. Since UK bed occupancy is typically greater than 80% and may frequently exceed 100%, it is clearly not the case that all open beds can simply be re-allocated for COVID-19 patients. Furthermore, we have assumed that all adult critical care beds can be used for level 3 or mechanically ventilated ICU patients and, operationally, this may also not be possible. Some specialist ICUs may not be able to reconfigure at all. Thus the precise percentage of additional COVID-19 patients which will actually exhaust routine capacity will vary from unit to unit, particularly in ICUs with a substantial post-operative elective surgical workload. Overall, it seems unlikely that any ICU could routinely accommodate the numbers forecast by our model without provision of surge capacity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "(which was not peer-reviewed)"
+        },
+        {
+            "text": "Early warning of an impending need for ICU surge capacity is crucial if there is to be su cient time to re-configure services to provide additional capacity. We have shown that ultra-early data can be used to make time-sensitive forecasts of ICU occupancy. We show, subject to our assumptions, that it is credible that ICU requirements may become challenging within weeks. There remains a significant degree of uncertainty in the predictions due both to limitations of the reporting data and also modelling assumptions. This emphasises the need for the collection of realtime patient-facing local data by initiatives such as CHESS [18] and a dynamic approach to improving models as new data becomes available.",
+            "cite_spans": [
+                {
+                    "start": 631,
+                    "end": 635,
+                    "text": "[18]",
+                    "ref_id": "BIBREF19"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Conclusions"
+        },
+        {
+            "text": "Declarations of interest statement None declared.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Conclusions"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "Critical Care Utilization for the COVID-19 Outbreak in Lombardy, Italy: Early Experience and Forecast During an Emergency Response",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Grasselli",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Pesenti",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Cecconi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "JAMA",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "The variability of critical care bed numbers in Europe",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Rhodes",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Ferdinande",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Flaatten",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Guidet",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "Metnitz",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Moreno",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Intensive Care Med",
+            "volume": "38",
+            "issn": "10",
+            "pages": "1647--1653",
+            "other_ids": {}
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Modelling the impact of an influenza A/H1N1 pandemic on critical care demand from early pathogenicity data: the case for sentinel reporting",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Ercole",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Taylor",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Rhodes",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "K"
+                    ],
+                    "last": "Menon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Anaesthesia",
+            "volume": "64",
+            "issn": "9",
+            "pages": "937--941",
+            "other_ids": {}
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Modelling the impact of pandemic influenza A(H1N1) on UK paediatric intensive care demand",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Ercole",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "K"
+                    ],
+                    "last": "Menon",
+                    "suffix": ""
+                },
+                {
+                    "first": "O&apos;",
+                    "middle": [],
+                    "last": "Donnell",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Arch Dis Child",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Impact of non-pharmaceutical interventions (NPIs) to reduce COVID-19 mortality and healthcare demand",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "NHS Commissioning Region December 2019 ICU capacity snap-shot data",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "Public Health England CoViD-19 online data matched to NHS commissioning region",
+            "authors": [],
+            "year": null,
+            "venue": "Accessed: 14th March 2020 onwards to date",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "Estimates of the severity of COVID-19 disease",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Verity",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Okell",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Dorigatti",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Winskill",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Whittaker",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Imai",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "medRxiv",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF12": {
+            "ref_id": "b12",
+            "title": "China Statistical Yearbook;. Accessed: 17th March 2020 onwards to date",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "Clinical Characteristics of 138 Hospitalized Patients With 2019 Novel Coronavirus-Infected Pneumonia in Wuhan, China",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "JAMA",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF15": {
+            "ref_id": "b15",
+            "title": "Clinical course and outcomes of critically ill patients with SARS-CoV-2 pneumonia in Wuhan, China: a single-centered, retrospective, observational study",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Shu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Xia",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Lancet Respir Med",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "Clinical course and risk factors for mortality of adult inpatients with COVID-19 in Wuhan, China: a retrospective cohort study",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Fan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Lancet",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF18": {
+            "ref_id": "b18",
+            "title": "Code available from GitHub",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Deasy",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Rocheteau",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Kohler",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Stubbs",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Barbiero",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Li\u00f2",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "2020",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "COVID-19 Hospitalisation in England Surveillance System (CHESS)",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "England",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "2020",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Model timeline. Our model relies on a 10-day window for regression, constructed from recent observed data and estimated prior data. The model predicts two weeks into the future from the time of writing.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: Regional demographics and expected critical care demand per case of COVID-19 stratified by region, each compared to ICU bed capacity per 100,000 people. Population is divided into age categories, and percentage of cases requiring ICU is divided into expected percentage of survivors and non-survivors. The numerical data can be seen in Table 1.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "-by the average probability of a case falling in a given region over the observed days. Since the daily incidence of COVID-19 appears exponential (in line with what was observed in Italy [2]), we forecast the likely distributions of new COVID-19 diagnoses by extrapolating from the log of the daily incidence using ordinary least squares over the next 14 days. We chose this simple model which neglects pseudoreplication 3 .",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Projected new COVID-19 patients in the seven National Health Service commissioning regions in England. Exponential projections were calculated by an ordinary least squares fit on both estimates of previous values and reported recent values in log-space. regions. The log-linear fit produces a strong R 2 value in the non-London populous areas (the Midlands and the North West), strengthening the argument for exponential growth in areas where the virus has gained a foothold. Irrespective of how many of these cases translate into ICU patients, even the lower confidence bounds indicate more than 1000 new cases per day in all of the NHS commissioning regions in England within a week of writing.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "shows the projected additional ICU occupancy due to COVID-19 from our model over a 14 day horizon for each of the NHS commissioning regions as a percentage of total ICU beds normally commissioned. All source code has been made available at https://github.com/ariercole/ Cambridge_COVID-19_ICU [17]. In addition to our analysis and open-source code, an interactive version of our model is available at http://covid19icu.cl.cam.ac.uk. As documented cases in the literature evolve, we hope clinical and policy decision makers will be able to experiment based on their region or the statistics demonstrated by their cohort. Given the highly dynamic situation at the time this work was carried out, with model data changing on a daily basis, minimising model development time",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "parameter uncertainties are inevitable, particularly when predicting the behaviour of a novel virus in a new population, and this may radically a\u21b5ect our forecasts. However, we set out to provide the earliest possible data-driven forecast and must therefore explicitly accept the limita-tions of the data available at the time. Our approach has been to keep the model as parsimonious as possible with what we hope are plausible parameter estimates from the existing literature to give a 'ball park' estimate of early surge needs.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": "specialised care. Nevertheless, whilst di cult,there are a number of mechanisms by which ICU capacity can be increased in an emergency",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 1: Mortality and Critical Care Needs due to COVID-19 in England stratified by region along with ICU capacity (Data Sources:[6,7]).because, at the time of modelling, we do not have su cient data to look for the underlying autocorrelation structure in this time series robustly.Using early data from Verity et al. 2020[10] (reproduced inTable 1), we estimate the ICU mortality and ICU admission rate per case by standardising to the local population in each NHS",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": [
+        {
+            "text": "The authors would like to thank Ronan O'Leary and Isobel Ramsay for useful discusions as well as Mark Cresham for rapidly procuring compute facilities for our online model.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        }
+    ]
+}

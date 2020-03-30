@@ -1,0 +1,1127 @@
+{
+    "paper_id": "eac6f99c5187f0a254687b455c4fa8d59d190b3c",
+    "metadata": {
+        "title": "Development and validation of a single-step reverse transcriptase rapid loop-mediated isothermal amplification (RT-LAMP) system potentially to be used for reliable and high- throughput screening of COVID-19 Running title: Rapid diagnosis of COVID-19 by a LAMP assay",
+        "authors": [
+            {
+                "first": "Minghua",
+                "middle": [],
+                "last": "Jiang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "The Second Affiliated Hospital and Yuying Children's Hospital of Wenzhou Medical University",
+                    "location": {
+                        "addrLine": "Zhejiang Province",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Wenjie",
+                "middle": [],
+                "last": "Fang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Second Military Medical University",
+                    "location": {
+                        "settlement": "Shanghai",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Amir",
+                "middle": [],
+                "last": "Aratehfar",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Westerdijk Fungal Biodiversity Institute",
+                    "location": {
+                        "settlement": "Utrecht",
+                        "country": "The Netherlands"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "",
+                "middle": [],
+                "last": "Li",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Affiliated Hospital of Hebei University of Engineering",
+                    "location": {
+                        "settlement": "Hebei",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Liyan",
+                "middle": [],
+                "last": "Ling",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Pinghu Second People's Hospital",
+                    "location": {
+                        "settlement": "Zhejiang",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Hua",
+                "middle": [],
+                "last": "Fang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Pudong New Area People's Hospital",
+                    "location": {
+                        "settlement": "Shanghai",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Farnaz",
+                "middle": [],
+                "last": "Daneshnia",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Westerdijk Fungal Biodiversity Institute",
+                    "location": {
+                        "settlement": "Utrecht",
+                        "country": "The Netherlands"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Jian",
+                "middle": [],
+                "last": "Yu",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "The Second Affiliated Hospital and Yuying Children's Hospital of Wenzhou Medical University",
+                    "location": {
+                        "addrLine": "Zhejiang Province",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Wanqing",
+                "middle": [],
+                "last": "Liao",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Second Military Medical University",
+                    "location": {
+                        "settlement": "Shanghai",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Hao",
+                "middle": [
+                    "Pei"
+                ],
+                "last": "7#",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Wuxi No",
+                    "location": {}
+                },
+                "email": ""
+            },
+            {
+                "first": "Weihua",
+                "middle": [],
+                "last": "Pan",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Second Military Medical University",
+                    "location": {
+                        "settlement": "Shanghai",
+                        "country": "China"
+                    }
+                },
+                "email": "panweihua9@sina.com"
+            },
+            {
+                "first": "Cornelia",
+                "middle": [],
+                "last": "Lass-Fl\u00f6rl",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Medical University of Innsbruck",
+                    "location": {
+                        "settlement": "Innsbruck",
+                        "country": "Austria"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Hao",
+                "middle": [],
+                "last": "Pei",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "The recent pandemic of COVID-19 has involved tens of thousands of patients in numerous countries and the causative virus, SARS COV-2 is highly transmissible. Molecular diagnostic tools are central to containment of the virus and initiating proper clinical care. Rapidity, userfriendliness, and high degree of sensitivity and specificity are desirable features of diagnostic assays for screening purposes. Herein, we present a single step reverse transcriptase LAMP assay (RT-LAMP), which can detect up to 500 viral copies in 30 minutes. We challenged our assay with a large number of clinical samples collected from 47 confirmed cases and 213 negative patients. Our LAMP assay showed a high degree of sensitivity and specificity compared to two commercialized qRT-PCR assay as gold standard. We present a rapid RT-LAMP assay that could extend the capacity of laboratories to process 2.5 more clinical samples relative to qRT-PCR and potentially could be used for high-throughput screening purposes.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "A new virus causing pneumonia-like infection, COVID-19, which was found in Wuhan, Hubei Province, China, and to be linked to a seafood market has caused a serious crisis worldwide (1) .",
+            "cite_spans": [
+                {
+                    "start": 180,
+                    "end": 183,
+                    "text": "(1)",
+                    "ref_id": "BIBREF0"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Almost two months after the first report, COVID-19 severe outbreaks were reported in numerous countries and became a public health priority in the world (World Health Organization, Situation Report 48). As of March 14, 2020, COVID-19 cases are found in 122 All rights reserved. No reuse allowed without permission. the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is . https://doi.org/10.1101/2020.03.15.20036376 doi: medRxiv preprint countries and infected 213,749 patients, among whom 6730 died (World Health Organization, Situation Report 53). The latest phylogenetic analysis studies designated the etiologic agent of COVID-19, SARS COV-2 (2) .",
+            "cite_spans": [
+                {
+                    "start": 348,
+                    "end": 351,
+                    "text": "(2)",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "The virulent nature of this virus and its high rate of transmissibility warrants robust, rapid, sensitive, specific, and quantitative diagnostic tools to supplement clinical symptoms aiding clinicians to confidently rule in and rule out patients. Moreover, such a diagnostic tool will help with preventing spread of virus by identifying the infected cases and can monitor the health status of infected patients by quantifying the viral load. Center for Disease Control was the first to develop a quantitative reverse transcriptase real-time PCR (RT-PCR), which later became the gold standard technique (https://www.cdc.gov/coronavirus/2019-ncov/about/testing.html).",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Subsequently, a Chinese group used a RNA-based metagenomics next generation sequencing (mNGS) to diagnose the viral RNA from the clinical samples of two patients (3) . However, the requirement for advanced technology and skilled personnel and long turn-around time (24 hours) are not feasible for local and referral laboratories. Therefore, a colorimetric loop mediated isothermal amplification, also known as LAMP, was developed to obviate the need for expensive technologies, e.g. real-time PCR and NGS, as well as to shorten the turn-around time to up to 40 minutes (4). However, this assay was a qualitative one and also only the swab samples from limited number of patients (n=7) were included for testing (4) . Most recently a newer generation of single step RT-LAMP were developed to detect SARS COV-2, but these assays were not challenged with real clinical samples obtained from COVID-19 positive patients (5, 6). Therefore, we developed a sensitive, specific, and rapid RT-LAMP assay and its performance was challenged by an extensive number of confirmed COVID-19 (n=47) and negative patients (n=213) relative to qRT-PCR assays approved by two Chinese Food and Drug Administration (qRT-PCR NMPA). Altogether, we present a rapid and reliable diagnostic tool All rights reserved. No reuse allowed without permission. the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 162,
+                    "end": 165,
+                    "text": "(3)",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 711,
+                    "end": 714,
+                    "text": "(4)",
+                    "ref_id": "BIBREF3"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is . https://doi.org/10.1101/2020.03.15.20036376 doi: medRxiv preprint that potentially could be deployed for high-throughput screening applications in referral and local laboratories.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "According to Guidelines for prevention and control of downloaded from GenBank (https://www.ncbi.nlm.nih.gov/genbank/) to select the most specific target region. Genenious v11.1.14 was used for alignment analysis and to find the most specific region for designing LAMP primers. LAMP Designer (PREMIER Biosoft International, San Francisco, CA) was used for primer design. Designed primers were subjected to BLAST (https://blast.ncbi.nlm.nih.gov/Blast.cgi) and the specific candidates were used for analytical sensitivity and specificity testing (Table 1 ). Primers were synthesized by Sangon Biotech Co.,",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 543,
+                    "end": 551,
+                    "text": "(Table 1",
+                    "ref_id": null
+                }
+            ],
+            "section": "Target selection"
+        },
+        {
+            "text": "Analytical sensitivity and specificity testing was performed in a P2 lab and in order to mimic the real viral particles we purchased pseudotyped SARS-CoV-2 assay system containing ORF1ab part sequence, N gene and E gene (DAAN gene Co. Ltd, Guangzhou, China). RNA of pseudotyped virus were extracted using EZ-10 Spin Column Viral Total RNA Extraction Kit All rights reserved. No reuse allowed without permission. the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Analytical sensitivity and specificity testing"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is LAMP incubation time was set to 60 minutes to observe both limit of detection and crossreactivity (LAMP conditions are mentioned in clinical evaluation section). The reaction endpoint time was set in a way to detect the lowest possible copy number of virus without any cross-reaction.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Analytical sensitivity and specificity testing"
+        },
+        {
+            "text": "Clinical samples obtained from patients contain a wide range of inhibitors impairing the efficacy of diagnostic assay. Therefore, the tolerance of our LAMP assay was assessed when All rights reserved. No reuse allowed without permission. the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Evaluating LAMP assay tolerance against wide range of inhibitors"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Evaluating LAMP assay tolerance against wide range of inhibitors"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is . https://doi.org/10.1101/2020.03.15.20036376 doi: medRxiv preprint florescent data were collected each minute. RT-PCR and RT-LAMP tested separately by two assessors, final results were recorded and were compared with one another.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Evaluating LAMP assay tolerance against wide range of inhibitors"
+        },
+        {
+            "text": "The whole workflow of our study from in-silico analysis to analytical evaluation and clinical validation is depicted in Figure 1 . Nine LAMP primer systems were designed and evaluated insilico, among them six primers showed the highest sensitivity and specificity and used in the next steps (Table 1 and Figure 1 ). Primarily, our assay was meant to be quantitative and it",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 120,
+                    "end": 128,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 291,
+                    "end": 299,
+                    "text": "(Table 1",
+                    "ref_id": null
+                },
+                {
+                    "start": 304,
+                    "end": 312,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Results and discussion"
+        },
+        {
+            "text": "showed an optimal reproducibility when tested in analytical evaluation step using armored viral particle diluted in water (R 2 value \u02f70.99) and sputum sample (R 2 value \u02f70.83). Analytical sensitivity yielded reliable LOD of 500 copies/ml less than 30 minutes regardless of matrix used for serial dilution (Figure 2 ). Of note, our assay could detect 50 copies/ml, but some replicates showed unstable amplification. Therefore, we considered the LOD of 500 copies/ml. Analytical specificity was 100% when used a wide range of closely-and distantly-related viral species, prominent fungal and bacterial species, and human DNA. Moreover, analytical evaluation included a wide range of inhibitors and 500 copies of the simulated viral particles were successfully detected below 30 minutes ( Figure 3 ). In order to evaluate the performance of our assay in clinic, we provided our assay and respective instructions to two clinical centers ( Figure 3 ). In total, 168 patients from center 1, among which 35 confirmed COVID-19 cases, and 92 patients from center 2, among which 12 patients were confirmed COVID-19 cases, were recruited. One asymptomatic patient tested positive by qRT-PCR (Ct values 37) and by our RT-LAMP was categorized suspected by in-charge physician and few days later became positive.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 305,
+                    "end": 314,
+                    "text": "(Figure 2",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 786,
+                    "end": 794,
+                    "text": "Figure 3",
+                    "ref_id": null
+                },
+                {
+                    "start": 935,
+                    "end": 943,
+                    "text": "Figure 3",
+                    "ref_id": null
+                }
+            ],
+            "section": "Results and discussion"
+        },
+        {
+            "text": "Four patients tested positive by qRT-PCR were negative by our RT-LAMP and one patient tested negative by qRT-PCR was positive by our assay (Figure 3 and Supplementary Table 1 ).",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 139,
+                    "end": 148,
+                    "text": "(Figure 3",
+                    "ref_id": null
+                },
+                {
+                    "start": 153,
+                    "end": 174,
+                    "text": "Supplementary Table 1",
+                    "ref_id": null
+                }
+            ],
+            "section": "Results and discussion"
+        },
+        {
+            "text": "Subsequently, our RT-LAMP assay showed the sensitivity, specificity, negative predictive value, and positive predictive value of 91.4%, 99.5%, 98.1%, and 97.7%, respectively All rights reserved. No reuse allowed without permission. the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Results and discussion"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is . https://doi.org/10.1101/2020.03.15.20036376 doi: medRxiv preprint (Supplementary Table 2 and 3). The fact that our assay could not detect four positive patients was owing to using 2.5 less RNA input (2 \u00b5l) relative to qRT-PCR (5 \u00b5l). In the future, we will try to use various RNA input volume (5, 8 , and 10 \u00b5l) to observe if we could obtain a higher sensitivity. Although our RT-LAMP assay was developed to be quantitative, we could not find any pattern and association between the time to positivity by our RT-LAMP assay and the Ct values reported by qRT-PCR when using clinical samples. Therefore, we considered our assay a qualitative one. This fact will show that the analytical valuation should be always accompanied by clinical validation to observe the real capabilities of a given assay and that the results obtained in analytical evaluation step are not always reflected in real-life.",
+            "cite_spans": [
+                {
+                    "start": 367,
+                    "end": 370,
+                    "text": "(5,",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 371,
+                    "end": 372,
+                    "text": "8",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 140,
+                    "end": 162,
+                    "text": "(Supplementary Table 2",
+                    "ref_id": null
+                }
+            ],
+            "section": "Results and discussion"
+        },
+        {
+            "text": "Our assay has several advantageous compared to qRT-PCR. First, our RT-LAMP assay is 2.5 times faster relative to qRT-PCR and given the optimal diagnostic features could be used as a reliable screening method in local and referral laboratory to keep up with the increasing demand of suspected patients in critical situations. Secondly, our assay does not need the clod chain and could be shipped at room temperature.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Results and discussion"
+        },
+        {
+            "text": "In conclusion, we present a rapid RT-LAMP assay that allows processing 2 to 2.5 more clinical samples relative to CDC RT-PCR, which is indicative of its capacity to be deployed for highthroughput screening applications in local and referral laboratories.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Results and discussion"
+        },
+        {
+            "text": "We admit that our assay does not has the quantitative aspect of qRT-PCR and its sensitivity requires improvement. These two limitations will be the subject of future investigation.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Results and discussion"
+        },
+        {
+            "text": "Moreover, we will try to use simple and fast nucleic acid extraction procedures (7) that only uses heat that will further decrease the turn-around-time.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Results and discussion"
+        },
+        {
+            "text": "Not applicable Disclaimers All rights reserved. No reuse allowed without permission. the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgement"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is . https://doi.org/10.1101/2020.03.15.20036376 doi: medRxiv preprint Table 1 . Primers and probes successfully detected SARS COV-2.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 140,
+                    "end": 147,
+                    "text": "Table 1",
+                    "ref_id": null
+                }
+            ],
+            "section": "Acknowledgement"
+        },
+        {
+            "text": "Primer name Primer sequence the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Target loci"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is . https://doi.org/10.1101/2020.03.15.20036376 doi: medRxiv preprint",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Target loci"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "A Novel Coronavirus from Patients with Pneumonia in China",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Ph",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Ph",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Phil",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Ph",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "New England Journal of Medicine",
+            "volume": "",
+            "issn": "",
+            "pages": "727--733",
+            "other_ids": {}
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "SARS-CoV-2 is an appropriate name for the new coronavirus",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Ho",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Jin",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Qiu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Sang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Yuen",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "The Lancet",
+            "volume": "6736",
+            "issn": "",
+            "pages": "2--3",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "RNA based mNGS approach identifies a novel human coronavirus from two individual pneumonia cases in 2019 Wuhan outbreak",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Ye",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Zhong",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Mei",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Rapid Molecular Detection of SARS-CoV-2 ( COVID-19 ) Virus RNA 2",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Odiwuor",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Xiong",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "O"
+                    ],
+                    "last": "Nyaruaba",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Tanner",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Tanner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Development of Reverse Transcription Loop-mediated Isothermal Amplification ( RT-LAMP ) Assays Targeting SARS-CoV-2",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Park",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Ku",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Beak",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Il",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "No reuse allowed without permission. the author/funder, who has granted medRxiv a license to display the preprint in perpetuity. The copyright holder for this preprint (which was not peer-reviewed) is",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/2020.03.15.20036376"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Rapid Detection of Novel Coronavirus ( COVID-19 ) by Reverse Transcription-Loop-Mediated Isothermal Amplification",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Lamb",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "N"
+                    ],
+                    "last": "Bartolone",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Ward",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Chancellor",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "Field-deployable viral diagnostics using CRISPR-Cas13",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Myhrvold",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Freije",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Gootenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [
+                        "O"
+                    ],
+                    "last": "Abudayyeh",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Metsky",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Durbin",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Kellner",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Paul",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Parham",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Garcia",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "Barnes",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Chak",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Mondini",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Nogueira",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Isern",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Michael",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Lorenzana",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Yozwiak",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Macinnis",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Gehrke",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Sabeti",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "",
+            "volume": "360",
+            "issn": "",
+            "pages": "444--448",
+            "other_ids": {}
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "engaged two clinical centers, namely The Second Affiliated Hospital and Yuying Children's Hospital of Wenzhou Medical University, Wenzhou, China (Center one), and the Wuxi Infectious Diseases Hospital, Wuxi, China (Center two). Each center used a different qRT-NMPA assay as a gold standard technique. SARS-CoV-2 kit from Shanghai BioGerm Medical Biotechnology Co. Ltd, (NMPA approval number 20203400065, with LOD of 1000 copies/ml, Ct cut-off 38), and a kit from DAAN Gene Co., Ltd (NMPA approval number 20203400063, with LOD of 500 copies/ml, cut off Ct value of 40) were used in center one and center two, respectively. Positive patients were divided into two groups by physicians, namely suspected and confirmed. Those suspected were isolated and all became positive The ethics committees of both centers approved the study. Emergency patients (outpatients) with fever of unknown origin or inpatients diagnosed as COVID-19 or other diseases were enrolled and samples such as sputum, swabs and tears were used for evaluation. ABI 7500 were used for amplification and data analysis in both centers. The final LAMP reaction was 25 \u00b5l and contained 21.9 \u00b5l buffer solution (20 mM Tris-HCl pH 8.8, 10 mM (NH4)2SO4, 120 mM KCl, 2 mM MgSO4, 0.1% Tween 20), 8 U Bst DNA polymerase (New England Biolabs (Beijing) ltd, Beijing, China), 0.5 U AMV Reverse Transcriptase (Takara Bio Inc, Dalian, China), 2 \u00b5l RNA template, 1.6 \u03bcMFIP/BIP primers, 0.2 \u03bcM F3/B3 primers, 0.4 \u03bcM LF/LB primers, 7 mM MgSO4 (Sangon Biotech Co., Ltd., Shanghai, China), 0.8M betaine (Sangon Biotech Co., Ltd., Shanghai, China), 1.4 mM each dNTP (Takara Bio Inc, Dalian, China), 0.5 \u03bcM SYTO-9 (Invitrogen Trading, Shanghai) Co., Ltd, Shanghai, China). LAMP reactions were incubated at 63 \u00ba C for 30 mins in ABI 7500 machine and All rights reserved. No reuse allowed without permission.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Workflow comparison of our RT-LAMP assay relative to qRT-PCR for emergency cases (outpatients) and inpatients. Our RT-LAMP assay is 2 to 2.5 times faster than the qRT-PCR assays and can be shipped at room temperature.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Our assay was comprehensively evaluated at three steps, including in-silico analysis, in-vitro analytical analysis, and clinical validation. All rights reserved. No reuse allowed without permission.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": "HCoV-2 from clinical samples. Therefore, ORF1ab and N sequences of SARS-Cov-2, its close related coronavirus species (HCoV-NL63, HCoV-OC43, HCoV-229E and HCoV-HKU1), and other viral species, namely Adenovirus, Respiratory syncytial virus A, Human parainfluenza 2 virus, Human parainfluenza 3 virus, H1N1 influenza virus, H5N1 influenza virus, H7N9 influenza virus, H9N2 influenza virus, Mycoplasma pneumoniae and Influenza B virus, were",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": ". https://doi.org/10.1101/2020.03.15.20036376 doi: medRxiv preprint (Sangon Biotech Co.,Ltd. Shanghai, China). Serial dilutions with the magnitude of log10 containing 50*10 6 cell/ml to 50*10 0 cell/ml pseudotyped virus were performed to determine the limit of detection (LOD). Serial dilution testing was performed in both RNase/DNase free molecular grade water and sputum sample collected from a COVID-19 negative healthy individual. Reproducibility of our LAMP assay (linearity=R 2 value) was assessed by separate serial dilution testing on three occasions, each performed in duplicate. Signal intensity and the time to obtain decent amplification curves were recorded and R 2 values \u22650.98 were considered reliable amplification. Specificity testing included nucleic acid of HCoV-OC43 , HCoV-HKU1 , HCoV-229E , HCoV-NL63, Adenovirus, Respiratory syncytial virus A, Human parainfluenza 2 virus, Human parainfluenza 3 virus, H1N1 influenza virus, H5N1 influenza virus, H7N9 influenza virus, H9N2 influenza virus, Mycoplasma pneumoniae, Influenza B virus (Bdsbiotech Co. Ltd, Guangzhou, China). Moreover, HeLa cells (TechStar Co. Ltd, Jiangsu, China) and genomic DNA of clinically prominent bacteria or fungal species, including Staphylococcus aureus, Mycobacterium tuberculosis, Legionella pneumophila, Candida albicans, Candida glabrata, Candida tropicalis, Aspergillus fumigatus, Cryptococcus neoformans were used for specificity testing (provided by Shanghai Institute of Medical Mycology, Shanghai Changzheng hospital).",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": [
+        {
+            "text": "The opinions expressed by authors contributing to this journal do not necessarily reflect the opinions of the Centers for Disease Control and Prevention or the institutions with which the authors are affiliated.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "acknowledgement"
+        },
+        {
+            "text": "Dr. Minghua Jiang, director of the Department of Laboratory Medicine, The Second Affiliated Hospital and Yuying Children's Hospital of Wenzhou Medical University. His current interest is in development and validation of rapid diagnostic tools for infectious diseases.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Bibliographic sketch"
+        }
+    ]
+}

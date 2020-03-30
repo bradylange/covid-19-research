@@ -1,0 +1,1553 @@
+{
+    "paper_id": "28d5f69c84981ebeb76cf7c07b554d06bf85a770",
+    "metadata": {
+        "title": "Tracing DAY-ZERO and Forecasting the Fade out of the COVID-19 Outbreak in Lombardy, Italy: A Compartmental Modelling and Numerical Optimization Approach",
+        "authors": [
+            {
+                "first": "Lucia",
+                "middle": [],
+                "last": "Russo",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Cleo",
+                "middle": [],
+                "last": "Anastassopoulou",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Athanasios",
+                "middle": [],
+                "last": "Tsakris",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Nicola",
+                "middle": [],
+                "last": "Gennaro",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "",
+                "middle": [],
+                "last": "Bifulco",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Emilio",
+                "middle": [
+                    "Fortunato"
+                ],
+                "last": "Campana",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Gerardo",
+                "middle": [],
+                "last": "Toraldo",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Constantinos",
+                "middle": [],
+                "last": "Siettos",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "Background. Since the first suspected cluster of cases of coronavirus disease-2019",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "The butterfly effect in chaos theory underscores the sensitive dependence on initial conditions, highlighting the importance of even a small change in the state of a nonlinear system. The emergence of a novel coronavirus, SARS-CoV-2, that caused a viral pneumonia outbreak in Wuhan, Hubei province, 5 China in early December 2019 has evolved into the COVID-19 acute respiratory disease pandemic due to its alarming levels of spread and severity, with a total of 195,892 confirmed infected cases, 80,840 recovered and 7,865 deaths in 153 countries as of March 16, 2020 ([1] ). The seemingly far from the epicenter, old continent became the second-most impacted region after Asia Pacific to date, was declared recovered on February 26 [2] . A 38-year-old man repatriated back to Italy from Wuhan who was admitted to the hospital in Codogno, Lombardy on February 21 was the first secondary infection case (\"patient 1\"). \"Patient 0\" was never identified by tracing the first Italian citizen's movements and 20 contacts. In less than a week, the explosive increase in the number of cases in several bordering regions and autonomous provinces of northern Italy placed enormous strain on the decentralized health system. Following an a dramatic spike in deaths from COVID-19, Italy transformed into a \"red zone\", and the movement restrictions were expanded to the entire country on the 8th of March. 25 All public gatherings were cancelled and school and university closures were extended through at least the next month.",
+            "cite_spans": [
+                {
+                    "start": 299,
+                    "end": 300,
+                    "text": "5",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 553,
+                    "end": 572,
+                    "text": "March 16, 2020 ([1]",
+                    "ref_id": null
+                },
+                {
+                    "start": 733,
+                    "end": 736,
+                    "text": "[2]",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 1003,
+                    "end": 1005,
+                    "text": "20",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 1393,
+                    "end": 1395,
+                    "text": "25",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "In an attempt to assess the dynamics of the outbreak for forecasting purposes as well as to estimate epidemiological parameters that cannot be computed directly based on clinical data, such as the transmission rate of the disease and 30 the basic reproduction number R 0 , defined as the expected number of exposed cases generated by one infected case in a population where all individuals are susceptible, many mathematical modelling studies have already appeared since the first confirmed COVID-19 case. The first models mainly focused on the estimation of the basic reproduction number R 0 using dynamic mechanistic 35 mathematical models ( [3, 4, 5, 6] ), but also simple exponential growth models (see e.g. [7, 8] ). Compartmental epidemiological models like SIR, SIRD, SEIR and SEIRD have been proposed to estimate other important epidemiological parameters, such as the transmission rate and for forecasting purposes (see e.g. [6, 9] ). Other studies have used metapopulation models, which include data 40 of human mobility between cities and/or regions to forecast the evolution of the outbreak in other regions/countries far from the original epicenter in China [3, 10, 11, 5] , including the modelling of the influence of travel restrictions and other control measures in reducing the spread ( [12] .",
+            "cite_spans": [
+                {
+                    "start": 644,
+                    "end": 647,
+                    "text": "[3,",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 648,
+                    "end": 650,
+                    "text": "4,",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 651,
+                    "end": 653,
+                    "text": "5,",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 654,
+                    "end": 656,
+                    "text": "6]",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 712,
+                    "end": 715,
+                    "text": "[7,",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 716,
+                    "end": 718,
+                    "text": "8]",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 934,
+                    "end": 937,
+                    "text": "[6,",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 938,
+                    "end": 940,
+                    "text": "9]",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 1171,
+                    "end": 1174,
+                    "text": "[3,",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 1175,
+                    "end": 1178,
+                    "text": "10,",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 1179,
+                    "end": 1182,
+                    "text": "11,",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 1183,
+                    "end": 1185,
+                    "text": "5]",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 1304,
+                    "end": 1308,
+                    "text": "[12]",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Among the perplexing problems that mathematical models face when they 45 are used to estimate epidemiological parameters and to forecast the evolution of the outbreak, two stand out: (a) the uncertainty that characterizes the actual 4 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "number of infected cases in the total population, which is mainly due to the large percentage of asymptomatic or mild cases experiencing the disease like the common cold or the flu (see e.g. [13] ), and (b) the uncertainty regarding 50 the DAY-ZERO of the outbreak, the knowledge of which is crucial to assess the stage and dynamics of the epidemic, especially during the first growth period.",
+            "cite_spans": [
+                {
+                    "start": 191,
+                    "end": 195,
+                    "text": "[13]",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "To cope with the above problems, we herein propose a novel SEIRD with two compartments, one modelling the total infected cases in the population and another modelling the confirmed cases. The proposed modelling approach is 55 applied to Lombardy, the epicenter of the outbreak in Italy, to estimate the scale of under-reporting of the number of actual cases in the total population, the DAY-ZERO of the outbreak and for forecasting purposes. The above tasks were accomplished by the numerical solution of a mixed-integer optimization problem using the publicly available data of cumulative cases for the period 60 February 21-March 8, the day of lockdown of all of Italy.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "We address a compartmental SEIRD model that includes two categories of infected cases, namely the confirmed/reported and the unreported (unknown) cases in the total population. Based on observations and studies, our modelling hypothesis is that the confirmed cases of infected are only a (small) subset of the actual number of infected cases in the total population [5, 13, 6] . Regarding the confirmed cases of infected as of February 11, a study conducted by the Chinese longer than the non-confirmed, they may also be hospitalized and die from the disease.",
+            "cite_spans": [
+                {
+                    "start": 366,
+                    "end": 369,
+                    "text": "[5,",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 370,
+                    "end": 373,
+                    "text": "13,",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 374,
+                    "end": 376,
+                    "text": "6]",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "ref_spans": [],
+            "section": "The modelling approach"
+        },
+        {
+            "text": "Based on the above, let us consider a well-mixed population of size N . The state of the system at time t, is described by (see also Figure 1 for a schematic) S(t) representing the number of susceptible persons, E(t) the number of ex- The rate at which a susceptible (S) becomes exposed (E) to the virus is proportional to the density of infectious persons I in the total population, excluding the number of dead persons D. Our main assumption here is that upon confirmation, the infected persons I c go into quarantine, and, thus, they don't 6 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 133,
+                    "end": 141,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ],
+            "section": "The modelling approach"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint transmit further the disease. The proportionality constant is the \"effective\" disease transmission rate, say \u03b2 =cp, wherec is the average number of contacts per day and p is the probability of infection upon a contact between a susceptible and an infected.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "The modelling approach"
+        },
+        {
+            "text": "Thus, our discrete mean field compartmental SEIRD model reads:",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "The modelling approach"
+        },
+        {
+            "text": "The above system is defined in discrete time points t = 1, 2, . . ., with the The parameters of the model are:",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "The modelling approach"
+        },
+        {
+            "text": "\u2022 \u03b2(d \u22121 ) is the \"effective\" transmission rate of the disease,",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "The modelling approach"
+        },
+        {
+            "text": "\u2022 \u03c3(d \u22121 ) is the average per-day \"effective\" rate at which an exposed person 105 becomes infective,",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "The modelling approach"
+        },
+        {
+            "text": "\u2022 \u03b4(d \u22121 ) is the average per-day \"effective\" recovery rate within the group of unreported (asymptomatic/mild) cases in the total population,",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "The modelling approach"
+        },
+        {
+            "text": "\u2022 \u03b4 c (d \u22121 ) is the average per-day \"effective\" recovery rate within the subset of confirmed infected cases 110 \u2022 \u03b3(d \u22121 ) is the average per-day \"effective\" mortality rate within the subset of confirmed infected cases, 7 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "The modelling approach"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint \u2022 (d \u22121 ) is the per-day rate of the all cases of infected in the total population that get confirmed. This proportionality rate quantifies the uncertainty in the actual number of unreported cases in the total population. 115 Here, we should note the following: As new cases of recovered and dead at each time t appear with a time delay (which is generally unknown but an estimate can be obtained by clinical studies) with respect to the corresponding infected cases, the above per-day rates are not the actual ones; thus, they are denoted as \"effective/apparent\" rates.",
+            "cite_spans": [
+                {
+                    "start": 366,
+                    "end": 369,
+                    "text": "115",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "The modelling approach"
+        },
+        {
+            "text": "The values of the epidemiological parameters \u03c3, \u03b4, \u03b4 c that were fixed in the proposed model were chosen based on clinical studies.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "120"
+        },
+        {
+            "text": "In particular, in many studies that use SEIRD models, the parameter \u03c3 is set equal to the inverse of the mean incubation period (time from exposure to the development of symptoms) of a virus. However, the incubation period does not 125 generally coincide with the time from exposure to the time that someone starts to be infectious. Regarding COVID-19, it has been suggested that an exposed person can be infectious well before the development of symptoms [15] . With respect to the incubation period for SARS-CoV-2, a study in China [16] suggests that it may range from 2-14 days, with a median of 5.2 days. Another study 130 in China, using data from 1,099 patients with laboratory-confirmed 2019-nCoV ARD from 552 hospitals in 31 provinces/provincial municipalities suggested that the median incubation period is 4 days (interquartile range, 2 to 7). In our model, as explained above, 1 \u03c3 represents the period from exposure to the onset of the contagious period. Thus, based on the above clinical studies, for 135 our simulations, we have set 1 \u03c3 = 3. Regarding the recovery period, the WHO-China Joint Mission in a study that is based on 55,924 laboratory-confirmed cases has reported a median time of 2 weeks from onset to clinical recovery for mild cases, and 3-6 weeks for severe or critical cases [17] . Based on the above and on the fact that within the subset 140 of confirmed cases the mild cases are the 81% [14] , we have set the recovery period for the confirmed cases' compartment to be \u03b4 c = 1/21 in order to balance 8 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 456,
+                    "end": 460,
+                    "text": "[15]",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 534,
+                    "end": 538,
+                    "text": "[16]",
+                    "ref_id": null
+                },
+                {
+                    "start": 1306,
+                    "end": 1310,
+                    "text": "[17]",
+                    "ref_id": null
+                },
+                {
+                    "start": 1421,
+                    "end": 1425,
+                    "text": "[14]",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "ref_spans": [],
+            "section": "120"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . Thus, for each one of the above values of , the DAY-ZERO of the outbreak, the per-day \"effective\" transmission rate \u03b2 and the \"effective\" per-day mortality rate \u03b3, were computed by the numerical solution of a mixed-integer optimization problem with the aid of genetic algorithms to fit the reported data of confirmed 165 cumulative cases from February 21 to March 8, the day of the lockdown of Lombardy.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "120"
+        },
+        {
+            "text": "Here, for our computations, we have used the genetic algorithm \"ga\" provided by the Global Optimization Toolbox of Matlab [4] to minimize the following objective function:",
+            "cite_spans": [
+                {
+                    "start": 122,
+                    "end": 125,
+                    "text": "[4]",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "ref_spans": [],
+            "section": "120"
+        },
+        {
+            "text": "CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "120"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "120"
+        },
+        {
+            "text": "where",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "120"
+        },
+        {
+            "text": "where, \u2206X SEIRD (t), (X = I, R, D) are the cumulative cases resulting from the SEIRD simulator at time t; w 1 , w 2 , w 3 correspond to scalars serving in the general case as weights to the relevant functions.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "120"
+        },
+        {
+            "text": "In order to get the 90% confidence intervals for \u03b2 and \u03b3 (as these are not provided by the genetic algorithm), we fixed the DAY-ZERO for the simulations 175 and run the Levenberg-Marquard around the optimal solution as implemented by the \"lsqnonlin\" function of matlab [19] .",
+            "cite_spans": [
+                {
+                    "start": 269,
+                    "end": 273,
+                    "text": "[19]",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "120"
+        },
+        {
+            "text": "Thus, for each one of the five values of epsilon, we have repeated the above numerical optimization procedure fifty times and we kept the best fitting outcome.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "120"
+        },
+        {
+            "text": "At this point we should note that the above optimization problem may in principle have more than one near-optimal solutions, which may be attributed ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "180"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "Since the complete lockdown of almost all activities was decided as of March 8, we have taken an 90% reduction in the corresponding \"effective\" transmission rate to reflect the drop in the per-day average contacts per person.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "Finally, we also attempt a forecasting of the fade out of the outbreak.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "For the optimization procedure, we set as initial guesses (the intervals within (4) , and that at the very first days of the epidemic S \u2248 N and D \u2248 0, the Jacobian of the system as evaluated at the disease-free state reads:",
+            "cite_spans": [
+                {
+                    "start": 80,
+                    "end": 83,
+                    "text": "(4)",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "The eigenvalues (that is the roots of the characteristic polynomial of the 210 Jacobian matrix) dictate if the disease-free equilibrium is stable or not, that is 11 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint if an emerging infectious disease can spread in the population. In particular, the disease-free state is stable, meaning that an infectious disease will not result in an outbreak, if and only if all the norms of the eigenvalues of the Jacobian J of the discrete time system are bounded by one. Jury's stability criterion [20] 215 (the analogue of Routh-Hurwitz criterion for discrete-time systems) can be used to determine the stability of the linearized discrete time system by analysis of the coefficients of its characteristic polynomial. The characteristic polynomial of the Jacobian matrix reads:",
+            "cite_spans": [
+                {
+                    "start": 465,
+                    "end": 469,
+                    "text": "[20]",
+                    "ref_id": "BIBREF19"
+                }
+            ],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "where 220 a 3 = 1",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "The necessary conditions for stability read:",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "The sufficient conditions for stability are given by the following two inequalities:",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "12 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "It can be shown that the second necessary condition (14) and the first sufficient condition (15) are always satisfied for the range of values of the epidemi-225 ological parameters considered here.",
+            "cite_spans": [
+                {
+                    "start": 52,
+                    "end": 56,
+                    "text": "(14)",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 92,
+                    "end": 96,
+                    "text": "(15)",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "The first inequality (13) results in the necessary condition:",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "It can be also shown that for the range of the parameters considered here, the second sufficient condition (16) is satisfied if the necessary condition (18) is satisfied. Thus, the necessary condition (18) is also a sufficient condition for ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "Note that for = 0, the above expression simplifies to R 0 for the simple SIR model.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "10"
+        },
+        {
+            "text": "As discussed in the Methodology, we used five different values of (0.01, 0.05, 0.1, 0.15, 0.2) to assess the actual number of cases in the total population. Thus, for our computations, we run 50 times the numerical optimization procedure and for further analysis we kept the value of that gave the smaller fitting error 13 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "240"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint over all runs. In particular, by using the genetic algorithm as described in the Methodology, the best fitting to the reported data was obtained with =0.05 (best fitting residual norm of the objective function: 301,231). For this scale of under-reporting, we present the results for DAY-ZERO, the \"effective\" perday transmission and mortality rates as computed with the reported data from For the computed \"effective\" per-day transmission and mortality rates, we 255 also report the corresponding 90% confidence intervals instead of the more standard 95% CI because of the small size of the data. Under this scenario, the DAY-ZERO for the outbreak in Lombardy was found to be the 21st of January.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "240"
+        },
+        {
+            "text": "The \"effective\" per-day transmission rate was found to be \u03b2 = 0.779 (90% CI: 0.777-0.781) and the \"effective\" per-day mortality rate for the confirmed cases the reported number of confirmed cases for that period.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "240"
+        },
+        {
+            "text": "Thus, according to the above results, on the 8th of March, the actual cumulative number of infected cases in the total population (taking into account the exposed cases to the virus) was of the order of 15 times more the confirmed cumulative number of infected cases. . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "240"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "240"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "16"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "16"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "17"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint 18 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "17"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "17"
+        },
+        {
+            "text": "The crucial questions about an outbreak is how, when (DAY-ZERO), why it started and when it will end. Answers to these important questions would add critical knowledge in our arsenal to combat the pandemic. The tracing of DAY-300 ZERO, in particular, is of outmost importance. It is well known that minor perturbations in the initial conditions of a complex system, such as the ones of an outbreak, may result in major changes in the observed dynamics. No doubt, a high level of uncertainty for DAY-ZERO, as well as the uncertainty in the actual numbers of exposed people in the total population, raise several barriers 305 in our ability to correctly assess the state and dynamics of the outbreak, and to forecast its evolution and its end. Such pieces of information would lower the barriers and help public health authorities respond fast and efficiently to the emergency.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Discussion"
+        },
+        {
+            "text": "This study aimed exactly at shedding more light into this problem, taking 310 advantage of state-of-the-art tools of mathematical modelling and numerical analysis/optimization tools. To achieve this goal, we addressed a new compartmental SEIRD with two infectious compartments in order to bridge the gap between the number of reported cases and the actual number of cases in the total population. By following the proposed methodological framework, we 315 found that the DAY-ZERO in Lombardy was the 21th of January, a date that precedes by one month the fate of the first confirmed case in Lombardy. Furthermore, our analysis revealed that the actual cumulative number of infected cases in the total population is around 15 times more the cumulative number of confirmed infected cases. Importantly, based on our simulations, we predict 320 that the fade-out of the outbreak in Lombardy will be by the end of May, if the strict isolation measures continue to hold.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Discussion"
+        },
+        {
+            "text": "To this end, we would like to make a final comment with respect to the basic reproduction number R 0 , the significance and meaning of which are very often misinterpreted and misused, thereby leading to erroneous conclusions. Here, we 325 found an R 0 \u223c 4, which is similar to the values reported by many studies in 19 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Discussion"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint However, we would like to stress that R 0 is NOT a biological constant for a disease as it is affected not only by the pathogen, but also by many other factors, such as environmental conditions, the demographics as well as, importantly, by the social behavior of the population (see for example the discussion in [22] ).",
+            "cite_spans": [
+                {
+                    "start": 389,
+                    "end": 393,
+                    "text": "[22]",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Discussion"
+        },
+        {
+            "text": "Thus, a value for R 0 that is found in a part of world (and even in a region of the same country) cannot be generalized as a global biological constant for other parts of world (or even for other regions of the same country). Obviously, the environmental factors and social behavior of the population in Lombardy are different from the ones, for example, prevailing in Hubei. 340 We hope that the results of our analysis help to mitigate some of the severe consequences of the currently uncontrolled pandemic.",
+            "cite_spans": [
+                {
+                    "start": 376,
+                    "end": 379,
+                    "text": "340",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "335"
+        },
+        {
+            "text": "We did not receive any specific funding for this study.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Funding"
+        },
+        {
+            "text": "The data used in this paper are given in the Supporting information. . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "345"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "References"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "References"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "References"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "References"
+        },
+        {
+            "text": "All the relevant data used in this paper are publicy available and accessible at https://lab.gedidigital.it/gedi-visual/2020/coronavirus-i-contagi-in-italia/.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Supporting information"
+        },
+        {
+            "text": "In Table S1 are given the reported cumulative numbers from Febrary 21 to March 16. The data from February 21 to March 8 have been used for the calibration of the model parameters and the data from March 9 to March 16 have been used for the validation of the model. S1 Table. .",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 3,
+                    "end": 11,
+                    "text": "Table S1",
+                    "ref_id": null
+                },
+                {
+                    "start": 268,
+                    "end": 274,
+                    "text": "Table.",
+                    "ref_id": null
+                }
+            ],
+            "section": "Supporting information"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "25"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "25"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "Covid-19: preparedness, decentralisation, and the hunt for patient zero",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Carinci",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "BMJ",
+            "volume": "368",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1136/bmj.m799"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "Nowcasting and forecasting the potential domestic and international spread of the 2019-nCoV outbreak originating in wuhan, china: a modelling study",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Leung",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Leung",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "30260--30269",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/s0140-6736(20)30260-9"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "Transmissibility of 2019-ncov",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Imai",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Cori",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Dorigatti",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Int J Infect Disdoi",
+            "volume": "3",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ijid.2020.01.050"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Estimating the scale of covid-19 epidemic in the united states: Simulations based on air traffic directly from wuhan, china",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lv",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Botwin",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Braun",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Cao",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Mcgovern",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/2020.03.06.20031880"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Data-based analysis, modelling and forecasting of the covid-19 outbreak",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Anastassopoulou",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Russo",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Tsakris",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Siettos",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/2020.02.11.20022186"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "Preliminary estimation of the basic reproduction number of novel coronavirus (2019-nCoV) in china, from 2019 to 2020: A data-driven analysis in the early phase of the outbreak",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ran",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Musa",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Lou",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Int J Infect Disdoi",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/2020.01.23.916395"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "COVID-19 and italy: what next?",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Remuzzi",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Remuzzi",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "30627--30636",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/s0140-6736(20)30627-9"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "Breaking down of the healthcare system: Mathematical modelling for controlling the novel coronavirus (2019-nCoV) outbreak in wuhan",
+            "authors": [
+                {
+                    "first": "W.-K",
+                    "middle": [],
+                    "last": "Ming",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "J P"
+                    ],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/2020.01.27.922443"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "Estimating the risk on outbreak spreading of 2019-ncov in china using transportation data",
+            "authors": [
+                {
+                    "first": "H.-Y",
+                    "middle": [],
+                    "last": "Yuan",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Hossain",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Tsegaye",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Jia",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.-H",
+                    "middle": [],
+                    "last": "Wen",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Pfeiffer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/2020.02.01.20019984"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "Using predicted imports of 2019-ncov cases to determine locations that may not be identifying all imported cases",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Salazar",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Niehus",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Taylor",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "O"
+                    ],
+                    "last": "Buckee",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/2020.02.04.20020495"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "The effect of travel restrictions on the spread of the 2019 novel coronavirus (COVID-19) outbreak",
+            "authors": [
+                {
+                    "first": "I",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Halloran",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Vespignani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Science",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.aba9757"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "ref_id": "b12",
+            "title": "Current US coronavirus cases are \"just the tip of the iceberg",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "",
+                    "suffix": ""
+                },
+                {
+                    "first": "William",
+                    "middle": [],
+                    "last": "Feuer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF13": {
+            "ref_id": "b13",
+            "title": "The epidemiological characteristics of an outbreak of 2019 novel coronavirus diseases (covid-19) in china",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [
+                        "N C P E R E"
+                    ],
+                    "last": "Team",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "China CDC Weekly",
+            "volume": "2",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "Prevention, How COVID-19 Spreads",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "For Disease",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Control",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "Early transmission dynamics in wuhan, china, of novel coronavirus infected pneumonia",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Cowling",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Leung",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Feng",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "New England Journal of Medicine",
+            "volume": "0",
+            "issn": "0",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "http:/arxiv.org/abs/https:/doi.org/10.1056/NEJMoa2001316"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "Inners and stability of dynamic systems",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [
+                        "I"
+                    ],
+                    "last": "Jury",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Stark",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [
+                        "V"
+                    ],
+                    "last": "Krishnan",
+                    "suffix": ""
+                }
+            ],
+            "year": 1976,
+            "venue": "IEEE Transactions on Systems, Man, and Cybernetics SMC",
+            "volume": "6",
+            "issn": "10",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1109/tsmc.1976.4309436"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "ref_id": "b20",
+            "title": "Early Transmission Dynamics in Wuhan, China, of Novel Coronavirus Infected Pneumonia",
+            "authors": [
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Guan",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMoa2001316"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "ref_id": "b21",
+            "title": "Complexity of the basic reproduction number (r0)",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Delamater",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Street",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Leslie",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Jacobsen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "",
+            "volume": "25",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.3201/eid2501.171901"
+                ]
+            }
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "A schematic of the proposed compartmental SEIRD model. The actual number of cases are unknown.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "80posed, I(t) the number of unreported infected persons in the total population who are asymptomatic or experience mild symptoms and recover relatively soon without any other complications, I c (t) the number of confirmed infected cases who may develop more severe symptoms and a part of them dies, R(t) the number of recovered persons in the total population, R c (t) the number of con-85 firmed recovered cases and D(t) the number of deaths. For our analysis, and for such a short period, we assume that the total number of the population remains constant. Based on demographic data, the total population of Lombardy is N = 10m; its surface area is 23,863.09 kmq and the population density is sim422 (Inhabitants/Kmq).",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "corresponding initial condition at the very start of the outbreak (DAY-ZERO): S(0) = N \u2212 1, I(0) = 1, E(0) = 0 I c (0) = 0, R(0) = 0, R c (0) = 0, D(0) = 0.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "the recovery period with the corresponding characterization of the cases (mild, severe/critical). The average recovery period of the unreported/non-confirmed part of the infected population, which in our assumptions experiences the disease 145 like the flu or a common cold, is set equal to one week [18], i.e. we have set \u03b4 = 1/7. Note, that per-day mortality rate in the model does not coincide with the case fatality (mortality) ratio (CFR) which is usually reported and computed as the ratio between the reported deaths and the cumulative number of infected. 150 Furthermore, the transmission rate cannot be obtained by clinical studies, but only by mathematical models. Finally, regarding DAY-ZERO in Lombardy, what has been reported is just the date on which the first infected person was confirmed to be positive for SARS-CoV-2. That day was February 21, 2020, which is the starting date of 155 public data release of confirmed cases. Estimation of the DAY-ZERO of the outbreak, the scale of data uncertainty, the disease transmission and mortality rates In order to provide a coarse estimation of the scale of under-reporting of the number of actual cases in the total population, we have considered five 160 indicative values of the corresponding variable (0.01, 0.05, 0.1, 0.15, 0.2).",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "to the fact that the tuning of both DAY-ZERO and the transmission rate may in essence result in nearby values of the objective function. As a consequence, starting from different sets of optimal values for DAY-ZERO and the transmis-185 sion rate (the closer DAY-ZERO is to the day of the initial report of the data, the larger the transmission rate will be and vice versa), simulations may result in numbers of cases that differ significantly.To validate the model as resulting for the estimated level of scaling, we used it to forecast the confirmed reported cases from March 9 to March 16, 2020.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF7": {
+            "text": "195which the optimal estimates were sought are also given in parentheses): for the DAY-ZERO (t 0 ) the 16th of January (1st January-15th of February), \u03b2=0.5(0.1-0.95), \u03b3 = 0.01 (0.001-0.05). Estimation of the basic reproduction number R 0 from the SEIRD model Initially, when the spread of the epidemic starts, all the population is con-200 sidered to be susceptible, i.e. S \u2248 N . On the basis of this assumption, we computed the basic reproduction number based on the estimates of the epidemiological parameters computed using the data from the 21st of February to the 8th of March with the aid of the SEIRD model given by Eq.(1)-(7) as follows. 205 Note that there are three infected compartments, namely E, I, I c that determine the outbreak. Thus, considering the corresponding equations given by Eq.(2),(3),",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF8": {
+            "text": "stability. Hence, the disease-free state is stable, if and only if, condition (18) is satisfied.Note that in this necessary and sufficient condition (18), the first term in the parenthesis, i.e.1 (\u03b4+ ) is the average infection time of the compartment I Thus, the above expression reflects the basic reproduction number R 0 which is 235 qualitatively defined by R 0 = \u03b2 1 infection time . Hence, our model results in the following expression for the basic reproduction number:",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF9": {
+            "text": "March 8. The solution of the mixed-integer optimization problem 250 for the DAY-ZERO and the \"effective\" per-day transmission and mortality rates of the compartmental SEIRD model resulted in the following values (with w 1 =1, w 2 =4, w 3 =16 to balance for the different scales of the number of infected vs. the number of recovered and dead).",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF10": {
+            "text": "260was found to be \u03b3 = 0.0173 (90% CI: 0.0154-0.0192). Based on the derived value of the \"effective\" per-day disease transmission rate, the basic reproduction number was found to be R 0 = 4.04 (90% CI: 4.03-4.05).Thus, based on the computed expression for R 0 , the \"effective\" per-day transmission rate should have been below \u223c0.19, implying that the average 265 contacts per person should have dropped by at least \u223c75% for the outbreak to fade out at the initial stage.Using these estimated values for the epidemiological parameters, we ran the simulator from DAY-ZERO (21st of January) to March 8. On March 8, simulations resulted in the following numbers for the cumulative cases: \u2206E(t) = Cumulative number of (confirmed) infected cases resulting from simulations from DAY-ZERO (January 21) until the 16th of March. The DAY-ZERO, \u03b2 = 0.779, \u03b3 = 0.0173 were computed by solving the mixed-integer optimization problem for the period DAY-ZERO to March 8. The validation of the model was performed using the reported data of confirmed cases from March 9 to March 16 (shaded area) by taking a 90% reduction in the \u03b2 due to the lockdown of March 8. Dots correspond to the reported data of confirmed cases.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF11": {
+            "text": "To validate the model with respect to the reported data of confirmed cases from March 9 to March 16, we have set as \u03b2 = 0.078, (i.e. taking a 90% reduction in the value of \u03b2 found with the optimization procedure) and as initial conditions the values resulting from the simulation on March 8. Based on the above, the model resulted in the following numbers for the cumulative cases for March 16:285 15",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF12": {
+            "text": "Cumulative number of (confirmed) recovered cases resulting from simulations from DAY-ZERO (January 21) until the 16th of March. The DAY-ZERO, \u03b2 = 0.779, \u03b3 = 0.0173 were computed by solving the mixed-integer optimization problem for the period DAY-ZERO to March 8. The validation of the model was performed using the reported data of confirmed cases from March 9 to March 16 (shaded area) by taking a 90% reduction in the \u03b2 due to the lockdown of March 8. Dots correspond to the reported data of confirmed cases.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF13": {
+            "text": "Cumulative number of (confirmed) deaths resulting from simulations from DAY-ZERO (January 21) until the 16th of March. The DAY-ZERO, \u03b2 = 0.779, \u03b3 = 0.0173 were computed by solving the mixed-integer optimization problem for the period DAY-ZERO to March 8. The validation of the model was performed using the reported data of confirmed cases from March 9 to March 16 (shaded area) by taking a 90% reduction in the \u03b2 due to the lockdown of March 8. Dots correspond to the reported data of confirmed cases.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF14": {
+            "text": "Estimated number of infected cases in the total population at each day resulting from simulations from March 8 to May 31 (the day of the lockdown of all Italy) using \u03b2 = 0.779 \u2212 90%0.779, \u03b3 = 0.0173 as computed by solving the mixed-integer optimization problem for the period DAY-ZERO (21st January) to March 8. \u2206E(t) = 81, 619, \u2206I(t) = 75, 149, \u2206I c (t) = 14, 317, R(t) = 40, 946, R c (t) = 3, 158, D(t) = 1, 139 (the reported confirmed cumulative numbers on March 16 were \u2206I c (t) = 14, 649, R c = 2, 368, D(t) = 1, 420). Thus, the model predicted fairly well the period from March 9 to March 16. As discussed in the Methodology, we also attempted to forecast the evolution 290 of the outbreak based on our analysis. To do so, we have considered a 90% reduction in the effective transmission rates starting on March 8, the day of lockdown not only of Lombardy, but of all Italy. The result of our forecast is depicted in Figure 5. As predicted by simulations, if the strict isolation measures continue to hold, the outbreak in Lombardy will fade out by the end of May, 295 2020.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF1": {
+            "text": ". https://doi.org/10.1101/2020.03.17.20037689 doi: medRxiv preprint China. For example, Zhao et al. estimated R 0 to range between 2.24 (95% CI: 1.96-2.55) and 3.58 (95% CI: 2.89-4.39) in the early phase of the outbreak [7]. Similar estimates, were obtained for R 0 by Imai et al. 2.6 (95% CI: 1.5-3.5) [4], Li et al. [21], Wu et al. 2.68 (95% CI: 2.47-2.86), as well as by Anastassopoulou et al. recently 3.1 (90% CI: 2.5-3.7) [6].",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "[1] W. H. Organization, Coronavirus disease 2019 (COVID-19). Situation report 51 (2020). URL https://www.who.int/docs/default-source/coronaviruse/ situation-reports/20200311-sitrep-51-covid-19.pdf?sfvrsn= 1ba62e57_10",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": []
+}

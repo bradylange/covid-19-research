@@ -1,0 +1,1280 @@
+{
+    "paper_id": "b0aa77344d5726699361b0d3bf2dc9b45eff8b06",
+    "metadata": {
+        "title": "Assessing the Global Tendency of COVID-19 Outbreak",
+        "authors": [
+            {
+                "first": "Qinghe",
+                "middle": [],
+                "last": "Liu",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Southeast University",
+                    "location": {
+                        "settlement": "Nanjing",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Zhicheng",
+                "middle": [],
+                "last": "Liu",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Junkai",
+                "middle": [],
+                "last": "Zhu",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Southeast University",
+                    "location": {
+                        "settlement": "Nanjing",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Yuhao",
+                "middle": [],
+                "last": "Zhu",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Southeast University",
+                    "location": {
+                        "settlement": "Nanjing",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Deqiang",
+                "middle": [],
+                "last": "Li",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Zefei",
+                "middle": [],
+                "last": "Gao",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Southeast University",
+                    "location": {
+                        "settlement": "Nanjing",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Liuling",
+                "middle": [],
+                "last": "Zhou",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Southeast University",
+                    "location": {
+                        "settlement": "Nanjing",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Junyan",
+                "middle": [],
+                "last": "Yang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Southeast University",
+                    "location": {
+                        "settlement": "Nanjing",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Qiao",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Southeast University",
+                    "location": {
+                        "settlement": "Nanjing",
+                        "country": "China"
+                    }
+                },
+                "email": "qiaowang@seu.edu.cn"
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "COVID-19 is now widely spreading around the world as a global pandemic, whereas it had been effecitvely under control in China by March 15. In this report, we estimate the global tendency of COVID-19 and analyze the associated global epidemic risk, given that the status quo is continued without further measures being taken.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "The results show that the global \u0734 , excluding China, is estimated to be 2.63 (95% CI: 1.67 -4.69). Seven countries, including Italy and Republic of Korea, have peak values over 10,000. And the peak arrival time of all these countries is after May 12, 2020 (95 % CI: April 1, 2020 -June 24, 2020). We predict that there are four regional clusters of the outbreak: Southeast Asia extending southward to Oceania, the Middle East, Western Europe and North America. Among them, Western Europe will become the major center of the outbreak. The peak values in Spain and Italy are estimated to be 232,661 and 108,062, respectively. The total number of peak values in Europe will exceed 703,215 (95% CI: 209,095,507). Above all, if the current policy environment is maintained, the cumulative number of patients worldwide will exceed 892,950 (95% CI: 335,930,386).",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "On March 1, 2020, Li Y et al [10] , used the outside-China diagnosis number released by WHO and built a mathematical model to capture the global trend of epidemics outside China, and they found that 34 founder patient outside China were not found, the worldwide epidemic trend is approximately exponential, and may grow 10 folds every 19 days.",
+            "cite_spans": [
+                {
+                    "start": 29,
+                    "end": 33,
+                    "text": "[10]",
+                    "ref_id": "BIBREF9"
+                }
+            ],
+            "ref_spans": [],
+            "section": "INTRODUCTION"
+        },
+        {
+            "text": "On March 2, 2020, Zhuang Z et al [11] , used a stochastic model to simulate the transmission process of South Korea and Italy under two corresponding assumptions of exponential growth periods, the results indicated that the reproductive number of the Republic of Korea and Italy are 2.6 (95% CI: 2.3-2.9) and 3.3 (95% CI: 3.0-3.6), respectively. In addition, the estimation of dispersion term were conducted, which indicated that there are fewer super-spreading events.",
+            "cite_spans": [
+                {
+                    "start": 33,
+                    "end": 37,
+                    "text": "[11]",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "ref_spans": [],
+            "section": "INTRODUCTION"
+        },
+        {
+            "text": "On March 8, 2020 , Zhang Z et al [12] , applied a data-driven coding method for the prediction of the global spreading epidemic of COVID-19. Based on the historical epidemiological data and the sets of parameters of augmented SEIR model in 367 cities of China, they selected the best fit profiles to predict the trend of epidemic with any population by comparing the given an early epidemic and the historical profiles. In their study, the peaks of infected cases in South Korea, Italy, and Iran are expected to occur at the end of March, and the percentages of population infected will less than 0.01%, 0.05% and 0.02%, respectively.",
+            "cite_spans": [
+                {
+                    "start": 3,
+                    "end": 16,
+                    "text": "March 8, 2020",
+                    "ref_id": null
+                },
+                {
+                    "start": 33,
+                    "end": 37,
+                    "text": "[12]",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "ref_spans": [],
+            "section": "INTRODUCTION"
+        },
+        {
+            "text": "On March 10, 2020, Zhang Z et al [13] , used the state transition matrix model to predict the epidemic trend of South Korea, Italy and Iran. By matching and fitting different scenarios, the inflection point arrival time will be March 6-12 for South Korea, March 10-24 for Italy and March 10-24 for Iran, and the cumulative number of cases will reach 20k in South Korea, 209k in Italy and 226k in Iran, respectively.",
+            "cite_spans": [
+                {
+                    "start": 33,
+                    "end": 37,
+                    "text": "[13]",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "ref_spans": [],
+            "section": "INTRODUCTION"
+        },
+        {
+            "text": "In our previous work [14] , we predicted the time and value of inflection point and peak point in both Hubei and outside Hubei of China. Inspired by the recent studies and our precious works, we conduct a worldwide prediction of the time and value of the peak point, which is essential for the containment of the epidemic spread of COVID-19. The predicted results are based on the current medical situation, if there is specific medicine for COVID-19 in the future, the time and value of peak point of all countries will be advanced and shrinking compared with none-medicine situation.",
+            "cite_spans": [
+                {
+                    "start": 21,
+                    "end": 25,
+                    "text": "[14]",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "ref_spans": [],
+            "section": "INTRODUCTION"
+        },
+        {
+            "text": "The SEIR model was firstly proposed by Aron and Schwartz in 1984 [15] , where S, E, I and R referring to four different populations in epidemiology: the Susceptibles, Exposed, Infective, and Recovered, respectively [16] [17] . As the research object of this paper is more than 100 countries or regions, it is not the same as the previous study on China's epidemic [14] . In the study of China's epidemic situation, many factors such as Spring Festival, control policies and so on are taken into account, but in contrast, this paper will analyze the heterogeneity of each country or region on the basis of the common spread of infectious diseases. Although these countries have different policies and customs, their basic spread pattern of the epidemic still meets . CC-BY-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 39,
+                    "end": 69,
+                    "text": "Aron and Schwartz in 1984 [15]",
+                    "ref_id": null
+                },
+                {
+                    "start": 215,
+                    "end": 219,
+                    "text": "[16]",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 220,
+                    "end": 224,
+                    "text": "[17]",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 364,
+                    "end": 368,
+                    "text": "[14]",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "ref_spans": [],
+            "section": "COVID-19 TRANSMISSION MODEL: SEIR 3.1. SEIR Model"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18.20038224 doi: medRxiv preprint the principle of dynamics [18] . The epidemic impact of current attitudes and measures on the future trend can also be seen from the data. In this paper, SEIR model which has a strong generalization ability is used. The main assumptions of this model are as follows:",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 122,
+                    "text": "18.20038224",
+                    "ref_id": null
+                },
+                {
+                    "start": 171,
+                    "end": 175,
+                    "text": "[18]",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "ref_spans": [],
+            "section": "COVID-19 TRANSMISSION MODEL: SEIR 3.1. SEIR Model"
+        },
+        {
+            "text": "(1) In the predicted time scale, the existing influences of policies or culture of the target object will be unchanged. (2) During the transmission of virus, the probability of infection in contact with each person is equal in the same target group.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "COVID-19 TRANSMISSION MODEL: SEIR 3.1. SEIR Model"
+        },
+        {
+            "text": "( )",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "COVID-19 TRANSMISSION MODEL: SEIR 3.1. SEIR Model"
+        },
+        {
+            "text": "where t means time, and S, E, I, R represent 4 different state variables, respectively. Formula (3.1) can be represented by the state transition diagram in Figure 1 . All parameters and physical interpretations of the model are shown in Table 1 . \u03b1 Rate of those exposed and being infectious.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 156,
+                    "end": 164,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 237,
+                    "end": 244,
+                    "text": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ],
+            "section": "COVID-19 TRANSMISSION MODEL: SEIR 3.1. SEIR Model"
+        },
+        {
+            "text": "Transmission rate to the recovered from the exposed.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "COVID-19 TRANSMISSION MODEL: SEIR 3.1. SEIR Model"
+        },
+        {
+            "text": "Transmission rate to the recovered from the infectious.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "COVID-19 TRANSMISSION MODEL: SEIR 3.1. SEIR Model"
+        },
+        {
+            "text": "The basic reproduction number, , refers to the average value of how many people an infected person can transmit the virus to through natural transmission without external intervention [19] . From the second generator approach in [20] , the . CC-BY-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 184,
+                    "end": 188,
+                    "text": "[19]",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 229,
+                    "end": 233,
+                    "text": "[20]",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Estimation of"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18.20038224 doi: medRxiv preprint equation (3.2) is derived as follows:",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 122,
+                    "text": "18.20038224",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Estimation of"
+        },
+        {
+            "text": "are transfer variables of SEIR model. Considering that the calculation of \u0734 is in the case of natural transmission, so we use the parameters of the starting time of epidemic spread in each country or region to estimate \u0734 to avoid the impact of human intervention.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Estimation of"
+        },
+        {
+            "text": "In this study, we use open dataset from World Health Organization, BNO News, National Health Commission of China and Github. The details of data source are shown in Appendix 1.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Data Source and Processing"
+        },
+        {
+            "text": "World Health Organization (WHO) . WHO provides timely official information of COVID-19, which includes official name, epidemic analysis, and situation reports. The number of confirmed and death cases are from daily situation reports.",
+            "cite_spans": [
+                {
+                    "start": 26,
+                    "end": 31,
+                    "text": "(WHO)",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Data Source and Processing"
+        },
+        {
+            "text": "BNO News. BNO News provides confirmed cases of coronavirus as well as recovered cases, and the data is updated throughout the day.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Data Source and Processing"
+        },
+        {
+            "text": "National Health Commission of the People's Republic of China. The national health commission of the People's Republic of China provides daily information of the epidemic situation in different parts of China, which is officially released as public data, including local real-time diagnosis data, suspected data, cure data et al.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Data Source and Processing"
+        },
+        {
+            "text": "Hub. For a detailed description of data, please refer to the research of E. Recchi, et al [14] .",
+            "cite_spans": [
+                {
+                    "start": 90,
+                    "end": 94,
+                    "text": "[14]",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Knowledge Centre on Migration and Demography of European Commission. European Commission provides global transnational migration data in Dynamic Data"
+        },
+        {
+            "text": "The data of recovered cases for each country or region was obtained from GitHub ( https://bnonews.com/index.php/2020/02/the-latest-coronavirus-cases/ ). However, there are missing values. For an observation with a missing value, if the previous and the next data points are non-missing and the difference between the values is small than 10, we fill in the missing value by taking the average values. Otherwise, this observations is discarded.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Knowledge Centre on Migration and Demography of European Commission. European Commission provides global transnational migration data in Dynamic Data"
+        },
+        {
+            "text": "While estimating the \u0734 of the epidemic globally, we ignore the countries whose ultimate cumulative number of infected cases are less than 100 and focus on 42 countries out of 118 (please refer to appendix). The average basic reproduction number of these countries is 2.09 (95% CI: 1.89 -2.80). As we can notice, COVID-19 is lashing a great part of the world, and the sufferings are not likely to end soon. By estimating the average value of R 0 , we obtain the objective information of current situations as well as the importance of epidemic prevention.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "MAIN RESULTS OF SEIR MODEL 4.1. Estimate of"
+        },
+        {
+            "text": "Among these 42 countries, the \u0734 of three countries are higher than 2.80, suggesting the great potential of a destructive outburst. Denmark is one of these three . CC-BY-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "MAIN RESULTS OF SEIR MODEL 4.1. Estimate of"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18.20038224 doi: medRxiv preprint countries with a basic reproduction number of (See Appendix 2 for more details), much higher than the global average. In fact, Denmark has frequent contacts with other European countries, some of which are worst-hit areas by SARS-CoV-2. Yet, the government did not pay enough attention to the epidemic and its people refused to wear masks, which would make Denmark one of the areas that suffer the most from the disaster. The lowest value of R 0 is 1.87 in Brazil, still greater than 1. Reflecting on this phenomenon, the global epidemic is still spreading fiercely.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 122,
+                    "text": "18.20038224",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "MAIN RESULTS OF SEIR MODEL 4.1. Estimate of"
+        },
+        {
+            "text": "The peak value is defined as the cumulative number of infected cases. After this peak point, the temporary number of cases gradually decrease and the epidemic subsides [15] . In previous section the tense is simple present. So let's stick to it. The epidemic trend of 147 countries are first simulated all over the world, and the peak number of confirmed cases and its arrival time in each country are predicted (See Appendix 2 for details). As is shown in Table 2 , according to different peak value intervals, these countries are divided into six different categories. Among these categories, the highest one includes Spain and Italy, whose peak values are higher than 100,000 based on our simulation. 18 countries including France and Iran have peak values higher than 10,000. And the peak values of most of these contries come after May, 2020. Thirteen countries have peak values ranging from 1000 to 10,000, and all of their peak values arrive after April 18, 2020. Mexico and other 20 countries have peak values ranging from 100 and 1,000. 42 countries have peak values between 10 and 100 and the peak values arrive between March 21, 2020 and April 23, 2020. Moreover, 51 countries of 147 have peak values under 10, which arrive before the middle of April according to our simulation. Italy and Spain monopolize one category, out of all 147 countries, due to its high exposure to the risk of the coronavirus. It should be stressed out that these two countries should take effective measures to overcome the epidemic as soon as possible. According to our estimation, the peak number of real-time confirmed cases of Italy is predicted to reach 108,062, and its arrival time is on May 6, 2020. As one of the worst-hit countries, Italy has already seized the world's attention. The major reason of this outbreak is that the public in Italy doesn't take quarantine seriously. This could be a warning to other countries. The other 18 countries whose peak value . CC-BY-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 168,
+                    "end": 172,
+                    "text": "[15]",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 457,
+                    "end": 464,
+                    "text": "Table 2",
+                    "ref_id": "TABREF1"
+                }
+            ],
+            "section": "Estimate of the Peak of Confirmed Cases"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03.18.20038224 doi: medRxiv preprint will reach over 10,000, such as the United States of America and South Korea, are all in severe situation at present. Poland, Japan and several other countries are the next worst-hit areas with their peak value over 1000. As for the peak value between 100 and 1000, we consider these countries as potential-disaster-area. The development trend of them firmly rely on the actions they take to confront the SARS-CoV-2. Once powerful measures are taken, the epidemic will be likely to be under control. To our relief, the most dangerous countries in this category including Belgium and Singapore are taking actions to strictly suppress the transmission. Rest of the countries have the peak value under 100, they are much less dangerous. Moreover, 51 of them will not reach 10 confirmed cases, which makes these countries a relatively safe place, with no need to implement strong measures overly.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Estimate of the Peak of Confirmed Cases"
+        },
+        {
+            "text": "Furthermore, as is shown in Table 2 , 16.9% of all 118 countries will not reach the peak value of 10, and 55.9% of 118 countries will have the peak value under 100. However, 17.8% of the countries are suffering a lot. We are supposed to help each other to overcome the hardship. In addition, as is shown in Table 3 , we compared peak arrival time in countries whose peak value are higher than 200. As we can see, most of the countries will reach their peak value in April. China is an exceptional research object, since it broke out several months ago, and have already been under control effectively. And Denmark is one of the latest to reach its peak. Ultimately, we take a broader view at the six continents of the world. From Table  4 , we can observe that Africa has the the minimum peak value and the second earliest peak arrival time. There are only two countries in Oceania for our study, the sparse of population makes it easier to reach the peak value quickly. With the peak value over 10,000, North America could ascribe the potentially danger to the United States of America\uff0cwhose peak value would reach 14,454. Moreover, it is estimated that Asia's peak value would reach 157,982, China plays a great part in raising the peak value.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 28,
+                    "end": 35,
+                    "text": "Table 2",
+                    "ref_id": "TABREF1"
+                },
+                {
+                    "start": 307,
+                    "end": 314,
+                    "text": "Table 3",
+                    "ref_id": "TABREF2"
+                },
+                {
+                    "start": 730,
+                    "end": 738,
+                    "text": "Table  4",
+                    "ref_id": "TABREF3"
+                }
+            ],
+            "section": "Estimate of the Peak of Confirmed Cases"
+        },
+        {
+            "text": ". CC-BY-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Estimate of the Peak of Confirmed Cases"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18.20038224 doi: medRxiv preprint According to Table 4 , Europe has both the highest peak value and the latest peak-arrival time, which indicates that the situation is severe in Europe. South Africa also has the second earliest peak-arrival time but a much lower peak value, which might be due to the lack of medical resources and the relative bad traffic. Figure 2 . Comparisons between the estimated trends of cumulative number of confirmed cases in 40 countries or regions, which has the number of confirmed cases exceeding 100, as of March 17, 2020. X-axis is days since the outbreak, and y-axis is the number of confirmed cases.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 144,
+                    "text": "18.20038224 doi: medRxiv preprint",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 158,
+                    "end": 165,
+                    "text": "Table 4",
+                    "ref_id": "TABREF3"
+                },
+                {
+                    "start": 468,
+                    "end": 476,
+                    "text": "Figure 2",
+                    "ref_id": null
+                }
+            ],
+            "section": "Estimate of the Peak of Confirmed Cases"
+        },
+        {
+            "text": ". CC-BY-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Estimate of the Peak of Confirmed Cases"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18.20038224 doi: medRxiv preprint The predicted final epidemic scale is visualized on the world map to show the geographical characteristics of the predicted epidemic peak of confirmed cases. According to the previous research [21] [22] , geographic proximity transmission is very prominent in epidemic transmission. That is to say that the phenomenon of regional transmission is popular. This opinion can also be confirmed on the map shown in Figure 3 . The outbreak shows multiple clusters, and has a more obvious near aggregation effect. But we can still find that North Korea is geographically close to . CC-BY-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 122,
+                    "text": "18.20038224",
+                    "ref_id": null
+                },
+                {
+                    "start": 338,
+                    "end": 342,
+                    "text": "[21]",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 343,
+                    "end": 347,
+                    "text": "[22]",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 555,
+                    "end": 563,
+                    "text": "Figure 3",
+                    "ref_id": null
+                }
+            ],
+            "section": "Estimate of the Peak of Confirmed Cases"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Estimate of the Peak of Confirmed Cases"
+        },
+        {
+            "text": "South Korea, Japan and China, which has the worst outbreak. North Korea's neighboring countries are suffering from severe epidemics, but North Korea is safe. This is because at the time of the outbreak in China in January 2020, North Korea adopted strict control and management. The North Korean government blocked all entry borders, not allowing any people to travel home and abroad. The choropleth map indicates that the spread of the epidemic will form four major regional clusters. The first cluster ranges from Southeast Asia to Oceania, including China, South Korea, Japan, Indonesia, the Philippines, Australia, etc. South Korea, Japan, Indonesia, Malaysia, and the Philippines will all have peak values of more than 1,000. Water transportation in this area is well developed, with frequent commercial exchanges and more opportunities for people to gather, which accelerating the spread of COVID-19. Among these cases, the Diamond Princess incident is the most typical. The effect of epidemic spread caused by gathering behaviors such as cruises is likely to be much higher than the R 0 level in general sense [22] . As Mar. 18, 2020, 712 people have been diagnosed with the disease on the diamond princess. In the case of unknown diseases, patients will spread the virus to more susceptible groups.",
+            "cite_spans": [
+                {
+                    "start": 1117,
+                    "end": 1121,
+                    "text": "[22]",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "ref_spans": [],
+            "section": "0"
+        },
+        {
+            "text": "The second outbreak cluster occurs in Western Europe, including Spain, Italy, France, Poland, Germany, and many other neighboring countries. In addition, Spain and Italy are estimated to 232,661 and 108,062 confirmed cases, respectively, given that the current policies are not changed. Another 15 countries are expected to have peak values of over 10,000. Considering the number and density of European countries, there would be a serious cross-border phenomenon. As the first outbreak center, China has a population of about 1.4 billion, and the number of patients in China has basically reached the relative saturation level, because the increment of confirmed cases in China is less than 100 more than one week. As of March 15, 2020, the cumulative number of patients is 81,059 in China, while the total population in Europe is about 740 million. Under the current transmission environment and government measures, the estimated number of patients is likely to be 703,215. Based on the above data, the per capita prevalence rate in Western Europe will be at least 15.4 times higher than that in China. Without timely response measures, Western Europe has become a more serious epidemic area than southeast Asia.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "0"
+        },
+        {
+            "text": "The third outbreak cluster is in the Middle East, e.g.,, Iran. According to the current trend, the peak number of confirmed cases in Iran will reach 37404. Under the circumstances of social unrest and economic sanctions, it is very difficult and urgent to control the epidemic situation in Iran. In addition, the peak values of Qatar and Saudi Arabia are both estimated to be over 5,000. In particular, ithe maximum daily increase in the number of patients is 238 in Qatar, while the base number has reached 427.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "0"
+        },
+        {
+            "text": "The last outbreak luster occurred in North America. Up to now, although there's no direct evidence to prove that wearing masks can inhibit the spread of the epidemic, the phenomenon of crowd gathering in airports and other places in the United States still exists, and many people have not taken any isolation and protection measures. 1 1 Given that the epidemic has spread in the United States (2,726 cases in total, as of March 15, 2020) , if the current situation is maintained, the peak number of cases in the United States will reach 14,454. In addition, Canada is expected to have a peak value of 1,866, making it the second most affected country in the region. It can be seen clearly that the most countries or regions where the outbreak is expected to occur has relatively developed economy, trade and their people flow are relatively large. Timely isolation measures are necessary and the epidemic situation is urgent. The cumulative number of global patients will finally be 892,950 (95% CI: 335,922 -24,930,386).",
+            "cite_spans": [
+                {
+                    "start": 335,
+                    "end": 338,
+                    "text": "1 1",
+                    "ref_id": null
+                },
+                {
+                    "start": 424,
+                    "end": 439,
+                    "text": "March 15, 2020)",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "0"
+        },
+        {
+            "text": "We performed simulation analysis of COVID-19 based on SEIR model. From analysis, we draw the following conclusions: (1) We collected data before March 17, 2020 ",
+            "cite_spans": [
+                {
+                    "start": 145,
+                    "end": 159,
+                    "text": "March 17, 2020",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "CONCLUSION"
+        },
+        {
+            "text": "Ethics approval and consent to participate Not applicable.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Declarations"
+        },
+        {
+            "text": "Not applicable.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Consent for publication"
+        },
+        {
+            "text": ". CC-BY-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Consent for publication"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18 . CC-BY-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 113,
+                    "text": "18",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Consent for publication"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18.20038224 doi: medRxiv preprint ",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 144,
+                    "text": "18.20038224 doi: medRxiv preprint",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Consent for publication"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "Definition of suspected cases of unexplained pneumonia', the National Health Commission of the People's Republic of China",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "Early Transmission Dynamics in Wuhan, China, of Novel Coronavirus-Infected Pneumonia",
+            "authors": [
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Guan",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "Update on COVID-19 as of 24:00 on",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "WHO Director-General's opening remarks at the media briefing on COVID-19 -11",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Novel coronavirus (2019-nCoV) situation report 54. World Health Organization",
+            "authors": [],
+            "year": 2020,
+            "venue": "WHO",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "WHO Director-General's opening remarks at the media briefing on COVID-19 -13",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Novel coronavirus(2019-nCoV) situation report. World Health Organization",
+            "authors": [],
+            "year": 2020,
+            "venue": "WHO",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "Modified SEIR and AI prediction of the epidemics trend of COVID-19 in China under public health interventions",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Zeng",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Thorac",
+            "volume": "2020",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "The spatiotemporal estimation of the dynamic risk and the international transmission of 2019 Novel Coronavirus (COVID-19) outbreak: A global perspective",
+            "authors": [
+                {
+                    "first": "Y-C",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "Chi W-J",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y-T",
+                    "middle": [],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "COVID-19 Epidemic Outside China: 34 Founders and Exponential Growth",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Liang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Yin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF10": {
+            "ref_id": "b10",
+            "title": "Preliminary estimating the reproduction number of the coronavirus disease (COVID-19) outbreak in Republic of Korea and Italy by 5",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Zhuang",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "Prediction of COVID-19 Spreading Profiles in South Korea, Italy and Iran by Data-Driven Coding",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Zhan",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "K"
+                    ],
+                    "last": "Tse",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Lai",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF12": {
+            "ref_id": "b12",
+            "title": "The Prediction for Development of COVID-19 in Global Major Epidemic Areas Through Empirical Trends in China by Utilizing State Transition Matrix Model",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Yao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF13": {
+            "ref_id": "b13",
+            "title": "Estimating transnational human mobility on a global scale",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Recchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Deutschmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Vespe",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "Assessing the Tendency of 2019-nCoV (COVID-19) Outbreak in China, medRxiv",
+            "authors": [
+                {
+                    "first": "Qinghe",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Zhicheng",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Deqiang",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Zefei",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Junkai",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Junyan",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Qiao",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF15": {
+            "ref_id": "b15",
+            "title": "Seasonality and period-doubling bifurcations in an epidemic model",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Aron",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Schwartz",
+                    "suffix": ""
+                }
+            ],
+            "year": 1984,
+            "venue": "Journal of theoretical biology",
+            "volume": "110",
+            "issn": "4",
+            "pages": "665--679",
+            "other_ids": {}
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "Global stability for the SEIR model in epidemiology",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Muldowney",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF18": {
+            "ref_id": "b18",
+            "title": "Global dynamics of an SEIR epidemic model with vertical transmission",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "SIAM Journal on Applied Mathematics",
+            "volume": "62",
+            "issn": "1",
+            "pages": "58--69",
+            "other_ids": {}
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "The Mathematics of Infectious Diseases",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hethcote",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "J]. SIAM Review",
+            "volume": "42",
+            "issn": "4",
+            "pages": "599--653",
+            "other_ids": {}
+        },
+        "BIBREF20": {
+            "ref_id": "b20",
+            "title": "The estimation of the basic reproduction number for infectious diseases",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Dietz",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF22": {
+            "ref_id": "b22",
+            "title": "SARS outbreaks in Ontario, Hong Kong and Singapore: the role of diagnosis and isolation as a control mechanism",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Chowell",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Fenimore",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Castillo-Garsow",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Castillo-Chavez",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Journal of Theoretical Biology",
+            "volume": "224",
+            "issn": "1",
+            "pages": "1--8",
+            "other_ids": {}
+        },
+        "BIBREF23": {
+            "ref_id": "b23",
+            "title": "Transmission dynamics of the etiological agent of SARS in Hong Kong: Impact of public health interventions",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Riley",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                },
+                {
+                    "first": "Ca",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "SEIR system state transition diagram.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Peak value of confirmed cases in 118 countries over the world. In this world map, the same set of color coding is used for different actual geographical locations. Red means the higher the diagnosis cases peak, while white means the lower the diagnosis cases peak.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "The peak time of the number of confirmed cases in major 43 countries and 6 continents, as well as the global trend chart of the cumulative number of confirmed cases. X-axis is date, and y-axis is the global number of confirmed cases.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": "List of Symbols",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Predicted peak number and percentage of each interval of confirmed cases",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Peak arrival time comparisons in 42 main countries, which has the number of confirmed cases exceeding 100, as of March 17, 2020.",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF3": {
+            "text": "Sum of peak values and average peak arrival time of different continents",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF4": {
+            "text": "to simulate the natural transmission of the SARS-CoV-2 in 147 countries. The average basic reproductive number \u0734 of these countries was estimated to be 2.63 (95% CI: 1.67 -4.69). (2) The peak value of these countries except China will arrive after May 12, 2020 (95 % CI: April 1, 2020 -June 24, 2020). 16.9% of the 118 countries have peak values lower than 10. 55.9% of the 118 countries will have peak values lower than 100. (3) Among the six continents, Europe has the highest peak value of 703,215 (95% CI: 209670 -23095507), and the average peak-arrival date of Europe is June 15 (95% CI: May 26 -August 20). The lowest peak of 899 (95% CI: 679 -5,186) appears in Oceania, which will arrive on March 6 (95% CI: April 25 -May 23). Asia has a peak value of 157,982 (95% CI: 112,467 -1,466,119), and China accounts for about 51.31% this value. (4) Most countries or regions where the outbreak is expected to occur has a fairly high level of economic development, and their population flow are relatively large. Timely isolation measures are necessary and the epidemic situation is several. Susceptible-Exposed-Infectious-Recovered.",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": [
+        {
+            "text": "Not applicable.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "The datasets used and analyzed during the current study is available from open resources.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Availability of data"
+        },
+        {
+            "text": "The authors declare that they have no conflict of interest.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Competing Interests"
+        },
+        {
+            "text": "This work was not supported by any funding. ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Funding"
+        }
+    ]
+}

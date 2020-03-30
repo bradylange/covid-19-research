@@ -1,0 +1,661 @@
+{
+    "paper_id": "9731e9ca09f70adcddebc6667f689908bd3b18e0",
+    "metadata": {
+        "title": "Favipiravir versus Arbidol for COVID-19: A Randomized Clinical Trial",
+        "authors": [
+            {
+                "first": "Chang",
+                "middle": [],
+                "last": "Chen",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Zhongnan Hospital of Wuhan University",
+                    "location": {
+                        "postCode": "430071",
+                        "settlement": "Wuhan",
+                        "region": "Hubei",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Jianying",
+                "middle": [],
+                "last": "Huang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Zhongnan Hospital of Wuhan University",
+                    "location": {
+                        "postCode": "430071",
+                        "settlement": "Wuhan",
+                        "region": "Hubei",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Zhenshun",
+                "middle": [],
+                "last": "Cheng",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Zhongnan Hospital of Wuhan University",
+                    "location": {
+                        "postCode": "430071",
+                        "settlement": "Wuhan",
+                        "region": "Hubei",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Jianyuan",
+                "middle": [],
+                "last": "Wu",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Zhongnan Hospital of Wuhan University",
+                    "location": {
+                        "postCode": "430071",
+                        "settlement": "Wuhan",
+                        "region": "Hubei",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Song",
+                "middle": [],
+                "last": "Chen",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Zhongnan Hospital of Wuhan University",
+                    "location": {
+                        "postCode": "430071",
+                        "settlement": "Wuhan",
+                        "region": "Hubei",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Yongxi",
+                "middle": [],
+                "last": "Zhang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Zhongnan Hospital of Wuhan University",
+                    "location": {
+                        "postCode": "430071",
+                        "settlement": "Wuhan",
+                        "region": "Hubei",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Bo",
+                "middle": [],
+                "last": "Chen",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Zhongnan Hospital of Wuhan University",
+                    "location": {
+                        "postCode": "430071",
+                        "settlement": "Wuhan",
+                        "region": "Hubei",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Mengxin",
+                "middle": [],
+                "last": "Lu",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Zhongnan Hospital of Wuhan University",
+                    "location": {
+                        "postCode": "430071",
+                        "settlement": "Wuhan",
+                        "region": "Hubei",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Yongwen",
+                "middle": [],
+                "last": "Luo",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Zhongnan Hospital of Wuhan University",
+                    "location": {
+                        "postCode": "430071",
+                        "settlement": "Wuhan",
+                        "region": "Hubei",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Jingyi",
+                "middle": [],
+                "last": "Zhang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "The Third People's Hospital of Hubei Province",
+                    "location": {
+                        "postCode": "430033",
+                        "settlement": "Wuhan",
+                        "region": "Hubei",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Ping",
+                "middle": [],
+                "last": "Yin",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Huazhong University of Science and Technology",
+                    "location": {
+                        "postCode": "430030",
+                        "settlement": "Wuhan",
+                        "region": "Hubei",
+                        "country": "China"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Xinghuan",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Zhongnan Hospital of Wuhan University",
+                    "location": {
+                        "postCode": "430071",
+                        "settlement": "Wuhan",
+                        "region": "Hubei",
+                        "country": "China"
+                    }
+                },
+                "email": "wangxinghuan@whu.edu.cn"
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "Manuscript word count: Key points 57; Abstract 336; Full text 3678 All rights reserved. No reuse allowed without permission. author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "\u2264 36.6 \u00b0C; respiratory frequency \u2264 24 times/min; Oxygen saturation \u2265 98% without oxygen inhalation; mild or no cough.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "The armpit temperature, respiratory rate, oxygen saturation without oxygen, oxygen therapy and noninvasive positive pressure ventilation (NPPV) were recorded in daily All rights reserved. No reuse allowed without permission. author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is the . https://doi.org/10.1101/2020.03.17.20037432 doi: medRxiv preprint follow-up. Repeated measurements were made at least twice in each follow-up. The measurements were taken after 15 minutes rest at room temperature (23\u00b12 \u00b0C).",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Secondary outcomes included the time from randomization to fever reduction (patients with fever at the time of enrollment), the time from randomization to cough relief (patients with moderate or severe cough at the time of enrollment), the rate of auxiliary oxygen therapy or noninvasive mechanical ventilation during the trial, the all-cause mortality during the trial, the rate of respiratory failure during the trial (defined as SPO 2 \u2264 90% or PaO 2 /FiO 2 < 300 mmHg without oxygen inhalation, and requires oxygen therapy or higher respiratory support).",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Blood biochemistry, urine routine, coagulation function, C-reactive protein, nucleic acid and CT were examined on the third day (D3\u00b11 day) and the seventh day (D7\u00b11 day) after taking the drug, and the adverse events and concomitant medication were observed.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Classification criteria of ordinary COVID-19 patients and critical COVID-19 patients:",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "(1) Ordinary COVID-19 patients: has a fever, respiratory symptom, can be observed by imageology methods. (2) Critical COVID-19 patients: meeting any of the following case: a. dyspnea, RR > 30 times/min; b. the SpO 2 < 93% in the resting state; c. PaO 2 /FiO 2 < 300mmHg (1 mmHg = 0.133 kPa). PaO 2 /FiO 2 should be corrected according to the formula: PaO 2 /FiO 2 \u00d7 [atmospheric pressure (mmHg)/760]. The pulmonary imaging showed that the lesions progressed more than 50% within 24-48 hours, and the patients were classified as critical patients.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "All rights reserved. No reuse allowed without permission. author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Statistical Analysis"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is the . https://doi.org/10.1101/2020.03.17.20037432 doi: medRxiv preprint Sample size estimation: the expected clinical recovery rate of the experimental group is 70%, the clinical recovery of the control group is 50%, \u03b1 = 0.025 (single side), \u03b2 = 0.20, power = 0.80. According to the distribution ratio of 1:1 between the experimental group and the control group, the statistical sample size is 92 participants in each group. The sample size increased about 20% considering factors such as shedding/elimination. The trial was designed to include 240 participants in the group, including 120 in the experimental group and 120 in the control group.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Statistical Analysis"
+        },
+        {
+            "text": "SAS9.4 software was used for statistical analysis. For the main efficacy indicator/primary outcome (clinical recovery rate after 7 days or the end of treatment), the comparison between the experimental group and the control group adopts the optimal test. We calculated the bilateral 95% CI of the difference between the clinical recovery rate of the experimental group and the control group. If the lower limit was > 0, it was considered the experimental group (favipiravir) is superior to the control group (arbidol). Log rank test was used to compare the \"time\" between the two groups. For the secondary efficacy indicators/secondary outcomes, t test or Wilcoxon rank sum test (if t-test was not applicable) was performed for safety indicators and continuous variables, Wilcoxon rank sum test was used for grade variables. Frequency or composition (%) were used for statistical description of classification indexes, and",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Statistical Analysis"
+        },
+        {
+            "text": "Chi-square test test or Fisher's exact test was used for comparison between groups.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Statistical Analysis"
+        },
+        {
+            "text": "For all statistical tests, P value < 0.05 (bilateral) were considered as statistically significant.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Statistical Analysis"
+        },
+        {
+            "text": "All rights reserved. No reuse allowed without permission.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Statistical Analysis"
+        },
+        {
+            "text": "author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Statistical Analysis"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is the . https://doi.org/10.1101/2020.03.17.20037432 doi: medRxiv preprint Comparison of duration of fever, cough relief time and auxiliary oxygen therapy or noninvasive mechanical ventilation rate between 2 groups Table 3 displayed duration of fever, cough relief time and auxiliary oxygen therapy or noninvasive mechanical ventilation rate between the favipiravir and arbidol groups. All rights reserved. No reuse allowed without permission. author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 284,
+                    "end": 291,
+                    "text": "Table 3",
+                    "ref_id": "TABREF1"
+                }
+            ],
+            "section": "Statistical Analysis"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is the . All rights reserved. No reuse allowed without permission.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Statistical Analysis"
+        },
+        {
+            "text": "author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Statistical Analysis"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is the .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Statistical Analysis"
+        },
+        {
+            "text": "patients.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Table 2. Comparison of 7 day's clinical recovery rate of favipiravir and arbidol in COVID-19"
+        },
+        {
+            "text": "Favipiravir author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Variables"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is the . author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Variables"
+        },
+        {
+            "text": "The copyright holder for this preprint (which was not peer-reviewed) is the . https://doi.org/10.1101/2020.03.17.20037432 doi: medRxiv preprint",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Variables"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "COVID-19) Situation Report. World Health Organization",
+            "authors": [],
+            "year": null,
+            "venue": "Coronavirus disease 2019",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "Coronavirus Disease (COVID-19)-Statistics and Research",
+            "authors": [
+                {
+                    "first": "Max",
+                    "middle": [],
+                    "last": "Roser",
+                    "suffix": ""
+                },
+                {
+                    "first": "Hannah",
+                    "middle": [],
+                    "last": "Ritchie",
+                    "suffix": ""
+                },
+                {
+                    "first": "Esteban",
+                    "middle": [],
+                    "last": "Ortiz-Ospina",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "Clinical Characteristics of 138 Hospitalized Patients With 2019 Novel Coronavirus-Infected Pneumonia in Wuhan, China",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "JAMA",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1001/jama.2020.1585"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Clinical course and risk factors for mortality of adult inpatients with COVID-19 in Wuhan, China: a retrospective cohort study",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Lancet",
+            "volume": "",
+            "issn": "",
+            "pages": "30566--30569",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(20"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Arbidol and Other Low-Molecular-Weight Drugs That Inhibit Lassa and Ebola Viruses",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Hulseberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "F\u00e9n\u00e9ant",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Szyma\u0144ska-De Wijs",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "J Virol",
+            "volume": "93",
+            "issn": "8",
+            "pages": "2185--2203",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.02185-18"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "The mechanism of resistance to favipiravir in influenza",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Goldhill",
+                    "suffix": ""
+                },
+                {
+                    "first": "Te",
+                    "middle": [],
+                    "last": "Velthuis",
+                    "suffix": ""
+                },
+                {
+                    "first": "Ajw",
+                    "middle": [],
+                    "last": "Fletcher",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "115",
+            "issn": "45",
+            "pages": "11613--11618",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1811345115"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Clinical course and risk factors for mortality of adult inpatients with COVID-19 in Wuhan, China: a retrospective cohort study. Lancet. published online Mar 11",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "30566--30569",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(20"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "Clinical features of patients infected with 2019 novel coronavirus in Wuhan",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "China. Lancet",
+            "volume": "395",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(20)30183-5"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "Chinese diagnosis and treatment plan of COVID-19 patients (The sixth edition)",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Of 98 ordinary COVID-19 patients in the favipiravir group, 57 had a fever and 60 had a cough; of 111 ordinary COVID-19 patients in the arbidol group, 65 had a fever and 64 had a cough. For ordinary COVID-19 patients, the time of fever reduction and cough relief in the favipiravir group was significantly shorter than that in the arbidol group (P < 0.0001).Of 42 COVID-19 patients with hypertension and/or diabetes in the favipiravir group, 28 had a fever and 25 had a cough; of 35 COVID-19 patients with hypertension and/or diabetes in the arbidol group, 24 had a fever and 23 had a cough. For COVID-19 patients with hypertension and/or diabetes, the time of fever reduction and cough relief in the favipiravir group was also significantly shorter than that in the arbidol group (P < 0.0001).For ordinary patients with COVID-19, auxiliary oxygen therapy or noninvasive mechanical ventilation rate was 17.12% (19/111) in the arbidol group and 8.16%(8/98) in the favipiravir group (P = 0.0541), with the difference of recovery rate between 2 groups (95% CI) was -0.0895 (-0.1781, -0.0009); for critical patients with COVID-19, auxiliary oxygen therapy or noninvasive mechanical ventilation rate was 88.89 (8/9) in the arbidol group and 72.22% (13/18) in the favipiravir group (P = 0.3261), with the difference of recovery rate between 2 groups (95% CI) was -0.1667 Figure legend",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Flow Diagram of the Study.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": "Basic characteristics of the participants. * t test was performed for continuous variables, frequency or composition (%) were used for statistical description of classification indexes, and Chi-square test or Fisher's exact test was used for comparison between groups.",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Comparison of duration of fever, cough relief time and other secondary outcomes between two groups. All rights reserved. No reuse allowed without permission.author/funder, who has granted medRxiv a license to display the preprint in perpetuity.The copyright holder for this preprint (which was not peer-reviewed) is the. https://doi.org/10.1101/2020.03.17.20037432",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Comparison of antiviral-associated adverse effects between two groups. Fisher's exact test was used for comparison between groups.All rights reserved. No reuse allowed without permission.",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": []
+}

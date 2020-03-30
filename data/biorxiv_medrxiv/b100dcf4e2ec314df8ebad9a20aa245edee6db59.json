@@ -1,0 +1,764 @@
+{
+    "paper_id": "b100dcf4e2ec314df8ebad9a20aa245edee6db59",
+    "metadata": {
+        "title": "Machine Learning the Phenomenology of COVID-19 From Early Infection Dynamics",
+        "authors": [
+            {
+                "first": "Malik",
+                "middle": [],
+                "last": "Magdon-Ismail",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Rensselaer Ploytechnic Institute",
+                    "location": {
+                        "addrLine": "110 8th Street",
+                        "postCode": "12180",
+                        "settlement": "Troy",
+                        "region": "NY",
+                        "country": "USA"
+                    }
+                },
+                "email": "magdon@cs.rpi.edu"
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "We present a data-driven machine learning analysis of COVID-19 from its early infection dynamics, with the goal of extracting actionable public health insights. We focus on the transmission dynamics in the USA starting from the first confirmed infection on January 21 2020. We find that COVID-19 has a strong infectious force if left unchecked, with a doubling time of under 3 days. However it is not particularly virulent. Our methods may be of general interest.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "On March 1 on ABC's This Week, US Secretary of Health and Human Services Alex Azar told host George Stephanopoulos that asymptomatic spread of COVID-19 is \"not the major driver\" of the spread of the new coronavirus, a sentiment corroborated on the CDC's website. Meanwhile several other researchers disagreed, for example Dr. Osterholm, director of the Center for Infectious Disease Research and Policy at the University of Minnesota and Dr. Schaffner of the Vanderbilt University School of Medicine and longtime adviser to the CDC (see the CNN article, Cohen (2020) ). At the time, there was clearly no unimodal opinion. What does the data say? In a recent article, Chinazzi et al. (2020) used the Global Epidemic and Mobility Model (GLEAM) to perform infection scenario analyses on China COVID-19 data, using a networked meta-population model focused on transportation hubs. A similar model for the US was reported in Wilson (2020) where their web-app predicts from 150,000 to 1.4 million infected cases by April 30, depending on the intervention scenario. Such complex scenario analysis requires user input such as infection sites and properties of the contagion, and the model is taken at face value. A majority of infection sites are hidden, especially if asymptomatic transmission is significant, and a range of contagion parameters must be deduced, perhaps using domain expertise.",
+            "cite_spans": [
+                {
+                    "start": 554,
+                    "end": 566,
+                    "text": "Cohen (2020)",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 667,
+                    "end": 689,
+                    "text": "Chinazzi et al. (2020)",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 920,
+                    "end": 933,
+                    "text": "Wilson (2020)",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "There is a clear need for generating actionable intelligence on the nature of a pandemic from early and minimal data. Data driven approaches are powerful. A long range regression analysis of COVID-19 out to 2025 on US data using immunological, epidemiological and seasonal effects is given in Kissler et al. (2020) , which predicts recurrent outbreaks. We also follow a pure data-driven machine learning approach to understand early dynamics of COVID-19 on the first 54 days of US confirmed infection reports (downloadable from the European Center For Disease Control). We address the challenge of real-time data-intelligence from early data. Our data-approach is simple, requires minimal data or human input and generates fast actionable insights. Is asymptomatic 1 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 293,
+                    "end": 314,
+                    "text": "Kissler et al. (2020)",
+                    "ref_id": "BIBREF9"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https: //doi.org/10.1101/2020.03.17.20037309 doi: medRxiv preprint spread significant? Our data-driven analysis says yes, emphatically. What are the properties of the contagion, for example is it unusually virulent? Our analysis says no.",
+            "cite_spans": [
+                {
+                    "start": 85,
+                    "end": 122,
+                    "text": "//doi.org/10.1101/2020.03.17.20037309",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Early data is both a curse and a blessing. The curse is that early data means you do not have much information, so quantitative models must be simple and robust if they are to be learned from the data. The blessing is that early data is a peek at the pandemic as it roams free, unchecked by public health protocols, for to learn the true intentions of the lion, you must follow the beast on the savanna, not in the zoo. As we will see, much can be learned from this early data and these insights early in the game, that are not based on opinion but data, are crucial to public health governance.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "We analyze confirmed COVID-19 cases as they arrive day by day from January 21 to March 14. We test the predictions on March 15 and 16 and we eagerly await March 17 data. Our model predictions up to March 15 are in Figure 1 . Red circles are cumulative confirmed infections, the blue curve is our learned model and the blue circle is our prediction for March 15, 665 new confirmed infections. Qualitatively the model captures the data. The blue model curve is, in some sense, an optimal fit to the data, with an asymptomatic infectious force if left unchecked of 30% new cases per day (doubling in about 2.6 days) and a virulence of \u03b3 = 0.14% (1 or 2 in a thousand conversions from mild infection to serious). Such intelligence extracted from the learned model has public health significance. The spread rate is high, hence protocols should be invoked to curtail that spread, to prevent overloading of the health-system. On the other hand, we should not panic, the virulence is not astonishingly high.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 214,
+                    "end": 222,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ],
+            "section": "Introduction"
+        },
+        {
+            "text": "Our goal is a simple robust model. By far, the majority of disease models are based on aggregation of individuals according to disease status, such as SI, SIR, SIS Kermack and McKendrick (1927) ; Bailey (1957) ; Anderson and May (1992) . We use a similar model by considering a mild infected state which can transition to a serious state. Early data allows us to make simplifying assumptions. In the early phase, when public health protocols have not kicked in, a confirmed infection is self-2 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 164,
+                    "end": 193,
+                    "text": "Kermack and McKendrick (1927)",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 196,
+                    "end": 209,
+                    "text": "Bailey (1957)",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 212,
+                    "end": 235,
+                    "text": "Anderson and May (1992)",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Model, Data and Analysis"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Model, Data and Analysis"
+        },
+        {
+            "text": "reported. That is, you decide to get tested. Why? Because the condition became serious. That is an important bit of information. A confirmed case is a transition from mild infection to serious. This is not true later when, for example, public health protocols may institute randomized testing. Let us assume that at time t there are C(t) confirmed cases and correspondingly M (t) mild unreported (asymptomatic) infections. The new confirmed cases at time t correspond to mild infections at some earlier time t \u2212 k which have now transitioned to serious and hence got self-reported. Let us suppose that a fraction \u03b3 of those mild cases transitioned to serious, C(t) = C(t \u2212 1) + \u03b3M (t \u2212 k). Another advantage of early dynamics is that we may approximate the growth from each infection as independent and exponential, according to the infectious force of the disease. So",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Model, Data and Analysis"
+        },
+        {
+            "text": "Here, the second term is the loss of mild cases that transitioned to serious and confirmed, and the third term accounts for new infections from confirmed cases. We will further simplify and assume that confirmed cases are fully quarantined and so \u03b1 = 0. Our simplified model is:",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Model, Data and Analysis"
+        },
+        {
+            "text": "We set t = 0 at the first confirmed infection (Jan 21 in USA). There are four parameters.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Model, Data and Analysis"
+        },
+        {
+            "text": "\u03b2, the (asymptomatic) infectious force parameter governing the exponential spreading \u03b3, the virulence, the fraction of mild cases that become serious some time later k, the lag time for mild (asymptomatic) infection to become serious (incubation time) M 0 , The number of unconfirmed (mild) infections at time 0",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Model, Data and Analysis"
+        },
+        {
+            "text": "We may assess the quality of given set of parameters \u03b2, \u03b3, k, M 0 by how well they reproduce the observed dynamics in Figure 1 , using an error-measure, see for example Abu-Mostafa et al. (2012).",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 118,
+                    "end": 126,
+                    "text": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ],
+            "section": "Model, Data and Analysis"
+        },
+        {
+            "text": "We use a combination of the root-mean-squared-error and the root-mean-squared-percentage-error between the observed dynamics and the model predictions. The model parameters which optimally fit the data are \u03b2 * = 1.30 \u03b3 * = 0.0014 k * = 10 days",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Model, Data and Analysis"
+        },
+        {
+            "text": "The (asymptomatic) infectious force, \u03b2, is very high, and corresponds to a doubling time of 2.6 days. On the other hand, the virulence at 0.14% is small, comparable to a standard flu. That is promising. The incubation period of 10 days seems in line with physician observations. The data analysis predicts that when the first confirmed case appeared, there were 4 other infections in the USA. The parameters \u03b2 * , \u03b3 * and M * 0 are new knowledge, gained with relative ease by calibrating a simple robust model to the early dynamics. But, these optimal parameters are not the whole story, when it comes to prediction.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Model, Data and Analysis"
+        },
+        {
+            "text": "To understand the model fitting better, let us walk through the process of obtaining the optimal parameters (\u03b2 * , \u03b3 * , k * , M * 0 ). First we determine the incubation period k and the initial number of unseen mild infections M 0 . To do so, we exhaustively search a grid over (k, M 0 ) and for each pair of values, we perform a gradient descent with 4 million iterations to identify the optimal \u03b2 and \u03b3 for that specific k, M 0 . We evaluate the best achievable fits for various (k, M 0 ) in Figure 2(a) . The deep-blue region corresponds to essentially equivalent models within 0.5% of the optimal fit, our (user defined) error tolerance. The deep-blue region shows the extent to which the model is ill-identified by the data. Indeed, all these deep-blue models equally fit the data which results in a range of predictions. For robustness, we pick the white square in the middle of the deep-blue region, but note here that it is only one of the models which are consistent with the data. In making predictions, we should consider all equivalent models to get a range for the predictions that are period and initial infections. Blue is better fit, red is worse fit. The deep-blue region corresponds to comparable models, within 0.5% of the optimal fit. The white square is the model chosen, (k * , M * 0 ) = (10, 4) which has optimal fit and also is \"robust\" being in the middle of the deep-blue regions. (b) Model fit for the chosen k * and M * 0 . Again, blue is a better fit and the deep-blue region is an equivalence class of optimal models. We choose the \"robust\" model corresponding to the white square in the middle of the deep-blue region, (\u03b2 * , \u03b3 * ) = (1.30, 0.0014) The deep-blue regions represent uncertainty.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 495,
+                    "end": 506,
+                    "text": "Figure 2(a)",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Model, Data and Analysis"
+        },
+        {
+            "text": "all equally consistent with the data. Similarly, in Figure 2 (b), we fix k * and M * 0 to their optimal robust values and show the uncertainty with respect to \u03b2 and \u03b3 (the deep-blue region). Again, we pick the white square in the middle of the deep-blue region of equivalent models with respect to the data. Hence we arrive at our optimal parameters in Equation (2).",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 52,
+                    "end": 60,
+                    "text": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Model, Data and Analysis"
+        },
+        {
+            "text": "As mentioned in the previous section, to get honest estimates, we must consider all models which are equally consistent with the data, indicated by the deep-blue regions in Figure 2 . We arrive at the following ranges for our estimates, based on a 0.5% error tolerance. The model says the (asymptomatic) infectious force is very strong, around 30%, however it is not that virulent, converting at most 1.2% of mild infections to serious, comparable to a flu. There is significant uncertainty in the incubation period, from 1 up to 13 days, and there could have been up to 12 unknown initial infections when first case was confirmed. As of March 14, the model says there are on the order of a million unknown infections.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 173,
+                    "end": 181,
+                    "text": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Predictions and Discussion"
+        },
+        {
+            "text": "We now come to the predictions of new infections, how the model predicts S(t) will evolve beyond March 14, see We can learn a lot from the early dynamics of COVID-19. It's infectious force, virulence, incubation period, unseen infections and predictions of new confirmed cases. All this, albeit within error tolerances, from a simple model and little data. And, the information is useful for planning and health-system preparedness. A side benefit of the predictions in Table 1 , if the model is to be trusted, is as a benchmark against which to evaluate public health interventions. If moving forward, observed new infections are low compared to the data in Table 1 , it means the interventions are working by most likely reducing \u03b2. The US instuted broad and aggressive social distancing protocols starting on or before March 10. If our \"lag\" k = 10 is accurate, and the social distancing protocols have been effective at reducing \u03b2, the observed new infections should significantly lag the predictions starting on or before March 20. If we did not have such a target to compare with, it would be hard to evaluate intervention protocols.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 470,
+                    "end": 477,
+                    "text": "Table 1",
+                    "ref_id": "TABREF1"
+                },
+                {
+                    "start": 659,
+                    "end": 666,
+                    "text": "Table 1",
+                    "ref_id": "TABREF1"
+                }
+            ],
+            "section": "Predictions and Discussion"
+        },
+        {
+            "text": "Our approach is simple, easy to use, general and works with coarse, aggregated data. We end with some limitations. First, the independent evolution of infection sites only applies to early dynamics. Hence, when the model infections increase beyond some point, and the pandemic begins to saturate the population, a more sophisticated network model that captures the dependence between infection sites would be needed Balcan et al. (2009); Hill et al. (2010) ; Salath\u00e9 and Jones (2010) ; Keeling and Eames (2005) ; Chinazzi et al. (2020) . While we did present an optimal model, it should be taken with a grain of salt because many models are nearly equivalent, resulting in prediction uncertainty. The model and the interpretation of its parameters will change once public health protocols kick in. The model may have to be re-calibrated (for example if \u03b2 decreases) and the parameters may have to be reinterpreted (for example \u03b3 is a virulence only in the self-reporting setting, not for random testing). Lastly, the model was learned on USA data. The learned model parameters may not be appropriate for another society. The virulence could be globally invariant, but it could also depend on genetic and demographic factors like age. One certainly expects the infectious force to depend on the underlying social network and interaction patterns between people, which can vary drastically from one society to another and depending on interventions. Hence, one should calibrate the model to country specific data to gain more useful insights.",
+            "cite_spans": [
+                {
+                    "start": 416,
+                    "end": 437,
+                    "text": "Balcan et al. (2009);",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 438,
+                    "end": 456,
+                    "text": "Hill et al. (2010)",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 459,
+                    "end": 483,
+                    "text": "Salath\u00e9 and Jones (2010)",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 486,
+                    "end": 510,
+                    "text": "Keeling and Eames (2005)",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 513,
+                    "end": 535,
+                    "text": "Chinazzi et al. (2020)",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Predictions and Discussion"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "5"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10. 1101 ",
+            "cite_spans": [
+                {
+                    "start": 98,
+                    "end": 102,
+                    "text": "1101",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "5"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "Learning From Data: A Short Course. amlbook",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Abu-Mostafa",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Magdon-Ismail",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.-T",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "Infectious diseases of humans",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "May",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "The mathematical theory of epidemics",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Bailey",
+                    "suffix": ""
+                }
+            ],
+            "year": 1957,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Multiscale mobility networks and the spatial spreading of infectious diseases",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Balcan",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Colizza",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Gon\u00e7alves",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Ramasco",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vespignani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Proceedings of the National Academy of Sciences",
+            "volume": "106",
+            "issn": "51",
+            "pages": "21484--21489",
+            "other_ids": {}
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "The effect of travel restrictions on the spread of the 2019 novel coronavirus",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Chinazzi",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Davis",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ajelli",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Gioannini",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Litvinova",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Merler",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Piontti",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Mu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Rossi",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Viboud",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xiong",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Halloran",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [
+                        "M L"
+                    ],
+                    "last": "Jr",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vespignani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "Infected people without symptoms might be driving the spread of coronavirus more than we realized",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Cohen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Infectious disease modeling of social contagion in networks",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Hill",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "Rand",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Nowak",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Christakis",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "PLOS Computational Biology",
+            "volume": "6",
+            "issn": "11",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "Networks and epidemic models",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Keeling",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Eames",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Journal of the Royal Society Interface",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "A contribution to the mathematical theory of epidemics",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Kermack",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Mckendrick",
+                    "suffix": ""
+                }
+            ],
+            "year": 1927,
+            "venue": "Proceedings of the Royal Society A",
+            "volume": "",
+            "issn": "",
+            "pages": "700--721",
+            "other_ids": {}
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "Projecting the transmission dynamics of sars-cov-2 through the post-pandemic period",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Kissler",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Tedijanto",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Goldstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Grad",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF10": {
+            "ref_id": "b10",
+            "title": "Dynamics and control of diseases in networks with community structure",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Salath\u00e9",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Jones",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "PLOS Computational Biology",
+            "volume": "6",
+            "issn": "4",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "Exclusive: Here's how fast the coronavirus could infect over 1 million americans. TIME web-applet available for scenario analysis",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Wilson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Early dynamics of (USA) COVID-19 and model prediction.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Uncertainty in model estimation. (a) Optimal fit-error over (\u03b2, \u03b3) for different choices of incubation",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF1": {
+            "text": "We could have added March 15 and 16 to the data and re-calibrated, but then we wouldn't have a test prediction to validate on. You may complain about the large uncertainty-range for each prediction. Unfortunately, that is what the data tells us. There is",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": []
+}

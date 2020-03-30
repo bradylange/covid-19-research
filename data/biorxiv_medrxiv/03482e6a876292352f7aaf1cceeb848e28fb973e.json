@@ -1,0 +1,1089 @@
+{
+    "paper_id": "03482e6a876292352f7aaf1cceeb848e28fb973e",
+    "metadata": {
+        "title": "Estimating Preventable COVID19 Infections Related to Elective Outpatient Surgery in Washington State: A Quantitative Model",
+        "authors": [
+            {
+                "first": "Yuemei",
+                "middle": [],
+                "last": "Zhang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Washington",
+                    "location": {
+                        "settlement": "Seattle",
+                        "region": "WA",
+                        "country": "USA"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Sheng-Ru",
+                "middle": [],
+                "last": "Cheng",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "University of Illinois at Urbana-Champaign",
+                    "location": {
+                        "settlement": "Urbana",
+                        "region": "IL",
+                        "country": "USA"
+                    }
+                },
+                "email": ""
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "Background: As the number of suspected and confirmed COVID19 cases in the US continues to rise, the US surgeon general, Centers for Disease Control and Prevention, and several specialty societies have issued recommendations to consider canceling elective surgeries. However, these recommendations have also faced controversy and opposition.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "Objective: The goal of this study is to provide a quantitative analysis and model for preventable COVID19 infections from elective outpatient or ambulatory surgery cases, which can also be adapted to analyze COVID19 transmission in other healthcare settings. Furthermore, given the controversy over the appropriate handling of elective surgical cases during this pandemic, we hope that our results may have a positive impact on health policy and public health.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        },
+        {
+            "text": "Methods: Using previously published information on elective ambulatory or outpatient surgical procedures and publicly available data on COVID19 infections in the US and on the Diamond Princess cruise ship, we calculated a transmission rate and generated a mathematical model to predict a lower bound for the number of healthcare-acquired COVID19 infections that could be prevented by canceling or postponing elective outpatient surgeries in Washington state. Results: Our model predicts that over the course of 30 days, at least 2445 preventable patient infections and at least 1557 preventable healthcare worker (HCW) infections would occur in WA state alone if elective outpatient procedures were to continue as usual. The majority of these infections are caused by transmission from HCW who became infected at work.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "Despite its humble origins as a cluster of cases restricted to Wuhan, China in Nov. and Dec.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "of 2019, COVID-19 spread explosively across the globe and was officially declared a pandemic by the WHO on March 11, 2020. 1 In the United States, the number of confirmed cases has spiked from just 1 case between Jan. 20, 2020 to 4661 confirmed positives and 85 deaths as of March 16, 2020. 2 Washington state, the epicenter of the US outbreak and the location of the first American case, has had 904 COVID19+ patients as of March 16, 2020. 3 Given its rapid spread and 3.4% mortality rate, 4 countries like Italy and China have been forced to ration limited healthcare resources, and there are concerns that the US may need to do so as well. 5 Person-to-person transmission by asymptomatic individuals and pre-symptomatic individuals during the up-to-14 day incubation period 6 may play a significant role in this pandemic. [7] [8] [9] [10] Infection transmission between COVID19 patients and healthcare workers has also been documented. 11 Given the current status of the COVID19 outbreak, the US Surgeon General, 12 Centers for Disease Control and Prevention (CDC), 13 American College of Surgeons (ACS), 14 American Society of Anesthesiologists (ASA), and Anesthesia Patient Safety Foundation (APSF) 15 have recommended considering rescheduling or postponing some elective surgeries with the goal of conserving limited resources, such as ventilators and ICU beds, and mitigating the risk of \"exposing other inpatients, outpatients, and health care providers to the risk of contracting COVID-19\" from asymptomatic but infectious patients. 14 However, the American Hospital Association, the Federation of American Hospitals, the Association of American Medical Colleges, and the Children's Hospital Association have written a joint letter opposing the surgeon general's advice. 12 Going along with the surgeon general's and ACS's recommendations, multiple hospitals, including several major hospital systems in WA, are canceling or postponing elective surgery procedures. 16 17 The goal of this study is to provide a quantitative analysis and model for preventable COVID19 infections from elective outpatient or ambulatory surgery cases. Our model can also be adapted to analyze COVID19 transmission in other healthcare settings. Furthermore, given the controversy over the appropriate handling of elective surgical cases during this pandemic, we hope that our results may have a positive impact on health policy and public health. Given much of the uncertainty regarding the pathophysiology and epidemiology of COVID19, and the potential policy implications of our results, we chose to focus on lower bounds for preventable infections instead of upper bounds.",
+            "cite_spans": [
+                {
+                    "start": 123,
+                    "end": 124,
+                    "text": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 275,
+                    "end": 292,
+                    "text": "March 16, 2020. 2",
+                    "ref_id": null
+                },
+                {
+                    "start": 425,
+                    "end": 442,
+                    "text": "March 16, 2020. 3",
+                    "ref_id": null
+                },
+                {
+                    "start": 491,
+                    "end": 492,
+                    "text": "4",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 643,
+                    "end": 644,
+                    "text": "5",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 825,
+                    "end": 828,
+                    "text": "[7]",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 829,
+                    "end": 832,
+                    "text": "[8]",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 833,
+                    "end": 836,
+                    "text": "[9]",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 837,
+                    "end": 841,
+                    "text": "[10]",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 939,
+                    "end": 941,
+                    "text": "11",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 1016,
+                    "end": 1018,
+                    "text": "12",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 1069,
+                    "end": 1071,
+                    "text": "13",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1108,
+                    "end": 1110,
+                    "text": "14",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 1204,
+                    "end": 1206,
+                    "text": "15",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 1542,
+                    "end": 1544,
+                    "text": "14",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 1780,
+                    "end": 1782,
+                    "text": "12",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 1974,
+                    "end": 1979,
+                    "text": "16 17",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18.20037952 doi: medRxiv preprint We are excluding symptomatic COVID19+ patients from our model because their elective surgeries would likely be postponed or canceled due to the significantly increased risk of postoperative pulmonary complications if a surgical patient had a recent acute respiratory infection. 18 Thus, our elective surgery patient population only includes uninfected individuals and asymptomatic or pre-symptomatic individuals (whose COVID19 status would not be discovered given current testing limitations). Since COVID19 would not be suspected in these patients, healthcare workers interacting with them typically would not use the level of personal protective equipment (PPE) or precautions necessary to prevent COVID19 transmission, especially if there were also restrictions due to PPE shortages within the clinical institution.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 144,
+                    "text": "18.20037952 doi: medRxiv preprint",
+                    "ref_id": null
+                },
+                {
+                    "start": 423,
+                    "end": 425,
+                    "text": "18",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "The elective surgery population is estimated using data from the National Health Statistics Reports on Ambulatory Surgery Data in 2010. According to the report, an estimated 48 million elective ambulatory surgeries occur annually in the US. 19 Since every center or healthcare institution has different holiday schedules and policies, we divided this number by 365 days/year for a lower bound of 131,506.85 cases per day nationally. To simplify the calculation for the estimated number of elective outpatient cases in WA, we assumed that the case number was directly proportional to population. We divided 131,506.85 daily cases by the US population estimate of 328 million, 20 then multiplied the quotient by WA's population of 7.6 million, 21 to arrive at approximately 3047 elective outpatient surgeries per day in Washington state.",
+            "cite_spans": [
+                {
+                    "start": 241,
+                    "end": 243,
+                    "text": "19",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Data sourcing"
+        },
+        {
+            "text": "In order to predict the lower bounds for the number of preventable patient and healthcare worker infections, we decided to minimize the number of unique healthcare workers (HCW) that patients would interact with in an elective outpatient setting. At minimum, each patient must interact with 4.5 HCW: one anesthesiologist, one surgeon or proceduralist, one circulator, one scrub technician, and 0.5 pre-operative / Post-Anesthesia Care Unit (PACU) nurses for both pre-op and post-op care, since the PACU nursing ratio is usually 1 nurse to 2 patients and the same nurse can care for a patient during pre-op and post-op. Note that the actual number of HCW that patients will interact with can often be higher. The number of patients that each set of perioperative staff works with varies depending on the length of surgery and scheduling preferences. Based on the clinical experiences of one of our authors, we will use the assumption that each HCW is responsible for an average of 5 cases or 5 unique patients. Thus, we came up with the ratio of 4.5 HCW / 5 patients, or . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Data sourcing"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18 Due to the 14-day incubation period of the virus, 6 coupled with the current resource limitations in the US, COVID19 infections will not be detected until symptoms become evident. To estimate the asymptomatic infected population, we looked at publicly available data with at least 15 days of significant increase in confirmed COVID19 case numbers and back-calculated the population count that would have likely been in the pre-symptomatic incubation phase on previous dates. This means that, for any time t, the number of asymptomatic but infected individuals can be estimated using the sum of new infections that were confirmed on t + 1 to t + 14 as follows:",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 113,
+                    "text": "18",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 164,
+                    "end": 165,
+                    "text": "6",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Data sourcing"
+        },
+        {
+            "text": "In other words, if someone is symptomatic and confirmed to be COVID19+ on any of the days between t+1 to t+14, then s/he was infected but asymptomatic on day t. Using publicly available data for the state of Washington for dates Feb. 28-March 16, 2020, our math shows that on Feb. 28, 2020, there were at least 567 asymptomatic infected cases, despite there being only 1 officially confirmed case reported for that day. 3 Similarly, on Feb. 29, there would have been 636 asymptomatic infected individuals, 755 asymptomatic infected individuals on March 1, and 886 . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [
+                {
+                    "start": 420,
+                    "end": 421,
+                    "text": "3",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Data sourcing"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18.20037952 doi: medRxiv preprint asymptomatic infected cases on March 2. We do not have any US data on asymptomatic individuals who ultimately never develop symptoms, so we will not include them. Since our goal is to focus on minima, we used the number 567 as that was the lowest one in the group. News reports that the virus is thought to have been circulating within communities for weeks prior to the outbreak also support the idea that this number underestimates the actual prevalence of asymptomatic cases. 22 Next, we needed to determine the ratio of asymptomatic uninfected people to uninfected people in the general population. We subtracted the confirmed infections on Feb. 28, 2020 and the asymptomatic infected population on that day from the total population of WA in order to determine the uninfected population.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 122,
+                    "text": "18.20037952",
+                    "ref_id": null
+                },
+                {
+                    "start": 624,
+                    "end": 626,
+                    "text": "22",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Data sourcing"
+        },
+        {
+            "text": "We assume that since the majority of patients and HCWs reside in WA, their infection statuses would initially also be representative of that of the general WA population. Thus we multiplied our ratio with 3037 total patients and 2773 total HCW to arrive at the initial values of ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Data sourcing"
+        },
+        {
+            "text": "To investigate the number of preventable infections of healthcare workers from asymptomatic infected patients, we used a simple logistic model of transmission:",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Transmission rate"
+        },
+        {
+            "text": "In this equation, k is the transmission constant, I'(t) is the rate of change of infected population, and I(t) represents total infected population, including the asymptomatic infected population. Since I'(t)",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "I'(t) = k * I(t) * (Population -I(t))"
+        },
+        {
+            "text": "is the rate of change of infected population, it can be observed that the number of total infected population of a discrete time t + 1 is calculated as I(t + 1) = I(t) + I'(t)",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "I'(t) = k * I(t) * (Population -I(t))"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "I'(t) = k * I(t) * (Population -I(t))"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18.20037952 doi: medRxiv preprint To calculate the transmission constant, we rearrange the previous equations to the following k = I(t + 1) \u2212 I(t)",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 144,
+                    "text": "18.20037952 doi: medRxiv preprint",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "I'(t) = k * I(t) * (Population -I(t))"
+        },
+        {
+            "text": "Since we are interested in the total infection spread, data for some known infected population, both symptomatic and asymptomatic, is required. For this, we used data extracted from the Diamond Princess cruise ship. 23 new HCW-to-patient infections, then I(t) would represent asymptomatically infected HCW, and m(t) would represent uninfected patients showing up for surgery. These calculations would be repeated for every day in our model. Since HCW and their patients interact much more closely with one another than they would with members of the general population outside this relationship, and we assume patients and HCW are following infection prevention guidelines such as social distancing appropriately, 24 we will assume the likelihood of either a patient or a HCW becoming infected with COVID19 from outside the clinical setting is negligible compared to their likelihood of infection from another HCW or patient.",
+            "cite_spans": [
+                {
+                    "start": 216,
+                    "end": 218,
+                    "text": "23",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 714,
+                    "end": 716,
+                    "text": "24",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "ref_spans": [],
+            "section": "I'(t) = k * I(t) * (Population -I(t))"
+        },
+        {
+            "text": "By definition, outpatient surgery means that patients leave the institution each day and a new batch of patients with characteristics representative of the general population would arrive . CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "I'(t) = k * I(t) * (Population -I(t))"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18.20037952 doi: medRxiv preprint each day. Although in real life, complications can occur that necessitate inpatient stays following outpatient surgery, for simplicity, we did not include that possibility in our model. Therefore, the starting numbers of uninfected patients and asymptomatic infected patients that we used for our calculations stayed constant. On the other hand, since HCW were unlikely to have significant changes in their employment in the time period we were modeling, we designed a Markov chain to track their infection timelines. New HCW infections comprised the D1 group for the following day, and HCW in D1 would get changed to D2 the following day, HCW in D2 would get changed to D3 the following day, so on and so forth.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 122,
+                    "text": "18.20037952",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "I'(t) = k * I(t) * (Population -I(t))"
+        },
+        {
+            "text": "Our model predicts that over the course of 30 days, at least 2445 preventable patient infections would occur in WA state alone if elective outpatient procedures were to continue as usual. Of those infections, 2 can be attributed to patient-to-patient transmission and 2443 can be attributed to HCW-to-patient transmission.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Preventable patient infections"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Preventable patient infections"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Preventable patient infections"
+        },
+        {
+            "text": "Preventable patient infections (yellow line) appears to behave in an exponential manner, while preventable HCW infections (green line) behaves logistically. A significant number of HCW and patient infections could be prevented if outpatient surgical procedures were canceled or postponed. The dotted lines represent mathematical projections based on our model, but in practice, since these occur after the perioperative workforce begins shrinking significantly, surgical case number will decrease and infection rate will slow down.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Figure 3. Number of Preventable Patient and Healthcare Worker Infections."
+        },
+        {
+            "text": "Based on our model, over the course of 30 days, at least 1557 preventable HCW infections would occur in WA state alone if elective outpatient procedures were to continue as usual. Of those infections, 2 can be attributed to patient-to-HCW transmission and 1555 can be attributed to HCWto-HCW transmission.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Preventable healthcare worker infections"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Preventable healthcare worker infections"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Preventable healthcare worker infections"
+        },
+        {
+            "text": "In the absence of disease symptoms, infected HCW who are pre-symptomatic or asymptomatic would not be suspected of being COVID19+, and therefore would continue to be a part of the active healthcare workforce. Despite rising levels of infection, the size of the active healthcare workforce in the outpatient surgical setting stays fairly constant for the majority of our model's timeline. On day 30, there are still 2660 active HCW, which is about 96% of the original workforce. However, by day 39, the active perioperative workforce has dropped to 1985 HCW in Washington state, which is an approximately 28% drop compared to the starting value. This means staffing shortages may transition from mild to severe within a short period of time.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Impact on healthcare workforce"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Impact on healthcare workforce"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18.20037952 doi: medRxiv preprint Discussion This model demonstrates that a substantial number of potential COVID19 infections in both patients and HCW can be prevented by cancelling elective outpatient surgeries during this pandemic. In combination with the concern that we may not have enough healthcare resources for patients who are being admitted for COVID19 symptoms, it appears that postponing elective surgeries may be an appropriate consideration. Given the fact that there is still a lot of uncertainty and unavailable data regarding COVID19, some of the numbers and assumptions in this model may be incorrect, which could affect the model's predictions.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 144,
+                    "text": "18.20037952 doi: medRxiv preprint",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Impact on healthcare workforce"
+        },
+        {
+            "text": "At first glance, the predicted numbers of preventable infections seem surprisingly high compared to the confirmed number of 769 positive COVID19 cases in WA 3 and 4661 confirmed positive cases in the entire US. However, the growth rate of COVID19 in the US has been rapid, increasing from 69 cases on 2/29/20 to 4661 confirmed cases just 17 days later. 2 Due to the current state of COVID19 testing, US statistics on confirmed COVID19 cases may not be the most reliable, either. Per CDC guidelines that were last updated 3/9/2020, laboratory testing for COVID19 is only indicated for individuals who both develop respiratory symptoms consistent with COVID19 and meet additional criteria, such as being hospitalized, having certain comorbidities, and/or having contact with suspected COVID19+ individuals. 25 However, many COVID19+ individuals may be asymptomatic or only have mild symptoms. 26 In addition, COVID19 testing shortages may make the US statistics on COVID19 cases less reliable. 27 According to Dr.",
+            "cite_spans": [
+                {
+                    "start": 353,
+                    "end": 354,
+                    "text": "2",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 805,
+                    "end": 807,
+                    "text": "25",
+                    "ref_id": null
+                },
+                {
+                    "start": 891,
+                    "end": 893,
+                    "text": "26",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 992,
+                    "end": 994,
+                    "text": "27",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Impact on healthcare workforce"
+        },
+        {
+            "text": "Marty Makary of Johns Hopkins, US statistics may be underestimating the number of cases of COVID19, and he believes that as of March 13, 2020, there could be between 50,000 to 500,000 actual cases of COVID19 in the US. 27 It is possible that many of our predicted new infections would not qualify for lab testing per the CDC's guidelines or would not be able to access it, and therefore would not be included in COVID19 case counts.",
+            "cite_spans": [
+                {
+                    "start": 219,
+                    "end": 221,
+                    "text": "27",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Impact on healthcare workforce"
+        },
+        {
+            "text": "Of note, the majority of new infections are transmitted by asymptomatic infected HCW, not by patients. By exclusively examining outpatient surgeries, we have a revolving door of patients, whereas the HCW stay at the surgical center or hospital for much longer periods of time, and the proportion of asymptomatic infected HCW that patients interact with accumulates. While we did not look at other healthcare settings, this seems to suggest that minimizing the risk of COVID19 infection to HCW in general may be important to preventing hospital-acquired COVID19 infections in patients as well.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Impact on healthcare workforce"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Impact on healthcare workforce"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint . https://doi.org/10.1101/2020.03. 18.20037952 doi: medRxiv preprint Given the high infection rates among HCW after a relatively short period of time, there is a risk that the healthcare system would collapse once enough HCW show symptoms in a similar timeframe and are unable to work. Additionally, based on our analysis of the active perioperative workforce size, it seems that staffing would decrease gradually until a certain point at which the shortage worsens acutely and severely. Although this would not be an issue for patient care if it only affected elective outpatient surgeries, since those could be rescheduled, many perioperative HCW work in hospitals or institutions that perform both elective and and non-elective (ie: urgent or emergent) cases. In those cases, any staffing shortages could cause significant patient harm if it affects the timeliness of urgent and emergent surgeries.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 144,
+                    "text": "18.20037952 doi: medRxiv preprint",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Impact on healthcare workforce"
+        },
+        {
+            "text": "Ultimately, our findings support the recommendations of the US surgeon general, CDC, ACS, ASA, and APSF to consider rescheduling or postponing elective surgeries until the COVID19 pandemic is under better control in the US.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Impact on healthcare workforce"
+        },
+        {
+            "text": ". CC-BY-NC-ND 4.0 International license It is made available under a author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Impact on healthcare workforce"
+        },
+        {
+            "text": "is the (which was not peer-reviewed) The copyright holder for this preprint .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Impact on healthcare workforce"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "WHO Director-General's opening remarks at the media briefing on COVID-19 -11",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Adhanom",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "An interactive web-based dashboard to track COVID-19 in real time",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Gardner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Lancet Infect Dis",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S1473-3099(20)30120-1"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "Novel Coronavirus Outbreak (COVID-19)",
+            "authors": [],
+            "year": 2019,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "WHO Director-General's opening remarks at the media briefing on COVID-19 -3",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Adhanom",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Spiking U.S. coronavirus cases could force rationing decisions similar to those made in Italy, China. The Washington Post",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Cha",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "European Centre for Disease Prevention and Control. Novel coronavirus disease 2019 (COVID-19) pandemic: increased transmission in the EU/EEA and the UK -sixth update -12",
+            "authors": [],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Substantial undocumented infection facilitates the rapid dissemination of novel coronavirus (SARS-CoV2)",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Science",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "Transmission interval estimates suggest pre-symptomatic spread of COVID-19. medRxiv",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Tindale",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "Estimating the generation interval for COVID-19 based on symptom onset data. medRxiv",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Ganyani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "The Contribution of Pre-symptomatic Transmission to the COVID-19 Outbreak. 2020, Centre for Mathematical Modeling of Infectious Diseases",
+            "authors": [
+                {
+                    "first": "Yang",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Sebastian",
+                    "middle": [],
+                    "last": "Group",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Funk &amp; Stefan Flasche",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF10": {
+            "ref_id": "b10",
+            "title": "Over 1,700 frontline medics infected with coronavirus in China, presenting new crisis for the government",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Gan",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Thomas",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Culver",
+                    "suffix": ""
+                },
+                {
+                    "first": "Cnn",
+                    "middle": [],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "SURGEON GENERAL URGES PROVIDERS TO 'CONSIDER STOPPING ELECTIVE SURGERIES.' HOSPITALS PUSH BACK",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Commins",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF12": {
+            "ref_id": "b12",
+            "title": "Interim Guidance for Healthcare Facilities: Preparing for Community Transmission of COVID-19 in the United States",
+            "authors": [],
+            "year": 2020,
+            "venue": "Centers for Disease Control and Prevention",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF13": {
+            "ref_id": "b13",
+            "title": "Recommendations for Management of Elective Surgical Procedures. 2020, American College of Surgeons",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Hoyt",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Turner",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Covid-",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "19",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "ASA-APSF Joint Statement on Non-Urgent Care During the COVID-19 Outbreak",
+            "authors": [],
+            "year": 2020,
+            "venue": "American Society of Anesthesiologists",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF15": {
+            "ref_id": "b15",
+            "title": "Anna Wilde Hospitals Push Off Surgeries to Make Room for Coronavirus Patients",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Evans",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Mathews",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "Seattle-area hospitals cancel elective procedures in response to coronavirus outbreak",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Blethen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF17": {
+            "ref_id": "b17",
+            "title": "Prediction of postoperative pulmonary complications in a populationbased surgical cohort",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Canet",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Anesthesiology",
+            "volume": "113",
+            "issn": "6",
+            "pages": "1338--50",
+            "other_ids": {}
+        },
+        "BIBREF18": {
+            "ref_id": "b18",
+            "title": "Ambulatory Surgery Data From Hospitals and Ambulatory Surgery Centers: United States",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Hall",
+                    "suffix": ""
+                },
+                {
+                    "first": "Alexander",
+                    "middle": [],
+                    "last": "Schwartzman",
+                    "suffix": ""
+                },
+                {
+                    "first": "Jin",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Xiang",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Centers for Disease Control and Prevention",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "United States Census Bureau. Quick Facts-United States",
+            "authors": [],
+            "year": 2019,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF20": {
+            "ref_id": "b20",
+            "title": "United States Census Bureau. QuickFacts-Washington; United States",
+            "authors": [],
+            "year": 2019,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF21": {
+            "ref_id": "b21",
+            "title": "How Did It Start? Questions Answered on the U.S. Coronavirus Outbreak. New York Times",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Weise",
+                    "suffix": ""
+                },
+                {
+                    "first": "Amy",
+                    "middle": [],
+                    "last": "Harmon",
+                    "suffix": ""
+                },
+                {
+                    "first": "Sheri",
+                    "middle": [
+                        "Why"
+                    ],
+                    "last": "Fink",
+                    "suffix": ""
+                },
+                {
+                    "first": "Washington",
+                    "middle": [],
+                    "last": "State",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF22": {
+            "ref_id": "b22",
+            "title": "Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Hongru",
+                    "suffix": ""
+                },
+                {
+                    "first": "Lauren",
+                    "middle": [],
+                    "last": "Gardner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "The Lancet",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF23": {
+            "ref_id": "b23",
+            "title": "Why outbreaks like coronavirus spread exponentially, and how to \"flatten the curve\". The Washington Post, 2020. 25. Centers for Disease Control and Prevention. Evaluating and Testing Persons for Coronavirus Disease 2019 (COVID-19)",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Stevens",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF24": {
+            "ref_id": "b24",
+            "title": "South Korea has tested 140,000 people for the coronavirus. That could explain why its death rate is just 0.6% -far lower than in China or the US",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Bendix",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Business Insider",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF25": {
+            "ref_id": "b25",
+            "title": "Don't believe the numbers you see': Johns Hopkins professor says up to 500,000 Americans have coronavirus. Yahoo! Finance",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Belmonte",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "0.227 asymptomatic infected patients, 3047 uninfected patients, 0.226 asymptomatic infected HCW, and 2732.78 uninfected HCW. Asymptomatic infected HCW were further subdivided into groups based on how long they had been infected. Because COVID19+ individuals could be asymptomatic and infectious for up to 14 days, we included infected HCW in the workforce for days 1-13 of their infections (during which time they could also infect other HCW and patients), and then removed them from the workforce once they reached day 14 and displayed symptoms. For our initial conditions, we divided asymptomatic infected HCW evenly into 13 groups for HCW on day 1 of infection (D1), day 2 of infection (D2), day 3 of infection (D3),..., day 13 of infection (D13).",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Due to the isolated nature of the ship, health officials were able to test everyone onboard the cruise ship, even if there are no symptoms evident. Using the data at hand and the equation above, we can readily determine the transmission constant by dividing the number of new cases at time t + 1 (with time measured in days) by the product of infected population at time t and the uninfected population at time t, which we calculated to be an average of k = 1.219e-4.To calculate the number of preventable patient-to-patient infections, patient-to-HCW infections, HCW-to-patient infections, and HCW-to-HCW infections, we adapted the logistic model to I'(t) = k * I(t) * m(t) where I'(t) refers to the new infections of the specified type, k is still the transmission constant, I(t) refers to asymptomatically infected individuals of the group transmitting the virus, and m(t) refers to uninfected individuals of the group that is being newly infected. For instance, if I'(t) represents",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Markov Chain for Healthcare Workers. Healthcare workers (HCW) who are uninfected on any given day can either stay uninfected or become newly infected, at which point they would proceed to day 1 of infection the next day. Individuals who are infected will proceed to the next day of infection with each passing day. On days 1-13 of infection, infected HCW are asymptomatic and therefore continue to fully participate in the workforce, exposing other individuals to the risk of COVID19 infection. On day 14 of infection, infected individuals begin showing symptoms, at which point they may no longer participate in the perioperative workforce.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Impact of Elective Procedures on Healthcare Workforce. The number of uninfected HCW (brown line) initially decreases gradually, until it begins falling sharply around 21 days. However, because of COVID19's asymptomatic incubation period, there is some lag before the active healthcare workforce size (blue line) decreases. This decrease occurs around the same time that the number of asymptomatic infected HCW (green line) decreases as their infections have progressed to the point of showing symptoms.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": "HCW/patient. Given our estimate of 3037 ambulatory surgery patients per day, this approximates 2773 HCWs involved in ambulatory surgery care per day.Fig 1. Timeline of Infection for Confirmed COVID19 Cases. After infection, the individual can transmit the infection to others but does not become symptomatic until day 14, at which point they become eligible for COVID19 testing and their infection is discovered and reported.",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": []
+}

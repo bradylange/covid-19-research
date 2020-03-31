@@ -13,7 +13,7 @@
 ###############################################################################
 # Large Files
 ###############################################################################
-data/biorxiv_medrxiv/*
-data/comm_use_subset/*
-data/custom_license/*
-data/noncomm_use_subset/*
+data/biorxiv_medrxiv/
+data/comm_use_subset/
+data/custom_license/
+data/noncomm_use_subset/
